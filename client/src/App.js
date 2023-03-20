@@ -18,7 +18,7 @@ const App = () => {
   }
 
   return <div>
-            <h1>Login page</h1>
+            <h1>PunchTime</h1>
             <form onSubmit={submit}>
               <div>Username:</div>
               <input value={usernameText} onChange={handleUsernameChange}/><br/>
