@@ -22,12 +22,24 @@ const EmployeePage = () => {
 
   const handleTimeChange = (num) => (event) => {
     const timeCopy = [...time]
-    timeCopy[num] = event.target.value    
+    timeCopy[num] = event.target.value
     setTime(timeCopy)
   }
 
   const submitTime = (event) => {
     event.preventDefault()
+    if (time.some(t => isNaN(t))) {
+      alert("All inputs must be numbers!")
+      return
+    }
+    if (time.some(t => parseInt(t) < 0)) {
+      alert("Time input cannot be negative")
+      return
+    }
+    if (time.some(t => parseInt(t) > 24)) {
+      alert("Time input is too long")
+      return
+    }
     console.log(time)
   }
 
