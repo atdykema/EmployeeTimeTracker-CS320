@@ -1,33 +1,19 @@
 import { useState } from 'react'
+import Login from './pages/Login'
+import EmployeePage from './pages/EmployeePage'
+
 
 const App = () => {
-  const [usernameText, setUsername] = useState('yourUsername')
-  const [passwordText, setPassword] = useState('yourPassword')
+  const [pageNum, setPageNum] = useState(0)
+  console.log(pageNum)
 
-  const submit = (event) => {
-    event.preventDefault()
-    console.log(`${usernameText} | ${passwordText}`)
+  if (pageNum === 0) {
+    return <Login pageUpdater={setPageNum}/>
+  } else if (pageNum === 1) {
+    return <EmployeePage/>
+  } else {
+    return <div>Error</div>
   }
-
-  const handleUsernameChange = (event) => {
-    setUsername(event.target.value)
-  }
-
-  const handlePasswordChange = (event) => {
-    setPassword(event.target.value)
-  }
-
-  return <div>
-            <h1>PunchTime</h1>
-            <form onSubmit={submit}>
-              <div>Username:</div>
-              <input value={usernameText} onChange={handleUsernameChange}/><br/>
-              <div>Password:</div>
-              <input value={passwordText} onChange={handlePasswordChange}/><br/>
-              <button type="submit">Login</button>
-            </form>
-         </div>
-
 }
 
 export default App;
