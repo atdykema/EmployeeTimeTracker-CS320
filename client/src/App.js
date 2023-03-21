@@ -21,8 +21,7 @@ const App = () => {
   }
 
   //---------------------------------------------------------------
-  // const [day, setDay] = useState([0,0,0,0,0,0,0])
-  const [time, setTime] = useState(["0","0","0","0","0","0","0"])
+  const [time, setTime] = useState(["-1","-1","-1","-1","-1","-1","-1"])
 
   const onHome = (e) => {
     console.log('employee home')
@@ -47,7 +46,7 @@ const App = () => {
     setTime(timeCopy)
   }
 
-  const submitTime = (num) => (event) => {
+  const submitTime = (event) => {
     event.preventDefault()
     console.log(time)
   }
@@ -75,15 +74,15 @@ const App = () => {
         </div>
       </div>
       <div className='daybuttons_container'>
-        {nums.map(num => <div>
-          <div className='day-label'key={num} id={days[num]} onClick={e => console.log(num)}>{days[num]}</div> 
-          <br/> 
-          <form onSubmit={submitTime(num)}>
-            <input value={time[num]} placeholder='Enter your time' onChange={handleTimeChange(num)}/>
-            <br/>
-            <button type="submit">Submit</button>
-          </form> 
-        </div>)}
+        <form onSubmit={submitTime}>
+          {nums.map(num => <div>
+            <div className='day-label'key={num} id={days[num]}>{days[num]}</div> 
+            <br/> 
+              <input value={time[num]} placeholder='Enter your time' onChange={handleTimeChange(num)}/>
+              <br/>
+          </div>)}
+          <button type="submit">Submit</button>
+        </form> 
       </div>
       <div className='date-info-container'>
         <div className='title'>Payment Histoy</div>
