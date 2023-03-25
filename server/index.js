@@ -1,4 +1,3 @@
-
 //requires: body-parser, mongoose, dotenv, routes (within api.js)
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
@@ -30,7 +29,7 @@ app.use((req, res, next) => {
   next();
 });
 app.use(bodyParser.json());
-app.use('/api', routes);
+app.use('/', routes);
 app.use((err, req, res, next) => {
   console.log(err);
   next();
