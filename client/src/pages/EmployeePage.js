@@ -1,9 +1,18 @@
 import { useState } from 'react'
 import TimeEntry from '../components/TimeEntry'
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ReferenceLine } from 'recharts';
 import './EmployeePage.css'
 
 const EmployeePage = () => {
   const [time, setTime] = useState(["","","","","","",""])
+  const [data, setData] = useState([
+    { name: 'Monday', value: 10, pay: 10 },
+    { name: 'Tuesday', value: 20, pay: 10 },
+    { name: 'Wednesday', value: 15, pay: 10 },
+    { name: 'Thursday', value: 25, pay: 10 },
+    { name: 'Friday', value: 30, pay: 10 },
+  ]);
+  const [xAxisName, setXAxisName] = useState('Day');
 
   const onHome = (e) => {
     console.log('employee home')
@@ -44,6 +53,81 @@ const EmployeePage = () => {
     console.log(time)
   }
 
+  const handleWeekly = () => {
+    const newData = [
+      { name: 'Monday', value: 10, pay: 10 },
+      { name: 'Tuesday', value: 20, pay: 10 },
+      { name: 'Wednesday', value: 15, pay: 10 },
+      { name: 'Thursday', value: 25, pay: 10 },
+      { name: 'Friday', value: 30, pay: 10 },
+    ];
+    setXAxisName('Day');
+    setData(newData);
+  };
+
+  const handleMonthly = () => {
+    const newData = [
+      { name: 'Jan', value: (170*Math.random()).toFixed(2), pay: ((170*Math.random())*22.5).toFixed(2) },
+      { name: 'Feb', value: (170*Math.random()).toFixed(2), pay: ((170*Math.random())*22.5).toFixed(2) },
+      { name: 'Mar', value: (170*Math.random()).toFixed(2), pay: ((170*Math.random())*22.5).toFixed(2) },
+      { name: 'Apr', value: (170*Math.random()).toFixed(2), pay: ((170*Math.random())*22.5).toFixed(2) },
+      { name: 'May', value: (170*Math.random()).toFixed(2), pay: ((170*Math.random())*22.5).toFixed(2) },
+      { name: 'Jun', value: (170*Math.random()).toFixed(2), pay: ((170*Math.random())*22.5).toFixed(2) },
+      { name: 'Jul', value: (170*Math.random()).toFixed(2), pay: ((170*Math.random())*22.5).toFixed(2) },
+      { name: 'Aug', value: (170*Math.random()).toFixed(2), pay: ((170*Math.random())*22.5).toFixed(2) },
+      { name: 'Sep', value: (170*Math.random()).toFixed(2), pay: ((170*Math.random())*22.5).toFixed(2) },
+      { name: 'Oct', value: (170*Math.random()).toFixed(2), pay: ((170*Math.random())*22.5).toFixed(2) },
+      { name: 'Nov', value: (170*Math.random()).toFixed(2), pay: ((170*Math.random())*22.5).toFixed(2) },
+      { name: 'Dec', value: (170*Math.random()).toFixed(2), pay: ((170*Math.random())*22.5).toFixed(2) },
+    ];
+    setXAxisName('Month');
+    setData(newData);
+  };
+
+  const handleYearly = () => {
+    const newData = [
+      { name: '2020', value: (2000*Math.random()).toFixed(2), pay: ((2000*Math.random())*22.5).toFixed(2) },
+      { name: '2021', value: (2000*Math.random()).toFixed(2), pay: ((2000*Math.random())*22.5).toFixed(2) },
+      { name: '2022', value: (2000*Math.random()).toFixed(2), pay: ((2000*Math.random())*22.5).toFixed(2) },
+      { name: '2023', value: (2000*Math.random()).toFixed(2), pay: ((2000*Math.random())*22.5).toFixed(2) },
+
+    ];
+    setXAxisName('Year');
+    setData(newData);
+  };
+
+  function CustomTooltip({ active, payload, label }) {
+    if (active && payload && payload.length) {
+      const tooltipData = payload[0].payload;
+      return (
+        <div className="custom-tooltip">
+          <p className="label">{`${label} : $${tooltipData.pay}`}</p>
+          {/* <p className="intro">{`Pay`}</p> */}
+        </div>
+      );
+    }
+  
+    return null;
+  }
+
+  function BarGraph() {
+    return (
+      <BarChart 
+        width={1200} 
+        height={300} 
+        data={data} 
+        margin={{ top: 15, right: 30, left: 30, bottom: 20 }}
+      >
+        <XAxis dataKey="name" label={{ value: xAxisName, position: 'insideBottom', dy: 10 }} />
+        <YAxis label={{ value: 'Hours Worked', angle: -90, position: 'insideLeft', dy: 50 }}/>
+        <CartesianGrid strokeDasharray="3 3" />
+        <Tooltip content={<CustomTooltip />}/>
+        <Bar dataKey="value" fill="#808080" />
+        <ReferenceLine fill='#808080' />
+      </BarChart>
+    );
+  }
+
   return <div className='page-container'>
         <div className='home-buttons'>
           <div className='home-single' id='employee_home_single' onClick={onHome}>
@@ -63,6 +147,11 @@ const EmployeePage = () => {
         </div>
         <div className='date-info-container'>
           <div className='title'>Payment History</div>
+        <div className='time-scale-button-container'>
+          <button onClick={handleWeekly}>Weekly</button>
+          <button onClick={handleMonthly}>Monthly</button>
+          <button onClick={handleYearly}>Yearly</button>
+        </div>
           <div className='timescale-container'>
             <div className='timescale-button' id='weekly'></div>
             <div className='timescale-button' id='monthly'></div>
@@ -70,7 +159,7 @@ const EmployeePage = () => {
           </div>
           <div className='graph-container'>
             <div className='graph'>
-              *graph goes here*
+              <BarGraph />
             </div>
           </div>
           

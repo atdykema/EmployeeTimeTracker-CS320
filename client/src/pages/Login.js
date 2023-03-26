@@ -24,7 +24,7 @@ const Login = ({ pageUpdater }) => {
 
     console.log(result)
 
-    if(result.status === 200){
+    if(result.status === 0){
       pageUpdater(1) // this should be validated remove later
     }else{
       //throw an error
