@@ -1,0 +1,88 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap'); /* baloo 2 font for heading */
+
+*{
+    font-family: 'Baloo 2', cursive;
+}
+
+.page-container{
+    display:flex;
+    flex-direction:column;
+    justify-content: start;
+    align-items: center;
+    background-image: url(./normalBG.svg);
+    background-size: cover;
+    background-position: center bottom 7%;
+    height: 100vh;
+}
+
+.home-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 50%;
+    padding: 5px;
+    margin: 10px;
+    background-color: rgba(255,255,255, .25);
+    border-radius: 25px;
+
+}
+
+.home-single:hover{
+    background-color: rgba(220,220,220, 1);
+}
+
+.home-single{
+    display: flex;
+    padding: 5px 15px 5px 15px;
+    border: whitesmoke 3px solid;
+    border-radius: 50px;
+    background-color: rgba(220,220,220, .5);
+    font-size: 1.5rem;
+    transition: .5s;
+}
+
+.daybuttons-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-daybuttons-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.daybuttons-form{
+    display: flex;  
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255,255,255, .25);
+    border-radius: 25px;
+}
+
+.time-entry-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.time-entry-submit{
+    width: 90%;
+    height: 50px;
+    background-color: rgba(220,220,220, .5);
+    transition: .5s;
+    border: 3px solid whitesmoke;
+    border-radius: 25px;
+}
+
+.time-entry-submit:hover{
+    background-color: rgba(220,220,220, 1);
+}

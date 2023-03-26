@@ -1,0 +1,38 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap'); /* baloo 2 font for heading */
+
+*{
+    font-family: 'Baloo 2', cursive;
+}
+
+.day-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 20px 0px 20px;
+   
+    
+}
+
+.day-label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin: 5px;
+    border: whitesmoke 3px solid;
+    border-radius: 20px;
+    background-color: rgba(220,220,220, .5);
+    height: 100px;
+    width: 125px;
+    font-size: 1.5rem;
+}
+
+input{
+    padding: 5px;
+    margin: 5px;
+    border-radius: 25px;
+    border: 1px gray solid;
+}
+
