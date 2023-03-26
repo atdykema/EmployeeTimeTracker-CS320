@@ -11,22 +11,22 @@ const Login = ({ pageUpdater }) => {
     event.preventDefault()
     console.log(`${usernameText} | ${passwordText}`)
     
-    let result;
+    let result = {}
     try{
       result = await axios.post("http://localhost:3000/user/get", {
         username: usernameText,
-        password: passwordText,
-      });
-    }catch(e){
+        password: passwordText
+      })
+    } catch(e){
       console.log(e)
       result = e
     }
 
     console.log(result)
 
-    if(result.status === 200){
+    if (result.status === 200){
       pageUpdater(1) // this should be validated remove later
-    }else{
+    } else{
       //throw an error
     }
   }
