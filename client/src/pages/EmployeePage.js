@@ -1,21 +1,22 @@
 import { useState } from 'react'
 import TimeEntry from '../components/TimeEntry'
+import './EmployeePage.css'
 
 const EmployeePage = () => {
-  const [time, setTime] = useState(["-1","-1","-1","-1","-1","-1","-1"])
+  const [time, setTime] = useState(["","","","","","",""])
 
   const onHome = (e) => {
     console.log('employee home')
   }
 
   const days = [
+    "Sunday",
     "Monday",
     "Tuesday",
     "Wednesday",
     "Thursday",
     "Friday",
-    "Saturday",
-    "Sunday"
+    "Saturday"
   ]
 
   const nums = [0,1,2,3,4,5,6]
@@ -43,23 +44,25 @@ const EmployeePage = () => {
     console.log(time)
   }
 
-  return <div>
-        <div className='homebuttons'>
-          <div className='homesingle' id='employee_home_single' onClick={onHome}>
+  return <div className='page-container'>
+        <div className='home-buttons'>
+          <div className='home-single' id='employee_home_single' onClick={onHome}>
             Employee Home
           </div>
-          <div className='homesingle' id='manager_home_single'>
-            Manny
+          <div className='home-single' id='manager_home_single'>
+            Manager Home
           </div>
         </div>
-        <div className='daybuttons_container'>
-          <form onSubmit={submitTime}>
-            {nums.map(num => <TimeEntry key={num} num={num} day={days[num]} time={time} timeUpdater={handleTimeChange} />)}
-            <button type="submit">Submit</button>
+        <div className='daybuttons-container'>
+          <form onSubmit={submitTime} className="daybuttons-form">
+            <div className='inner-daybuttons-container'>
+              {nums.map(num => <TimeEntry key={num} num={num} day={days[num]} time={time} timeUpdater={handleTimeChange}/>)}
+            </div>
+            <button className="time-entry-submit" type="submit">Submit</button>
           </form> 
         </div>
         <div className='date-info-container'>
-          <div className='title'>Payment Histoy</div>
+          <div className='title'>Payment History</div>
           <div className='timescale-container'>
             <div className='timescale-button' id='weekly'></div>
             <div className='timescale-button' id='monthly'></div>
