@@ -12,7 +12,7 @@ body{
 .page-container{
     display:flex;
     flex-direction:column;
-    justify-content: space-evenly;
+    justify-content: start;
     align-items: center;
     background-image: url(./normalBG.svg);
     background-size: cover;
@@ -52,7 +52,6 @@ body{
     width: 100%;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
 }
 
 .inner-daybuttons-container{
@@ -105,30 +104,11 @@ body{
 .time-scale-button-container{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    width: 90%;
-    padding: 20px;
 }
 
 .graph-container{
     background-color: rgba(220,220,220, .5);
     border-radius: 25px;
-}
-
-.timescale-button{
-    background-color: rgba(220,220,220, .5);
-    transition: .5s;
-    border: 3px solid whitesmoke;
-    border-radius: 25px;
-    width: 200px;
-    font-size: 1.5rem;
-}
-
-.timescale-button:hover{
-    background-color: rgba(220,220,220, 1);
-}
-
-.payment-history-title{
-    font-size: 2rem;
 }
