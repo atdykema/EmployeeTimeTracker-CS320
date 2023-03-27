@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import './Login.css';
 import logo from './punchtime.png';
-import axios from 'axios'
 import {validateLogin} from '../services/requests'
 
 const Login = ({ pageUpdater }) => {
