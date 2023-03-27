@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Login from './pages/Login'
 import EmployeePage from './pages/EmployeePage'
+import ManagerPage from './pages/ManagerPage'
 
 
 const App = () => {
@@ -10,9 +11,9 @@ const App = () => {
   if (pageNum === 0) {
     return <Login pageUpdater={setPageNum}/>
   } else if (pageNum === 1) {
-    return <EmployeePage/>
-  } else {
-    return <div>Error</div>
+    return <EmployeePage pageUpdater={setPageNum}/>
+  } else if (pageNum === 2) {
+    return <ManagerPage/>
   }
 }
 
