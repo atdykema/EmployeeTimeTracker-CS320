@@ -3,7 +3,7 @@ import TimeEntry from '../components/TimeEntry'
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ReferenceLine } from 'recharts';
 import './EmployeePage.css'
 
-const EmployeePage = () => {
+const EmployeePage = ({ pageUpdater }) => {
   const [time, setTime] = useState(["","","","","","",""])
   const [data, setData] = useState([
     { name: 'Monday', value: 10, pay: 10 },
@@ -16,6 +16,10 @@ const EmployeePage = () => {
 
   const onHome = (e) => {
     console.log('employee home')
+  }
+
+  const onManager = (e) => {
+    pageUpdater(2)
   }
 
   const days = [
@@ -133,7 +137,7 @@ const EmployeePage = () => {
           <div className='home-single' id='employee_home_single' onClick={onHome}>
             Employee Home
           </div>
-          <div className='home-single' id='manager_home_single'>
+          <div className='home-single' id='manager_home_single' onClick={onManager}>
             Manager Home
           </div>
         </div>
