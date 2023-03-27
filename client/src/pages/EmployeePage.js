@@ -129,15 +129,15 @@ const EmployeePage = () => {
   }
 
   return <div className='page-container'>
-        <div className='home-buttons'>
-          <div className='home-single' id='employee_home_single' onClick={onHome}>
-            Employee Home
-          </div>
-          <div className='home-single' id='manager_home_single'>
-            Manager Home
-          </div>
-        </div>
         <div className='daybuttons-container'>
+          <div className='home-buttons'>
+            <div className='home-single' id='employee_home_single' onClick={onHome}>
+              Employee Home
+            </div>
+            <div className='home-single' id='manager_home_single'>
+              Manager Home
+            </div>
+          </div>
           <form onSubmit={submitTime} className="daybuttons-form">
             <div className='inner-daybuttons-container'>
               {nums.map(num => <TimeEntry key={num} num={num} day={days[num]} time={time} timeUpdater={handleTimeChange}/>)}
@@ -146,17 +146,17 @@ const EmployeePage = () => {
           </form> 
         </div>
         <div className='date-info-container'>
-          <div className='title'>Payment History</div>
-        <div className='time-scale-button-container'>
-          <button onClick={handleWeekly}>Weekly</button>
-          <button onClick={handleMonthly}>Monthly</button>
-          <button onClick={handleYearly}>Yearly</button>
-        </div>
-          <div className='timescale-container'>
-            <div className='timescale-button' id='weekly'></div>
-            <div className='timescale-button' id='monthly'></div>
-            <div className='timescale-button' id='yearly'></div>
+          <div className=''>
+
           </div>
+          <div className='payment-history-title'>Payment History</div>
+
+          <div className='time-scale-button-container'>
+            <button className='timescale-button' onClick={handleWeekly}>Weekly</button>
+            <button className='timescale-button' onClick={handleMonthly}>Monthly</button>
+            <button className='timescale-button' onClick={handleYearly}>Yearly</button>
+          </div>
+
           <div className='graph-container'>
             <div className='graph'>
               <BarGraph />
