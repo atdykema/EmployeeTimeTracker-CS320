@@ -11,6 +11,9 @@ DB=mongodb+srv://<username>:<password>@cluster0.n2dksom.mongodb.net/PunchTimeDat
 
 For example (use mine if needed):
 DB=mongodb+srv://ntnguye0:1234@cluster0.n2dksom.mongodb.net/PunchTimeData
+  
+Also, make sure in /server/index.js, you have this line on top: 
+  dotenv.config({path: 'process.env'});
 
 To run this app:
 1. Open CLI and go to /server dir.
