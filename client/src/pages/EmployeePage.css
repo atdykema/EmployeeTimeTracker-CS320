@@ -132,3 +132,7 @@ body{
 .payment-history-title{
     font-size: 2rem;
 }
+
+.non_manager{
+    display: none;
+}

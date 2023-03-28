@@ -1,10 +1,15 @@
 const EmployeeTable = ({ employeeObjs }) => {
+  console.log("Table")
+  console.log(employeeObjs);
+  employeeObjs.then(
+
+  )
   return <div>
     <table>
       <tbody>
       {
         employeeObjs.map(employeeObj => {
-          return <tr key={employeeObj.id}>
+          return <tr key={employeeObj.employeeId}>
             <th>
               {employeeObj.firstName}
             </th>
@@ -12,7 +17,7 @@ const EmployeeTable = ({ employeeObjs }) => {
               {employeeObj.lastName}
             </th>
             <th>
-              {employeeObj.pay}
+              {"15"}
             </th>
           </tr>
         })

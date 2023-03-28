@@ -3,7 +3,7 @@ import TimeEntry from '../components/TimeEntry'
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ReferenceLine } from 'recharts';
 import './EmployeePage.css'
 
-const EmployeePage = ({ pageUpdater }) => {
+const EmployeePage = ({ pageUpdater, employeeData }) => {
   const [time, setTime] = useState(["","","","","","",""])
   const [data, setData] = useState([
     { name: 'Monday', value: 10, pay: 10 },
@@ -130,6 +130,10 @@ const EmployeePage = ({ pageUpdater }) => {
         <ReferenceLine fill='#808080' />
       </BarChart>
     );
+  }
+
+  if(!employeeData.isManager) {
+    document.getElementById('manager_home_single').className+=' '+'non_manager';
   }
 
   return <div className='page-container'>

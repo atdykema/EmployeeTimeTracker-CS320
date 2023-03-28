@@ -13,6 +13,21 @@ const validateLogin = (username, password) => {
   }
 }
 
-const methods = {validateLogin: validateLogin} // Recent React needs this to be a separate obj
+const getManagerViewData = (employeeId, companyName, isManager) => {
+  try{
+    console.log("WE ARE TRYING OUR BEST, WE ARE DYING OUT HERE")
+    // console.log(axios.post(`${baseURL}/user/manage`, {
+    //   employeeId, companyName, isManager
+    // }))
+    return axios.post(`${baseURL}/user/manage`, {
+      employeeId, companyName, isManager
+    })
+  } catch(e){
+    console.log("ERRORERROR ERROR ERROR ERROR  ")
+    return e
+  }
+}
+
+const methods = {validateLogin, getManagerViewData} // Recent React needs this to be a separate obj
 
 export default methods;

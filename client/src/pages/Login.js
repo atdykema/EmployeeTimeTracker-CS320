@@ -3,7 +3,7 @@ import './Login.css'
 import logo from './punchtime.png'
 import requests from '../services/requests'
 
-const Login = ({ pageUpdater }) => {
+const Login = ({ pageUpdater, employeeDataUpdater }) => {
   const [usernameText, setUsername] = useState('')
   const [passwordText, setPassword] = useState('')
   
@@ -16,6 +16,7 @@ const Login = ({ pageUpdater }) => {
     console.log(result)
 
     if (result.status === 200) {
+      employeeDataUpdater(result.data.value)
       pageUpdater(1) // switch to employee page
     } else {
       // display an error
