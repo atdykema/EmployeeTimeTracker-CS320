@@ -1,40 +1,31 @@
 import { useState } from 'react'
 import './Login.css'
 import logo from './punchtime.png'
-import axios from 'axios'
+import requests from '../services/requests'
 
 const Login = ({ pageUpdater }) => {
   const [usernameText, setUsername] = useState('')
   const [passwordText, setPassword] = useState('')
-
+  
   const submit = async (event) => {
     event.preventDefault()
     console.log(`${usernameText} | ${passwordText}`)
-
-    let result = {}
-    try {
-      result = await axios.post('http://localhost:3000/user/get', {
-        username: usernameText,
-        password: passwordText
-      })
-    } catch (e) {
-      console.log(e)
-      result = e
-    }
+    
+    let result = await requests.validateLogin(usernameText, passwordText)
 
     console.log(result)
 
     if (result.status === 200) {
-      pageUpdater(1) // this should be validated remove later
+      pageUpdater(1) // switch to employee page
     } else {
-      // throw an error
+      // display an error
     }
   }
-
+  
   const handleUsernameChange = (event) => {
     setUsername(event.target.value)
   }
-
+  
   const handlePasswordChange = (event) => {
     setPassword(event.target.value)
   }

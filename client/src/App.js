@@ -5,7 +5,7 @@ import ManagerPage from './pages/ManagerPage'
 
 
 const App = () => {
-  const [pageNum, setPageNum] = useState(1) //DREW FIX LATER
+  const [pageNum, setPageNum] = useState(0) //DREW FIX LATER
   console.log(pageNum)
 
   if (pageNum === 0) {
