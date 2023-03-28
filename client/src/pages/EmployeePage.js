@@ -133,20 +133,12 @@ const EmployeePage = ({ pageUpdater }) => {
   }
 
   return <div className='page-container'>
-        <div className='home-buttons'>
-          <div className='home-single' id='employee_home_single' onClick={onHome}>
-            Employee Home
-          </div>
-          <div className='home-single' id='manager_home_single' onClick={onManager}>
-            Manager Home
-          </div>
-        </div>
         <div className='daybuttons-container'>
           <div className='home-buttons'>
             <div className='home-single' id='employee_home_single' onClick={onHome}>
               Employee Home
             </div>
-            <div className='home-single' id='manager_home_single'>
+            <div className='home-single' id='manager_home_single' onClick={onManager}>
               Manager Home
             </div>
           </div>

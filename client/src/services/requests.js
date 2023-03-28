@@ -1,10 +1,10 @@
 import axios from 'axios'
 
-const baseURL = "http://localhost:3000"
+const baseURL = "http://localhost:5000"
 
-const validateLogin = async (username, password) => {
+const validateLogin = (username, password) => {
   try{
-    return await axios.post(`${baseURL}/user/get`, {
+    return axios.post(`${baseURL}/user/get`, {
       username: username,
       password: password
     })

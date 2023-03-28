@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './Login.css';
 import logo from './punchtime.png';
-import {validateLogin} from '../services/requests'
+import requests from '../services/requests'
 
 const Login = ({ pageUpdater }) => {
   const [usernameText, setUsername] = useState('')
@@ -11,14 +11,14 @@ const Login = ({ pageUpdater }) => {
     event.preventDefault()
     console.log(`${usernameText} | ${passwordText}`)
     
-    let result = validateLogin(usernameText, passwordText)
+    let result = await requests.validateLogin(usernameText, passwordText)
 
     console.log(result)
 
-    if (result.status === 200){
-      pageUpdater(1) // this should be validated remove later
+    if (result.status === 200) {
+      pageUpdater(1) // switch to employee page
     } else {
-      //throw an error
+      // display an error
     }
   }
   
