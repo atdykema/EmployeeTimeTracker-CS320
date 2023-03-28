@@ -32,6 +32,39 @@ router.post('/user/get', async (req, res, next) => {
     });
 });
 
+router.post('/user/manage', async(req, res, next) => {
+    company = req.body.companyName
+    person = req.body
+    queryList = []
+    checkedList = []
+    employees = []
+    if(req.body.isManager){
+        queryList.push(person)
+    }
+    while(queryList.length > 0){
+        person = queryList.shift();
+        checkedList.push(person.employeeId)
+        await User.find({managerId: person.employeeId, companyName: company}).exec()
+        .then(query=> {
+            if(query){
+                checkedList.push(person.employeeId)
+                while(query.length > 0){
+                    person = query.shift()
+                    employees.push(person)
+                    if(!checkedList.includes(person.employeeId)){
+                        queryList.push(person)
+                    }
+                }
+            }                
+            
+        })
+    }
+    res.send({response: "OK", value: employees});
+});
+
+
+
+
 router.delete('/todos/:id', (req, res, next) => {
 //TODO
 });

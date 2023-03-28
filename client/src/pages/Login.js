@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import './Login.css';
-import logo from './punchtime.png';
+import { useState } from 'react'
+import './Login.css'
+import logo from './punchtime.png'
 import requests from '../services/requests'
 
 const Login = ({ pageUpdater }) => {
@@ -45,4 +45,4 @@ const Login = ({ pageUpdater }) => {
     </div>
 }
 
-export default Login;
+export default Login
