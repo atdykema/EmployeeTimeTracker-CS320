@@ -1,0 +1,9401 @@
+[ {
+  "companyId" : 1,
+  "employeeId" : 1,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8.25
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 2,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8.75
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 3,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 7.75
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 4,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 7.75
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 5,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 6,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8.75
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 7,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 7.75
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 8,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 7.75
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 9,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8.75
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 10,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8.5
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 11,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 7.5
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 12,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 13,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8.5
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 14,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8.75
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 15,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 16,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 7.75
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 17,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 18,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 19,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 7.5
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 20,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8.75
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 21,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 7.25
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 22,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 7.75
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 23,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 7.5
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 24,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 7.5
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 25,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 7.25
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 26,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8.5
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 27,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 28,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 7.5
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 29,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 7.5
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 30,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 7.25
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 31,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 32,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 7.5
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 33,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 7.25
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 34,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 35,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 36,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8.75
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 37,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8.25
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 38,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8.25
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 39,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 7.5
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 40,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 41,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8.5
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 42,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 43,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8.25
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 44,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 45,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 7.25
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 46,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 7.25
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 47,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 7.5
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 48,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 7.25
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 49,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 7.25
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 50,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 7.75
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 51,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8.25
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 52,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8.25
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 53,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8.75
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 54,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 7.25
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 55,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 7.75
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 56,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8.25
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 57,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8.25
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 58,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8.5
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 59,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 7.5
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 60,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 7.75
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 61,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8.5
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 62,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 63,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 64,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 7.75
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 65,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 7.25
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 66,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 7.75
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 67,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 7.75
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 68,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 7.75
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 69,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 7.75
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 70,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 7.75
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 71,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 7.75
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 72,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8.25
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 73,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8.5
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 74,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 7.25
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 75,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 7.5
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 76,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8.75
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 77,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 7.5
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 78,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 79,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8.75
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 80,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8.25
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 81,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 82,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 7.5
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 83,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 7.5
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 84,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8.25
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 85,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 7.5
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 86,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 7.75
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 87,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8.25
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 88,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8.25
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 89,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 7.5
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 90,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8.5
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 91,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8.25
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 92,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 93,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8.25
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 94,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8.25
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 95,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8.5
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 96,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 7.5
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 97,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 7.5
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 98,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8.25
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 99,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8
+  } ]
+}, {
+  "companyId" : 1,
+  "employeeId" : 100,
+  "timeEntries" : [ {
+    "date" : "2023-02-01",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-02",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-03",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-06",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-07",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-08",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-09",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-10",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-13",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-02-14",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-15",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-16",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-02-17",
+    "hoursWorked" : 8.25
+  }, {
+    "date" : "2023-02-20",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-21",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-22",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-02-23",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-02-24",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-02-27",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-02-28",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-01",
+    "hoursWorked" : 8.5
+  }, {
+    "date" : "2023-03-02",
+    "hoursWorked" : 7.5
+  }, {
+    "date" : "2023-03-03",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-06",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-07",
+    "hoursWorked" : 7.75
+  }, {
+    "date" : "2023-03-08",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-09",
+    "hoursWorked" : 7.25
+  }, {
+    "date" : "2023-03-10",
+    "hoursWorked" : 8
+  }, {
+    "date" : "2023-03-13",
+    "hoursWorked" : 8.75
+  }, {
+    "date" : "2023-03-14",
+    "hoursWorked" : 8.25
+  } ]
+} ]
