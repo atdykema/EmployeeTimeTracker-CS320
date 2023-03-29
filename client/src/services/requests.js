@@ -4,7 +4,7 @@ const baseURL = 'http://localhost:5000'
 
 const validateLogin = (username, password) => {
   try {
-    return axios.post(`${baseURL}/user/get`, {
+    return axios.post(`${baseURL}/login`, {
       username, password
     })
   } catch (e) {
