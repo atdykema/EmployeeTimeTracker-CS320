@@ -11,10 +11,10 @@ const EmployeeTable = ({ employeeObjs }) => {
           console.log(employeeObj)
           return <tr key={employeeObj.employeeId}>
             <th>
-              {employeeObj.email}
+              {employeeObj.employeeId}
             </th>
             <th>
-              {employeeObj.companyName}
+              {employeeObj.email}
             </th>
             <th>
               {employeeObj.firstName}
@@ -23,7 +23,7 @@ const EmployeeTable = ({ employeeObjs }) => {
               {employeeObj.lastName}
             </th>
             <th>
-              {'15'}
+              {'$15.00'}
             </th>
           </tr>
         })
