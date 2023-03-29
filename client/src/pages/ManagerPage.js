@@ -6,6 +6,7 @@ import requests from '../services/requests'
 const Managerpage = ({ employeeData }) => {
   // call useState on employeeObjs to be updated in useEffect
   const [employeeObjs, setEmployeeObjs] = useState([])
+  const [searchText, updateSearchText] = useState('')
 
   // note: HTTP calls are considered side effects to rendering
   //       react components, so this must be separate, since
@@ -22,10 +23,25 @@ const Managerpage = ({ employeeData }) => {
     fetchData()
   }, [employeeData]) // runs on first render
 
+  const filterEmployees = (employees, text) => {
+    // return all employees if text is empty
+    if (text === '') {
+      return employees
+    }
+
+    // otherwise check if text is in the ID or name
+    // currently assumes that the manager will type
+    // in first name, then last name, but can change
+    const hasText = (txt) => (employee) => {
+      return employee.employeeId.toString().startsWith(txt) || (employee.firstName + ' ' + employee.lastName).startsWith(txt)
+    }
+    return employees.filter(hasText(text))
+  }
+
   return (
     <div>
-      <EmployeeSearch />
-      <EmployeeTable employeeObjs={employeeObjs} />
+      <EmployeeSearch text={searchText} updateText={updateSearchText}/>
+      <EmployeeTable employeeObjs={filterEmployees(employeeObjs, searchText)} />
     </div>
   )
 }
