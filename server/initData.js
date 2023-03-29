@@ -1,4 +1,7 @@
 const fs = require('fs'); // Node.js File System module
+const mongoose = require('mongoose');
+const dotenv = require('dotenv');
+dotenv.config({path: 'process.env'});
 
 const lunchRock = 'mockData/LunchRock_LLC-time-entries.json';
 const nightOwls = 'mockData/Night_Owls_Inc-time-entries.json';
@@ -119,4 +122,19 @@ const writeFiles = () => {
     fs.writeFileSync(gizmoGramOutput, JSON.stringify(gizmoGramData));
 }
 
+//run to upload files to database
+const uploadFilesToDB = () => {
+    mongoose
+    .connect(process.env.DB.toString(), { useNewUrlParser: true })
+    .then(() => {
+        console.log(`Database connected successfully`);
+        //Begin listening
+        app.listen(port, () => {
+        console.log(`Server running on port ${port}`);
+        });
+    })
+    .catch((err) => console.log(err));
+    mongoose.Promise = global.Promise;
 
+
+}
