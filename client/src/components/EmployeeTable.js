@@ -1,10 +1,21 @@
 const EmployeeTable = ({ employeeObjs }) => {
+  // TODO: If employeeObjs is empty, because the useEffect
+  //       hasn't been retrived, it will be empty at first.
+  //       Possible may be able to use a sentinel value to
+  //       indicate that it's not ready to render.
   return <div>
     <table>
       <tbody>
       {
         employeeObjs.map(employeeObj => {
-          return <tr key={employeeObj.id}>
+          console.log(employeeObj)
+          return <tr key={employeeObj.employeeId}>
+            <th>
+              {employeeObj.email}
+            </th>
+            <th>
+              {employeeObj.companyName}
+            </th>
             <th>
               {employeeObj.firstName}
             </th>
@@ -12,7 +23,7 @@ const EmployeeTable = ({ employeeObjs }) => {
               {employeeObj.lastName}
             </th>
             <th>
-              {employeeObj.pay}
+              {'15'}
             </th>
           </tr>
         })
@@ -22,4 +33,4 @@ const EmployeeTable = ({ employeeObjs }) => {
   </div>
 }
 
-export default EmployeeTable;
+export default EmployeeTable

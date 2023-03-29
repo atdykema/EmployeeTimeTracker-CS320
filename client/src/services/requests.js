@@ -1,18 +1,29 @@
 import axios from 'axios'
 
-const baseURL = "http://localhost:5000"
+const baseURL = 'http://localhost:5000'
 
 const validateLogin = (username, password) => {
-  try{
+  try {
     return axios.post(`${baseURL}/user/get`, {
-      username: username,
-      password: password
+      username, password
     })
-  } catch(e){
+  } catch (e) {
     return e
   }
 }
 
-const methods = {validateLogin: validateLogin} // Recent React needs this to be a separate obj
+const getManagerViewData = (employeeId, companyName, isManager) => {
+  try {
+    return axios.post(`${baseURL}/user/manage`, {
+      employeeId, companyName, isManager
+    })
+  } catch (e) {
+    console.log('Error: Unable to get managerViewData')
+    console.log(e)
+    return e
+  }
+}
 
-export default methods;
+const methods = { validateLogin, getManagerViewData } // Recent React needs this to be a separate obj
+
+export default methods

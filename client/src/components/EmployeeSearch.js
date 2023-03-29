@@ -1,10 +1,9 @@
-import { useState } from 'react';
-import axios from 'axios';
+import { useState } from 'react'
 
 const EmployeeSearch = () => {
   const [EmployeeName, setEmployeeName] = useState('')
 
-  const submit = async(event) => {
+  const submit = async (event) => {
     event.preventDefault()
     console.log(`${EmployeeName}`)
   }
@@ -12,7 +11,7 @@ const EmployeeSearch = () => {
   const handleEmployeeNameChange = (event) => {
     setEmployeeName(event.target.value)
   }
-  
+
   return <div>
     <form onSubmit={submit}>
       <input value = {EmployeeName} placeholder = 'Enter the name of employee' onChange={handleEmployeeNameChange}/><br/>
@@ -21,4 +20,4 @@ const EmployeeSearch = () => {
   </div>
 }
 
-export default EmployeeSearch;
+export default EmployeeSearch
