@@ -104,16 +104,19 @@ gizmoGramData = gizmoGramData.map(employee=>changeCompanyID(employee, gizmoGramI
 
 // Write the reformatted data to the output JSON file
 
-console.log(onionTechData[0]);
+//write files to the mockData folder if you wish
+const writeFiles = () => {
+    const lunchRockOutput = 'mockData/LunchRock_LLC-time-entries-reformatted.json';
+    fs.writeFileSync(lunchRockOutput, JSON.stringify(lunchRockData));
 
-const lunchRockOutput = 'mockData/LunchRock_LLC-time-entries-reformatted.json';
-fs.writeFileSync(lunchRockOutput, JSON.stringify(lunchRockData));
+    const nightOwlsOutput = 'mockData/Night_Owls_Inc-time-entries-reformatted.json';
+    fs.writeFileSync(nightOwlsOutput, JSON.stringify(nightOwlsData));
 
-const nightOwlsOutput = 'mockData/Night_Owls_Inc-time-entries-reformatted.json';
-fs.writeFileSync(nightOwlsOutput, JSON.stringify(nightOwlsData));
+    const onionTechOutput = 'mockData/Onion_Technology-time-entries-reformatted.json';
+    fs.writeFileSync(onionTechOutput, JSON.stringify(onionTechData));
 
-const onionTechOutput = 'mockData/Onion_Technology-time-entries-reformatted.json';
-fs.writeFileSync(onionTechOutput, JSON.stringify(onionTechData));
+    const gizmoGramOutput = 'mockData/GizmoGram-time-entries-reformatted.json';
+    fs.writeFileSync(gizmoGramOutput, JSON.stringify(gizmoGramData));
+}
 
-const gizmoGramOutput = 'mockData/GizmoGram-time-entries-reformatted.json';
-fs.writeFileSync(gizmoGramOutput, JSON.stringify(gizmoGramData));
+
