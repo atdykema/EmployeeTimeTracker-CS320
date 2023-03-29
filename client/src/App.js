@@ -3,9 +3,8 @@ import Login from './pages/Login'
 import EmployeePage from './pages/EmployeePage'
 import ManagerPage from './pages/ManagerPage'
 
-
 const App = () => {
-  const [pageNum, setPageNum] = useState(0) //DREW FIX LATER
+  const [pageNum, setPageNum] = useState(0) // DREW FIX LATER
   const [employeeData, setEmployeeData] = useState({})
   console.log(pageNum)
 
@@ -18,4 +17,4 @@ const App = () => {
   }
 }
 
-export default App;
+export default App

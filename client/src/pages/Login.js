@@ -6,12 +6,12 @@ import requests from '../services/requests'
 const Login = ({ pageUpdater, employeeDataUpdater }) => {
   const [usernameText, setUsername] = useState('')
   const [passwordText, setPassword] = useState('')
-  
+
   const submit = async (event) => {
     event.preventDefault()
     console.log(`${usernameText} | ${passwordText}`)
-    
-    let result = await requests.validateLogin(usernameText, passwordText)
+
+    const result = await requests.validateLogin(usernameText, passwordText)
 
     console.log(result)
 
@@ -22,11 +22,11 @@ const Login = ({ pageUpdater, employeeDataUpdater }) => {
       // display an error
     }
   }
-  
+
   const handleUsernameChange = (event) => {
     setUsername(event.target.value)
   }
-  
+
   const handlePasswordChange = (event) => {
     setPassword(event.target.value)
   }
