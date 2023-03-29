@@ -1,40 +1,32 @@
-import { useState } from 'react';
-import './Login.css';
-import logo from './punchtime.png';
-import axios from 'axios'
+import { useState } from 'react'
+import './Login.css'
+import logo from './punchtime.png'
+import requests from '../services/requests'
 
-const Login = ({ pageUpdater }) => {
+const Login = ({ pageUpdater, employeeDataUpdater }) => {
   const [usernameText, setUsername] = useState('')
   const [passwordText, setPassword] = useState('')
-  
+
   const submit = async (event) => {
     event.preventDefault()
     console.log(`${usernameText} | ${passwordText}`)
-    
-    let result = {}
-    try{
-      result = await axios.post("http://localhost:3000/user/get", {
-        username: usernameText,
-        password: passwordText
-      })
-    } catch(e){
-      console.log(e)
-      result = e
-    }
+
+    const result = await requests.validateLogin(usernameText, passwordText)
 
     console.log(result)
 
-    if (result.status === 200){
-      pageUpdater(1) // this should be validated remove later
-    } else{
-      //throw an error
+    if (result.status === 200) {
+      employeeDataUpdater(result.data.value)
+      pageUpdater(1) // switch to employee page
+    } else {
+      // display an error
     }
   }
-  
+
   const handleUsernameChange = (event) => {
     setUsername(event.target.value)
   }
-  
+
   const handlePasswordChange = (event) => {
     setPassword(event.target.value)
   }
@@ -54,4 +46,4 @@ const Login = ({ pageUpdater }) => {
     </div>
 }
 
-export default Login;
+export default Login

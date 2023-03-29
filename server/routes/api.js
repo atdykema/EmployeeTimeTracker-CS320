@@ -12,6 +12,21 @@ router.get('/todos', (req, res, next) => {
 //TODO
 });
 
+router.post('/login', async (req, res, next) => {
+    await User.findOne({email: req.body.username, password: req.body.password}).exec()
+    .then(query=> {
+        if (query) {
+            res.status(200).send({response: "OK", isManager: query.isManager});
+        } else {
+            res.status(404).send({response: "FAILURE"});
+        }
+    })
+    .catch(error=> {
+        console.log(`Failed. ${error}`);
+        res.status(500).send({response: "FAILURE"});
+    });
+});
+
 router.post('/user/get', async (req, res, next) => {
     //uses user schema and 
     await User.findOne({email: req.body.username, password: req.body.password}).exec()
@@ -29,6 +44,41 @@ router.post('/user/get', async (req, res, next) => {
         res.status(500).send({response: "FAILURE"});
     });
 });
+
+router.post('/user/time')
+
+router.post('/user/manage', async(req, res, next) => {
+    company = req.body.companyName
+    person = req.body
+    queryList = []
+    checkedList = []
+    employees = []
+    if(req.body.isManager){
+        queryList.push(person)
+    }
+    while(queryList.length > 0){
+        person = queryList.shift();
+        checkedList.push(person.employeeId)
+        await User.find({managerId: person.employeeId, companyName: company}).exec()
+        .then(query=> {
+            if(query){
+                checkedList.push(person.employeeId)
+                while(query.length > 0){
+                    person = query.shift()
+                    employees.push(person)
+                    if(!checkedList.includes(person.employeeId)){
+                        queryList.push(person)
+                    }
+                }
+            }                
+            
+        })
+    }
+    res.send({response: "OK", value: employees});
+});
+
+
+
 
 router.delete('/todos/:id', (req, res, next) => {
 //TODO
