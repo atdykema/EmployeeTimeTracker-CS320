@@ -8,7 +8,6 @@ const nightOwls = 'mockData/Night_Owls_Inc-time-entries.json';
 const onionTech = 'mockData/Onion_Technology-time-entries.json';
 const gizmoGram = 'mockData/GizmoGram-time-entries.json';
 
-
 const gizmoGramId = 3;
 const nightOwlsId = 1;
 const onionTechId = 4;
@@ -53,8 +52,8 @@ const millisecondDateToHours = (timeEntry) => {
 const formatHMSTimeData = (timeData) => {
     return timeData.map(employeeTimeObj=> {
         return ({
-            companyID: employeeTimeObj.companyId,
-            employeeID: employeeTimeObj.employeeId,
+            companyId: employeeTimeObj.companyId,
+            employeeId: employeeTimeObj.employeeId,
             timeEntries: employeeTimeObj.timeEntries.map(timeEntry=> {
                 return {
                     date: timeEntry.date,
@@ -68,8 +67,8 @@ const formatHMSTimeData = (timeData) => {
 const formatMilisecondTime = (timeData) => {
     return timeData.map(employeeTimeObj=> {
         return ({
-            companyID: employeeTimeObj.companyId,
-            employeeID: employeeTimeObj.employeeId,
+            companyId: employeeTimeObj.companyId,
+            employeeId: employeeTimeObj.employeeId,
             timeEntries: employeeTimeObj.timeEntries.map(timeEntry => millisecondDateToHours(timeEntry)),            
         })
     })
@@ -77,7 +76,7 @@ const formatMilisecondTime = (timeData) => {
 
 //so we can actually use the companyID
 const changeCompanyID = (employeeTimeObj, companyId) => ({
-    ...employeeTimeObj, companyID: companyId,
+    ...employeeTimeObj, companyId: companyId,
 });
 
 //assumes data has been converted to hrsWorked
@@ -122,19 +121,30 @@ const writeFiles = () => {
     fs.writeFileSync(gizmoGramOutput, JSON.stringify(gizmoGramData));
 }
 
+const timeSchema = new mongoose.Schema({
+    "employeeId": {type: Number, required: true},
+    "companyId": {type: Number, required: true},
+    "timeEntries": [{
+        date: {type: String, required: true},
+        hoursWorked: {type: Number, required: true},
+    }],
+});
+  
+const timeEntries = mongoose.model('employeetimeentries', timeSchema);
+
 //run to upload files to database
-const uploadFilesToDB = () => {
+const uploadFilesToDB = async  () => {
     mongoose
     .connect(process.env.DB.toString(), { useNewUrlParser: true })
     .then(() => {
         console.log(`Database connected successfully`);
-        //Begin listening
-        app.listen(port, () => {
-        console.log(`Server running on port ${port}`);
-        });
     })
     .catch((err) => console.log(err));
     mongoose.Promise = global.Promise;
 
+    await timeEntries.deleteMany({});
 
-}
+    const allData = [...gizmoGramData, ...lunchRockData, ...nightOwlsData, ...onionTechData];
+    await timeEntries.insertMany(allData);
+    mongoose.disconnect();
+};
