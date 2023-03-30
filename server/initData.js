@@ -8,6 +8,7 @@ const nightOwls = 'mockData/Night_Owls_Inc-time-entries.json';
 const onionTech = 'mockData/Onion_Technology-time-entries.json';
 const gizmoGram = 'mockData/GizmoGram-time-entries.json';
 
+//IDs from the employee object data
 const gizmoGramId = 3;
 const nightOwlsId = 1;
 const onionTechId = 4;
@@ -19,8 +20,8 @@ let nightOwlsData= JSON.parse(fs.readFileSync(nightOwls));
 let onionTechData = JSON.parse(fs.readFileSync(onionTech));
 let gizmoGramData = JSON.parse(fs.readFileSync(gizmoGram));
 
-// Reformat the JSON data
-
+// Reformat hour minute second data for single timeEntry object (one employee on one day)
+// accounts for daylight savings time and overnight shifts
 const HMSTimeToHours = (timeEntry) => {
     let inTime = timeEntry.clockedIn.split(':').map(val=>parseInt(val));
     let outTime = timeEntry.clockedOut.split(':').map(val=>parseInt(val));
@@ -37,6 +38,7 @@ const HMSTimeToHours = (timeEntry) => {
     return Number(hrsWorked.toFixed(2));
 };
 
+//formats millisecond data for single timeEntry object (one employee on one day)
 const millisecondDateToHours = (timeEntry) => {
     let dateIn = new Date(timeEntry.clockedInEpochMillisecond);
     let year = dateIn.getFullYear();
@@ -49,6 +51,7 @@ const millisecondDateToHours = (timeEntry) => {
     });
 };
 
+//formats the hours minutes second time data for all objects in a single array
 const formatHMSTimeData = (timeData) => {
     return timeData.map(employeeTimeObj=> {
         return ({
@@ -64,6 +67,7 @@ const formatHMSTimeData = (timeData) => {
     });
 };
 
+//formats the epoch millisecond time as hoursworked for all objects in a single array
 const formatMilisecondTime = (timeData) => {
     return timeData.map(employeeTimeObj=> {
         return ({
@@ -79,7 +83,7 @@ const changeCompanyID = (employeeTimeObj, companyId) => ({
     ...employeeTimeObj, companyId: companyId,
 });
 
-//assumes data has been converted to hrsWorked
+//assumes data has been converted to hrsWorked, combines entries for the same day, adding hours worked for both days
 const combineDuplicateDays = (employeeTimeObj) => {
     let newTimeEntries = [];
     employeeTimeObj.timeEntries.forEach(timeEntry => {
@@ -121,6 +125,7 @@ const writeFiles = () => {
     fs.writeFileSync(gizmoGramOutput, JSON.stringify(gizmoGramData));
 }
 
+//temporary until timeSchema file gets added
 const timeSchema = new mongoose.Schema({
     "employeeId": {type: Number, required: true},
     "companyId": {type: Number, required: true},
