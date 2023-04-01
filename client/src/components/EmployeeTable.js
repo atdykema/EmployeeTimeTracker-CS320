@@ -8,28 +8,35 @@ const EmployeeTable = ({ employeeObjs }) => {
   return <div className='table-container'>
     <table>
       <tbody>
-      {
-        employeeObjs.map(employeeObj => {
-          console.log(employeeObj)
-          return <tr className='table-item' key={employeeObj.employeeId}>
-            <th>
-              {employeeObj.employeeId}
-            </th>
-            <th>
-              {employeeObj.email}
-            </th>
-            <th>
-              {employeeObj.firstName}
-            </th>
-            <th>
-              {employeeObj.lastName}
-            </th>
-            <th>
-              {'$15.00'}
-            </th>
+        <tr className='table-item'>
+          <th>ID</th>
+          <th>E-Mail</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Payrate</th>
           </tr>
-        })
-      }
+        {
+          employeeObjs.map(employeeObj => {
+            console.log(employeeObj)
+            return <tr className='table-item' key={employeeObj.employeeId}>
+              <th>
+                {employeeObj.employeeId}
+              </th>
+              <th>
+                {employeeObj.email}
+              </th>
+              <th>
+                {employeeObj.firstName}
+              </th>
+              <th>
+                {employeeObj.lastName}
+              </th>
+              <th>
+                {`$${Math.floor(Math.random() * (150 - 20 + 1)) + 20}`}
+              </th>
+            </tr>
+          })
+        }
       </tbody>
     </table>
   </div>
