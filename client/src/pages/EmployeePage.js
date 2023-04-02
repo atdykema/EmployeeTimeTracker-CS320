@@ -125,12 +125,8 @@ const EmployeePage = ({ pageUpdater, employeeData }) => {
     )
   }
 
-  if (!employeeData.isManager) {
-    document.getElementById('manager_home_single').className += ' ' + 'non_manager'
-  }
-
   return <div className='page-container'>
-        <NavigationTab pageUpdater={pageUpdater}/>
+        {employeeData.isManager && <NavigationTab pageUpdater={pageUpdater}/>}
         <div className='daybuttons-container'>
           <form onSubmit={submitTime} className='daybuttons-form'>
             <div className='inner-daybuttons-container'>
