@@ -2,12 +2,15 @@ import axios from 'axios'
 
 const baseURL = 'http://localhost:5000'
 
-const validateLogin = (username, password) => {
-  const promise = axios.post(`${baseURL}/user/get`, {
-    username, password
-  })
-
-  return promise
+const validateLogin = async (username, password) => {
+  try {
+    return await axios.post(`${baseURL}/user/get`, {
+      username, password
+    })
+  } catch (e) {
+    console.log(`Error detected: ${e}`)
+    throw e
+  }
 }
 
 const getManagerViewData = (employeeId, companyName, isManager) => {

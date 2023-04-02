@@ -12,11 +12,10 @@ const Login = ({ pageUpdater, employeeDataUpdater }) => {
   const submit = async (event) => {
     event.preventDefault()
     console.log(`${usernameText} | ${passwordText}`)
-
     //  if we do not add await, we will get a promise. If we add await, we will get the data
     // however, even if we get the data, the status code might still not be 200, so we need to check for that
-    const promise = requests.validateLogin(usernameText, passwordText)
-    promise.then((result) => {
+    try {
+      const result = await requests.validateLogin(usernameText, passwordText)
       console.log('Promise fulfilled:', result)
       if (result.status === 200) {
         employeeDataUpdater(result.data.value)
@@ -28,13 +27,12 @@ const Login = ({ pageUpdater, employeeDataUpdater }) => {
         setUsername('')
         setPassword('')
       }
-    }).catch((error) => {
-      console.log('Promise rejected:', error)
+    } catch (e) {
       setInvalidInput('Your username or password or both was incorrect')
       seterrorMessage(true)
       setUsername('')
       setPassword('')
-    })
+    }
   }
 
   const handleUsernameChange = (event) => {
