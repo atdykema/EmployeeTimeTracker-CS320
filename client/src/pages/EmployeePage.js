@@ -45,8 +45,6 @@ const EmployeePage = ({ pageUpdater, employeeData }) => {
     console.log(time)
   }
 
-  }
-
   return <div className='page-container'>
         {employeeData.isManager && <NavigationTab pageUpdater={pageUpdater}/>}
         <div className='daybuttons-container'>
