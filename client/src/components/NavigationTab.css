@@ -13,6 +13,7 @@
 
 .home-single:hover{
   background-color: rgba(220,220,220, 1);
+  cursor: pointer;
 }
 
 .home-single{
