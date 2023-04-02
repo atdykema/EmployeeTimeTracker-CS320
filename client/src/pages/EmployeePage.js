@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import TimeEntry from '../components/TimeEntry'
+import NavigationTab from '../components/NavigationTab'
 import BarGraph from '../components/BarGraph'
 import './EmployeePage.css'
 
