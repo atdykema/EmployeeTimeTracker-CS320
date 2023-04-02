@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import TimeEntry from '../components/TimeEntry'
+import NavigationTab from '../components/NavigationTab'
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ReferenceLine } from 'recharts'
 import './EmployeePage.css'
 
@@ -13,14 +14,6 @@ const EmployeePage = ({ pageUpdater, employeeData }) => {
     { name: 'Friday', value: 30, pay: 10 }
   ])
   const [xAxisName, setXAxisName] = useState('Day')
-
-  const onHome = (e) => {
-    console.log('employee home')
-  }
-
-  const onManager = (e) => {
-    pageUpdater(2)
-  }
 
   const days = [
     'Sunday',
@@ -137,15 +130,8 @@ const EmployeePage = ({ pageUpdater, employeeData }) => {
   }
 
   return <div className='page-container'>
+        <NavigationTab pageUpdater={pageUpdater}/>
         <div className='daybuttons-container'>
-          <div className='home-buttons'>
-            <div className='home-single' id='employee_home_single' onClick={onHome}>
-              Employee Home
-            </div>
-            <div className='home-single' id='manager_home_single' onClick={onManager}>
-              Manager Home
-            </div>
-          </div>
           <form onSubmit={submitTime} className='daybuttons-form'>
             <div className='inner-daybuttons-container'>
               {nums.map(num => <TimeEntry key={num} num={num} day={days[num]} time={time} timeUpdater={handleTimeChange}/>)}
