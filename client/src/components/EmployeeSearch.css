@@ -1,0 +1,12 @@
+
+
+.search-form{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10vh;
+}
+
+.employee-search-input{
+    width: 30vw;
+    font-size: 2rem;
+}   

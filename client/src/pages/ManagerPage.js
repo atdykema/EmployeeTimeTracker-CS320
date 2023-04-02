@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import EmployeeTable from '../components/EmployeeTable'
 import EmployeeSearch from '../components/EmployeeSearch'
 import requests from '../services/requests'
+import './ManagerPage.css'
 
 const Managerpage = ({ employeeData }) => {
   // call useState on employeeObjs to be updated in useEffect
@@ -33,13 +34,13 @@ const Managerpage = ({ employeeData }) => {
     // currently assumes that the manager will type
     // in first name, then last name, but can change
     const hasText = (txt) => (employee) => {
-      return employee.employeeId.toString().startsWith(txt) || (employee.firstName + ' ' + employee.lastName).startsWith(txt)
+      return employee.employeeId.toString().startsWith(txt) || (employee.firstName + ' ' + employee.lastName).toLowerCase().startsWith(txt.toLowerCase())
     }
     return employees.filter(hasText(text))
   }
 
   return (
-    <div>
+    <div className='page-container'>
       <EmployeeSearch text={searchText} updateText={updateSearchText}/>
       <EmployeeTable employeeObjs={filterEmployees(employeeObjs, searchText)} />
     </div>

@@ -14,7 +14,7 @@ body{
     flex-direction:column;
     justify-content: space-evenly;
     align-items: center;
-    background-image: url(./normalBG.svg);
+    background-image: url(./normalBG.png);
     background-size: cover;
     background-position: center bottom 7%;
     height: 100vh;
