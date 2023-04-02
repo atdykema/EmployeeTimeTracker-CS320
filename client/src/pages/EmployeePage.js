@@ -10,14 +10,6 @@ const EmployeePage = ({ pageUpdater, employeeData }) => {
   const setMonthly = (e) => setGraphDisplayOption('M')
   const setYearly = (e) => setGraphDisplayOption('Y')
 
-  const onHome = (e) => {
-    console.log('employee home')
-  }
-
-  const onManager = (e) => {
-    pageUpdater(2)
-  }
-
   const days = [
     'Sunday',
     'Monday',
@@ -53,20 +45,11 @@ const EmployeePage = ({ pageUpdater, employeeData }) => {
     console.log(time)
   }
 
-  if (!employeeData.isManager) {
-    document.getElementById('manager_home_single').className += ' ' + 'non_manager'
   }
 
   return <div className='page-container'>
+        {employeeData.isManager && <NavigationTab pageUpdater={pageUpdater}/>}
         <div className='daybuttons-container'>
-          <div className='home-buttons'>
-            <div className='home-single' id='employee_home_single' onClick={onHome}>
-              Employee Home
-            </div>
-            <div className='home-single' id='manager_home_single' onClick={onManager}>
-              Manager Home
-            </div>
-          </div>
           <form onSubmit={submitTime} className='daybuttons-form'>
             <div className='inner-daybuttons-container'>
               {nums.map(num => <TimeEntry key={num} num={num} day={days[num]} time={time} timeUpdater={handleTimeChange}/>)}

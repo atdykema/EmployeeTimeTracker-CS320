@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react'
 import EmployeeTable from '../components/EmployeeTable'
 import EmployeeSearch from '../components/EmployeeSearch'
+import NavigationTab from '../components/NavigationTab'
 import requests from '../services/requests'
 import './ManagerPage.css'
 
-const Managerpage = ({ employeeData }) => {
+const Managerpage = ({ pageUpdater, employeeData }) => {
   // call useState on employeeObjs to be updated in useEffect
   const [employeeObjs, setEmployeeObjs] = useState([])
   const [searchText, updateSearchText] = useState('')
@@ -39,12 +40,13 @@ const Managerpage = ({ employeeData }) => {
     return employees.filter(hasText(text))
   }
 
-  return (
+  return <div>
     <div className='page-container'>
+      <NavigationTab pageUpdater={pageUpdater}/>
       <EmployeeSearch text={searchText} updateText={updateSearchText}/>
-      <EmployeeTable employeeObjs={filterEmployees(employeeObjs, searchText)} />
+      <EmployeeTable employeeObjs={filterEmployees(employeeObjs, searchText)}/>
     </div>
-  )
+  </div>
 }
 
 export default Managerpage
