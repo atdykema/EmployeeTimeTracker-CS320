@@ -1,0 +1,15 @@
+
+.table-container{
+    display: flex;
+    height: 60vh;
+    overflow: scroll;
+    justify-content: start;
+    padding: 25px;
+    background-color: rgba(220, 220, 220, .25);
+    border: 2px whitesmoke solid;
+    border-radius: 25px;
+}
+
+.table-item{
+    font-size: 2rem;
+}

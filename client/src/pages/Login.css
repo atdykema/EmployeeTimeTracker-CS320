@@ -52,6 +52,16 @@ body {
     /* border: 2px solid #000000; */
     box-shadow: 1px 1.5px 3px #C1C2C0;
 }
+.error {
+  padding-top: 0;
+}
+.error-message {
+    color: red;
+    font-size: 0.8em;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 #Inputs {
     border-radius: 10px;
     margin-bottom: 2%;
