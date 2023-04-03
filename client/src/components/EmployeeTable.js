@@ -8,13 +8,13 @@ const EmployeeTable = ({ employeeObjs }) => {
   return <div className='table-container'>
     <table>
       <tbody>
-        <tr className='table-item'>
+        <tr className='table-item' id='table-labels'>
           <th>ID</th>
           <th>E-Mail</th>
           <th>First Name</th>
           <th>Last Name</th>
           <th>Payrate</th>
-          </tr>
+        </tr>
         {
           employeeObjs.map(employeeObj => {
             console.log(employeeObj)

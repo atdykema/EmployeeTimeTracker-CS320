@@ -4,7 +4,7 @@ import EmployeePage from './pages/EmployeePage'
 import ManagerPage from './pages/ManagerPage'
 
 const App = () => {
-  const [pageNum, setPageNum] = useState(0) // DREW FIX LATER
+  const [pageNum, setPageNum] = useState(0)
   const [employeeData, setEmployeeData] = useState({})
   console.log(pageNum)
 
@@ -13,7 +13,7 @@ const App = () => {
   } else if (pageNum === 1) {
     return <EmployeePage pageUpdater={setPageNum} employeeData={employeeData}/>
   } else if (pageNum === 2) {
-    return <ManagerPage employeeData={employeeData}/>
+    return <ManagerPage pageUpdater={setPageNum} employeeData={employeeData}/>
   }
 }
 
