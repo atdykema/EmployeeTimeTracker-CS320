@@ -2,7 +2,7 @@
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
-const Test = require('../models/testModel');
+const Time = require('../models/timeModel');
 const User = require('../models/userModel');
 
 const router = express.Router();
