@@ -2,13 +2,16 @@ import axios from 'axios'
 
 const baseURL = 'http://localhost:5000'
 
-const validateLogin = (username, password) => {
+const validateLogin = async (username, password) => {
   try {
+
     return axios.post(`${baseURL}/login`, {
+
       username, password
     })
   } catch (e) {
-    return e
+    console.log(`Error detected: ${e}`)
+    throw e
   }
 }
 
