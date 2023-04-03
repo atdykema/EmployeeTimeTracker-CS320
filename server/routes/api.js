@@ -1,6 +1,8 @@
 //routing file: exports an express router
 const express = require('express');
 const cors = require('cors');
+const mongoose = require('mongoose');
+const Time = require('../models/timeModel');
 const User = require('../models/userModel');
 
 const router = express.Router();
