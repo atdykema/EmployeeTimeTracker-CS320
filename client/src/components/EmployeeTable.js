@@ -8,7 +8,7 @@ const EmployeeTable = ({ employeeObjs }) => {
   return <div className='table-container'>
     <table>
       <tbody>
-        <tr className='table-item' id='table-labels'>
+        <tr className='table-top-row' id='table-labels'>
           <th>ID</th>
           <th>E-Mail</th>
           <th>First Name</th>
@@ -18,20 +18,20 @@ const EmployeeTable = ({ employeeObjs }) => {
         {
           employeeObjs.map(employeeObj => {
             console.log(employeeObj)
-            return <tr className='table-item' key={employeeObj.employeeId}>
-              <th>
+            return <tr className='table-row' key={employeeObj.employeeId}>
+              <th className='table-item'>
                 {employeeObj.employeeId}
               </th>
-              <th>
+              <th className='table-item'>
                 {employeeObj.email}
               </th>
-              <th>
+              <th className='table-item'>
                 {employeeObj.firstName}
               </th>
-              <th>
+              <th className='table-item'>
                 {employeeObj.lastName}
               </th>
-              <th>
+              <th className='table-item'>
                 {`$${Math.floor(Math.random() * (150 - 20 + 1)) + 20}`}
               </th>
             </tr>

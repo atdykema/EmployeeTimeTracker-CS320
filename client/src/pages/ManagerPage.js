@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import EmployeeTable from '../components/EmployeeTable'
 import EmployeeSearch from '../components/EmployeeSearch'
-import NavigationTab from '../components/NavigationTab'
+// import NavigationTab from '../components/NavigationTab'
 import requests from '../services/requests'
 import loadingLogo from './loading.svg'
 import './ManagerPage.css'
@@ -44,7 +44,6 @@ const Managerpage = ({ pageUpdater, employeeData }) => {
     return employees.filter(hasText(text))
   }
 
-
   const loadFunction = () => {
     if (!loaded) {
       return <img src={loadingLogo}></img>
@@ -54,12 +53,10 @@ const Managerpage = ({ pageUpdater, employeeData }) => {
     }
   }
 
-  return (
-    <div className='page-container'>
+  return <div className='page-container'>
       <div className='back-button' onClick={() => pageUpdater(1)}>Back</div>
       {loadFunction()}
-    </div>
-  </div>
+      </div>
 }
 
 export default Managerpage
