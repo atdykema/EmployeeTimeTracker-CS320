@@ -1,9 +1,10 @@
 
 .table-container{
     display: flex;
-    height: 60vh;
+    height: 60vh;   
+    min-width: 70vw;
     overflow: scroll;
-    justify-content: start;
+    justify-content: center;
     padding: 25px;
     background-color: rgba(220, 220, 220, .25);
     border: 2px whitesmoke solid;
@@ -12,4 +13,17 @@
 
 .table-item{
     font-size: 2rem;
+}
+
+#table-labels{
+    font-size:2rem;
+    color: whitesmoke;
+}
+
+tbody{
+    min-width: 70vw;
+}
+
+table{
+    min-width: 70vw;
 }

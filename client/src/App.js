@@ -4,7 +4,7 @@ import EmployeePage from './pages/EmployeePage'
 import ManagerPage from './pages/ManagerPage'
 
 const App = () => {
-  const [pageNum, setPageNum] = useState(0) // DREW FIX LATER
+  const [pageNum, setPageNum] = useState(0)
   const [employeeData, setEmployeeData] = useState({})
   console.log(pageNum)
 
