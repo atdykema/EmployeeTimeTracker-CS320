@@ -1,7 +1,7 @@
 
 .table-container{
     display: flex;
-    height: 60vh;   
+    max-height: 60vh;
     min-width: 70vw;
     overflow: scroll;
     justify-content: center;
@@ -11,8 +11,13 @@
     border-radius: 25px;
 }
 
-.table-item{
+.table-row{
     font-size: 2rem;
+    transition: .5s;
+}
+
+.table-row:hover{
+    background-color: rgba(255, 255, 255, .50);
 }
 
 #table-labels{
@@ -27,3 +32,16 @@ tbody{
 table{
     min-width: 70vw;
 }
+
+.table-item{
+    border: 2px solid whitesmoke;
+    transition: .5s;
+    background-color: none;
+    border-radius: 15px;
+    
+}
+
+.table-item:hover{
+    background-color: rgba(139, 220, 255, 0.75);
+}
+
