@@ -59,6 +59,29 @@ router.post('/user/manage', async(req, res, next) => {
     res.send({response: "OK", value: employees});
 });
 
+router.post('/user/addTime', async(req, res, next) => {
+    
+    await Time.findOne({employeeId: req.body.employeeId, companyId:req.body.companyId}).exec().then(employee => {
+        if(!employee){      
+            return res.status(404).json({message: 'Employee not found'});
+        } 
+        for(const timedata of req.body.times){       
+            employee.timeEntries.push({
+                "date": timedata.date,
+                "hoursWorked": timedata.hoursWorked
+            });      
+        } 
+        employee.markModified('timeEntries'); 
+        employee.save().then(updatedTime => {
+            res.json(updatedTime);
+        }).catch(err => {
+            res.status(500).json({message: 'failed to update user', error: err});
+        });
+    }).catch(err => {
+        res.status(500).json({ message: 'Failed to find user', error: err });
+    })
+    
+});
 
 
 //export router (used in index.js)
