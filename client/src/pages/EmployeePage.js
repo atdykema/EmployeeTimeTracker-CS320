@@ -1,10 +1,11 @@
 import { useState } from 'react'
 import TimeEntry from '../components/TimeEntry'
+import LogoutButton from '../components/LogoutButton'
 import NavigationTab from '../components/NavigationTab'
 import BarGraph from '../components/BarGraph'
 import './EmployeePage.css'
 
-const EmployeePage = ({ pageUpdater, employeeData }) => {
+const EmployeePage = ({ pageUpdater, employeeData, employeeDataUpdater }) => {
   const [time, setTime] = useState(['', '', '', '', '', '', ''])
   const [graphDisplayOption, setGraphDisplayOption] = useState('D')
   const setDaily = (e) => setGraphDisplayOption('D')
@@ -46,10 +47,19 @@ const EmployeePage = ({ pageUpdater, employeeData }) => {
     console.log(time)
   }
 
+  // get current date
+  const currentDate = new Date()
+  // get Sunday by subtracting how far from sunday you are
+  const sunday = new Date(currentDate.setDate(currentDate.getDate() - currentDate.getDay()))
+  // get Saturday by finding sunday, adding 6
+  const saturday = new Date(currentDate.setDate(currentDate.getDate() - currentDate.getDay() + 6))
+
   return <div className='page-container'>
+        <LogoutButton pageUpdater={pageUpdater} employeeDataUpdater={employeeDataUpdater}/>
         {employeeData.isManager && <NavigationTab pageUpdater={pageUpdater}/>}
         <div className='daybuttons-container'>
           <form onSubmit={submitTime} className='daybuttons-form'>
+            <h1>{`${sunday.toLocaleDateString()} — ${saturday.toLocaleDateString()}`}</h1>
             <div className='inner-daybuttons-container'>
               {nums.map(num => <TimeEntry key={num} num={num} day={days[num]} time={time} timeUpdater={handleTimeChange}/>)}
             </div>

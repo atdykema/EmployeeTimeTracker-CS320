@@ -1,4 +1,4 @@
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ReferenceLine } from 'recharts'
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ReferenceLine, LabelList } from 'recharts'
 
 const BarGraph = ({ timeOption }) => {
   let data = null
@@ -37,12 +37,18 @@ const BarGraph = ({ timeOption }) => {
     xAxisName = 'Year'
   }
 
-  function CustomTooltip ({ active, payload, label }) {
+  const tickCount = 15
+  const maxValue = Math.ceil(Math.max(...data.map((d) => d.value)))
+  const domainMax = Math.ceil(maxValue / tickCount) * Number(tickCount * 1.2)
+
+  function CustomTooltip ({ active, payload }) {
     if (active && payload && payload.length) {
       const tooltipData = payload[0].payload
       return (
         <div className='custom-tooltip'>
-          <p className='label'>{`${label} : $${tooltipData.pay}`}</p>
+          <p className='label'>
+            {`Pay: $${tooltipData.pay}`}
+            </p>
         </div>
       )
     }
@@ -57,10 +63,21 @@ const BarGraph = ({ timeOption }) => {
               margin={{ top: 15, right: 30, left: 30, bottom: 20 }}
               >
             <XAxis dataKey='name' label={{ value: xAxisName, position: 'insideBottom', dy: 10 }} />
-            <YAxis label={{ value: 'Hours Worked', angle: -90, position: 'insideLeft', dy: 50 }}/>
+            <YAxis label={{ value: 'Hours Worked', angle: -90, position: 'insideLeft', dy: 50 }} domain={[0, domainMax]} tickCount={tickCount}/>
             <CartesianGrid strokeDasharray='3 3' />
             <Tooltip content={<CustomTooltip />}/>
-            <Bar dataKey='value' fill='#808080' />
+            <Bar dataKey='value' fill='#808080'>
+            <LabelList
+              dataKey="value"
+              position="insideTop"
+              fill="#fff"
+              content={({ x, y, width, value }) => (
+                <text x={x + width / 2} y={y} dy={-10} textAnchor="middle" fill="#666">
+                  {value}
+                </text>
+              )}
+            />
+            </Bar>
             <ReferenceLine fill='#808080' />
       </BarChart>
 }
