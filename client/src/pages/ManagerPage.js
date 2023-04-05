@@ -7,7 +7,7 @@ import requests from '../services/requests'
 import loadingLogo from './loading.svg'
 import './ManagerPage.css'
 
-const Managerpage = ({ pageUpdater, employeeData, employeeDataUpdater }) => {
+const Managerpage = ({ pageUpdater, employeeData, employeeDataUpdater, subordinateUpdater }) => {
   // call useState on employeeObjs to be updated in useEffect
   const [employeeObjs, setEmployeeObjs] = useState([])
   const [searchText, updateSearchText] = useState('')
@@ -50,7 +50,7 @@ const Managerpage = ({ pageUpdater, employeeData, employeeDataUpdater }) => {
       return <img src={loadingLogo}></img>
     } else {
       return <div><EmployeeSearch text={searchText} updateText={updateSearchText} />
-      <EmployeeTable employeeObjs={filterEmployees(employeeObjs, searchText)} /></div>
+      <EmployeeTable employeeObjs={filterEmployees(employeeObjs, searchText)} selectionUpdater={subordinateUpdater} pageUpdater={pageUpdater}/></div>
     }
   }
 
