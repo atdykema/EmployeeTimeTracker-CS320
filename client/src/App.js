@@ -11,9 +11,9 @@ const App = () => {
   if (pageNum === 0) {
     return <Login pageUpdater={setPageNum} employeeDataUpdater={setEmployeeData}/>
   } else if (pageNum === 1) {
-    return <EmployeePage pageUpdater={setPageNum} employeeData={employeeData}/>
+    return <EmployeePage pageUpdater={setPageNum} employeeData={employeeData} employeeDataUpdater={setEmployeeData}/>
   } else if (pageNum === 2) {
-    return <ManagerPage pageUpdater={setPageNum} employeeData={employeeData}/>
+    return <ManagerPage pageUpdater={setPageNum} employeeData={employeeData} employeeDataUpdater={setEmployeeData}/>
   }
 }
 
