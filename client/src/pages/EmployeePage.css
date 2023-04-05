@@ -110,3 +110,10 @@ body{
 .non_manager{
     display: none;
 }
+
+.label{
+    background-color: rgba(220,220,220, .5);
+    transition: .5s;
+    border-radius: 25px;
+    padding: 10px;
+}
