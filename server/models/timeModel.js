@@ -12,12 +12,8 @@ const timeSchema = new Schema({
     "timeEntries" : {type: [timeEntrySchema], required: true},
     // "timeEntries" : {any: Schema.Types.Mixed, required: true},
   });
-  
-
 
 
   const Time = mongoose.model('employeetimeentries', timeSchema);
-  // const TimeEntry = mongoose.model('employeetimeentries', timeEntrySchema);
   
   module.exports = Time;
-  // module.exports = TimeEntry;
