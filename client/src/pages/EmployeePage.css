@@ -12,13 +12,13 @@ body{
 .page-container{
     display:flex;
     flex-direction:column;
-    justify-content: space-evenly;
+    justify-content: start;
     align-items: center;
     background-image: url(./normalBG.png);
     background-size: cover;
-    background-position: center bottom 7%;
     height: 100vh;
     width: 100vw;
+    overflow-y:scroll;
 }
 
 .daybuttons-container{
