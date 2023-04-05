@@ -4,7 +4,7 @@ const TimeEntry = ({ num, day, time, timeUpdater }) => {
   return <div className="day-container">
            <br/>
            <div className='day-label' id={day}>{day}</div>
-           <input value={time[num]} placeholder='Enter your time' onChange={timeUpdater(num)}/>
+           <input value={time[num]} placeholder='Enter your time (hours)' onChange={timeUpdater(num)}/>
            <br/>
          </div>
 }
