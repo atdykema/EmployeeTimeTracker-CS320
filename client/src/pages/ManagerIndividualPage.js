@@ -6,11 +6,18 @@ const ManagerIndividualPage = ({ pageUpdater, employeeData, subordinateData }) =
   const setDaily = (e) => setGraphDisplayOption('D')
   const setMonthly = (e) => setGraphDisplayOption('M')
   const setYearly = (e) => setGraphDisplayOption('Y')
+  console.log(subordinateData)
   return <div className='page-container'>
         {employeeData.isManager && <NavigationTab pageUpdater={pageUpdater}/>}
         <div className='date-info-container'>
-          <div className=''>
-          </div>
+          <h1>
+            {subordinateData.firstName + ' ' + subordinateData.lastName}
+          </h1>
+          {/* <div className=''> */}
+            {/* <h1>
+              {employeeData.Id}
+            </h1> */}
+          {/* </div> */}
           <div className='payment-history-title'>Payment History</div>
           <div className='time-scale-button-container'>
             <button className='timescale-button' onClick={setDaily}>Weekly</button>
