@@ -1,5 +1,6 @@
 # EmployeeTimeTracker-CS320
 
+![image](https://user-images.githubusercontent.com/82404434/229971646-e0a54097-60aa-456a-ad23-8f7313da25ac.png)
 
 
 Before running this app:
