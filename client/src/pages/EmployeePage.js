@@ -1,10 +1,11 @@
 import { useState } from 'react'
 import TimeEntry from '../components/TimeEntry'
+import LogoutButton from '../components/LogoutButton'
 import NavigationTab from '../components/NavigationTab'
 import BarGraph from '../components/BarGraph'
 import './EmployeePage.css'
 
-const EmployeePage = ({ pageUpdater, employeeData }) => {
+const EmployeePage = ({ pageUpdater, employeeData, employeeDataUpdater }) => {
   const [time, setTime] = useState(['', '', '', '', '', '', ''])
   const [graphDisplayOption, setGraphDisplayOption] = useState('D')
   const setDaily = (e) => setGraphDisplayOption('D')
@@ -47,6 +48,7 @@ const EmployeePage = ({ pageUpdater, employeeData }) => {
   }
 
   return <div className='page-container'>
+        <LogoutButton pageUpdater={pageUpdater} employeeDataUpdater={employeeDataUpdater}/>
         {employeeData.isManager && <NavigationTab pageUpdater={pageUpdater}/>}
         <div className='daybuttons-container'>
           <form onSubmit={submitTime} className='daybuttons-form'>

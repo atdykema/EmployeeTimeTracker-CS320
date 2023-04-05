@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react'
 import EmployeeTable from '../components/EmployeeTable'
 import EmployeeSearch from '../components/EmployeeSearch'
+import LogoutButton from '../components/LogoutButton'
 // import NavigationTab from '../components/NavigationTab'
 import requests from '../services/requests'
 import loadingLogo from './loading.svg'
 import './ManagerPage.css'
 
-const Managerpage = ({ pageUpdater, employeeData }) => {
+const Managerpage = ({ pageUpdater, employeeData, employeeDataUpdater }) => {
   // call useState on employeeObjs to be updated in useEffect
   const [employeeObjs, setEmployeeObjs] = useState([])
   const [searchText, updateSearchText] = useState('')
@@ -54,6 +55,7 @@ const Managerpage = ({ pageUpdater, employeeData }) => {
   }
 
   return <div className='page-container'>
+      <LogoutButton pageUpdater={pageUpdater} employeeDataUpdater={employeeDataUpdater}/>
       <div className='back-button' onClick={() => pageUpdater(1)}>Back</div>
       {loadFunction()}
       </div>
