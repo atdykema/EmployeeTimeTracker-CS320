@@ -1,12 +1,18 @@
 import './NavigationTab.css'
+import { useCookies } from 'react-cookie'
 
 const NavigationTab = ({ pageUpdater }) => {
-  const onHome = (e) => {
-    pageUpdater(1)
+  // eslint-disable-next-line no-unused-vars
+  const [cookies, setCookie, removeCookie] = useCookies(['user', 'data'])
+
+  const onHome = () => {
+    setCookie('user', 1, { path: '/', expires: new Date(Date.now() + 50000) })
+    setCookie('data', cookies.data, { path: '/', expires: new Date(Date.now() + 50000) })
   }
 
-  const onManager = (e) => {
-    pageUpdater(2)
+  const onManager = () => {
+    setCookie('user', 2, { path: '/', expires: new Date(Date.now() + 50000) })
+    setCookie('data', cookies.data, { path: '/', expires: new Date(Date.now() + 50000) })
   }
 
   return <div className='home-buttons'>

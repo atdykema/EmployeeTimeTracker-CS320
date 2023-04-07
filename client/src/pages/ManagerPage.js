@@ -6,12 +6,15 @@ import LogoutButton from '../components/LogoutButton'
 import requests from '../services/requests'
 import loadingLogo from './loading.svg'
 import './ManagerPage.css'
+import { useCookies } from 'react-cookie'
 
 const Managerpage = ({ pageUpdater, employeeData, employeeDataUpdater, subordinateUpdater }) => {
   // call useState on employeeObjs to be updated in useEffect
   const [employeeObjs, setEmployeeObjs] = useState([])
   const [searchText, updateSearchText] = useState('')
   const [loaded, updateLoad] = useState(0)
+  // eslint-disable-next-line no-unused-vars
+  const [cookies, setCookie, removeCookie] = useCookies(['user', 'data', 'subData'])
 
   // note: HTTP calls are considered side effects to rendering
   //       react components, so this must be separate, since
@@ -53,10 +56,14 @@ const Managerpage = ({ pageUpdater, employeeData, employeeDataUpdater, subordina
       <EmployeeTable employeeObjs={filterEmployees(employeeObjs, searchText)} selectionUpdater={subordinateUpdater} pageUpdater={pageUpdater}/></div>
     }
   }
+  const onBack = () => {
+    setCookie('user', 1, { path: '/', expires: new Date(Date.now() + 50000) })
+    setCookie('data', cookies.data, { path: '/', expires: new Date(Date.now() + 50000) })
+  }
 
   return <div className='page-container'>
       <LogoutButton pageUpdater={pageUpdater} employeeDataUpdater={employeeDataUpdater}/>
-      <div className='back-button' onClick={() => pageUpdater(1)}>Back</div>
+      <div className='back-button' onClick={onBack}>Back</div>
       {loadFunction()}
       </div>
 }

@@ -2,12 +2,23 @@ import { useState } from 'react'
 import './Login.css'
 import logo from './punchtime.png'
 import requests from '../services/requests'
+import { useCookies } from 'react-cookie'
 
 const Login = ({ pageUpdater, employeeDataUpdater }) => {
   const [usernameText, setUsername] = useState('')
   const [passwordText, setPassword] = useState('')
   const [invalidInput, setInvalidInput] = useState('')
   const [errorMessage, seterrorMessage] = useState(false)
+
+  const [cookies, setCookie] = useCookies(['user', 'data'])
+  const state = 1
+
+  const handleCookies = (result) => {
+    setCookie('user', state, { path: '/', expires: new Date(Date.now() + 50000) })
+    setCookie('data', result, { path: '/', expires: new Date(Date.now() + 50000) })
+    console.log(cookies.user)
+    console.log(cookies.data)
+  }
 
   const submit = async (event) => {
     event.preventDefault()
@@ -19,6 +30,7 @@ const Login = ({ pageUpdater, employeeDataUpdater }) => {
       console.log('Promise fulfilled:', result)
       if (result.status === 200) {
         employeeDataUpdater(result.data.value)
+        handleCookies(result.data.value)
         pageUpdater(1) // switch to employee page
       } else {
         // display an error

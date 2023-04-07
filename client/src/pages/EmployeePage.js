@@ -4,6 +4,7 @@ import LogoutButton from '../components/LogoutButton'
 import NavigationTab from '../components/NavigationTab'
 import BarGraph from '../components/BarGraph'
 import './EmployeePage.css'
+import { useCookies } from 'react-cookie'
 
 const EmployeePage = ({ pageUpdater, employeeData, employeeDataUpdater }) => {
   const [time, setTime] = useState(['', '', '', '', '', '', ''])
@@ -11,6 +12,8 @@ const EmployeePage = ({ pageUpdater, employeeData, employeeDataUpdater }) => {
   const setDaily = (e) => setGraphDisplayOption('D')
   const setMonthly = (e) => setGraphDisplayOption('M')
   const setYearly = (e) => setGraphDisplayOption('Y')
+  // eslint-disable-next-line no-unused-vars
+  const [cookies, setCookie, removeCookie] = useCookies(['user', 'data'])
 
   const days = [
     'Sunday',
@@ -44,6 +47,7 @@ const EmployeePage = ({ pageUpdater, employeeData, employeeDataUpdater }) => {
       alert('Time input is too long')
       return
     }
+
     console.log(time)
   }
 

@@ -2,16 +2,23 @@ import { useState } from 'react'
 import NavigationTab from '../components/NavigationTab'
 import BarGraph from '../components/BarGraph'
 import LogoutButton from '../components/LogoutButton'
+import { useCookies } from 'react-cookie'
 const ManagerIndividualPage = ({ pageUpdater, employeeData, subordinateData, employeeDataUpdater }) => {
   const [graphDisplayOption, setGraphDisplayOption] = useState('D')
   const setDaily = (e) => setGraphDisplayOption('D')
   const setMonthly = (e) => setGraphDisplayOption('M')
   const setYearly = (e) => setGraphDisplayOption('Y')
+  const [cookies, setCookie, removeCookie] = useCookies(['user', 'data', 'subData'])
+  const onBack = () => {
+    setCookie('user', 2, { path: '/', expires: new Date(Date.now() + 50000) })
+    setCookie('data', cookies.data, { path: '/', expires: new Date(Date.now() + 50000) })
+    removeCookie('subData')
+  }
   console.log(subordinateData)
   return <div className='page-container'>
         <LogoutButton pageUpdater={pageUpdater} employeeDataUpdater={employeeDataUpdater}/>
         {employeeData.isManager && <NavigationTab pageUpdater={pageUpdater}/>}
-        <div className='back-button' onClick={() => pageUpdater(2)}>Back</div>
+        <div className='back-button' onClick={onBack}>Back</div>
         <div className='date-info-container'>
           <h1>
             {subordinateData.firstName + ' ' + subordinateData.lastName}

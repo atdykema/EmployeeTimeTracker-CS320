@@ -1,9 +1,15 @@
 import './EmployeeTable.css'
+import { useCookies } from 'react-cookie'
 
 const EmployeeTable = ({ employeeObjs, selectionUpdater, pageUpdater }) => {
+  // eslint-disable-next-line no-unused-vars
+  const [cookies, setCookie, removeCookie] = useCookies(['user', 'data', 'subData'])
   const handleRowClick = (employeeObj) => (e) => {
+    setCookie('user', 3, { path: '/', expires: new Date(Date.now() + 50000) })
+    setCookie('data', cookies.data, { path: '/', expires: new Date(Date.now() + 50000) })
+    setCookie('subData', employeeObj, { path: '/', expires: new Date(Date.now() + 50000) })
     selectionUpdater(employeeObj)
-    pageUpdater(3)
+    // pageUpdater(3)
   }
 
   return <div className='table-container'>
