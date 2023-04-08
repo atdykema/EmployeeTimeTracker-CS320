@@ -5,7 +5,7 @@ import NavigationTab from '../components/NavigationTab'
 import BarGraph from '../components/BarGraph'
 import './EmployeePage.css'
 
-const EmployeePage = ({ pageUpdater, employeeData, employeeDataUpdater }) => {
+const EmployeePage = ({ employeeData, employeeDataUpdater }) => {
   const [time, setTime] = useState(['', '', '', '', '', '', ''])
   const [graphDisplayOption, setGraphDisplayOption] = useState('D')
   const setDaily = (e) => setGraphDisplayOption('D')
@@ -55,8 +55,8 @@ const EmployeePage = ({ pageUpdater, employeeData, employeeDataUpdater }) => {
   const saturday = new Date(currentDate.setDate(currentDate.getDate() - currentDate.getDay() + 6))
 
   return <div className='page-container'>
-        <LogoutButton pageUpdater={pageUpdater} employeeDataUpdater={employeeDataUpdater}/>
-        {employeeData.isManager && <NavigationTab pageUpdater={pageUpdater}/>}
+        <LogoutButton employeeDataUpdater={employeeDataUpdater}/>
+        {employeeData.isManager && <NavigationTab />}
         <div className='daybuttons-container'>
           <form onSubmit={submitTime} className='daybuttons-form'>
             <h1>{`${sunday.toLocaleDateString()} — ${saturday.toLocaleDateString()}`}</h1>

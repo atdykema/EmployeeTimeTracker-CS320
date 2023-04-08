@@ -1,14 +1,14 @@
 import { useState } from 'react'
 import NavigationTab from '../components/NavigationTab'
 import BarGraph from '../components/BarGraph'
-const ManagerIndividualPage = ({ pageUpdater, employeeData, subordinateData }) => {
+const ManagerIndividualPage = ({ employeeData, subordinateData }) => {
   const [graphDisplayOption, setGraphDisplayOption] = useState('D')
   const setDaily = (e) => setGraphDisplayOption('D')
   const setMonthly = (e) => setGraphDisplayOption('M')
   const setYearly = (e) => setGraphDisplayOption('Y')
   console.log(subordinateData)
   return <div className='page-container'>
-        {employeeData.isManager && <NavigationTab pageUpdater={pageUpdater}/>}
+        {employeeData.isManager && <NavigationTab />}
         <div className='date-info-container'>
           <h1>
             {subordinateData.firstName + ' ' + subordinateData.lastName}
