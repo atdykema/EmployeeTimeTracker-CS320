@@ -12,10 +12,13 @@ body{
 .page-container{
     display:flex;
     flex-direction:column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     background-image: url(./normalBG.png);
     background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    overflow-y: scroll;
 }
 
 .back-button{
