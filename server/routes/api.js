@@ -32,7 +32,8 @@ router.post('/login', async (req, res, next) => {
 router.post('/user/time', async (req, res, next) => {
     // Default ALL timeEntries returned
     if(req.body.timeOption == "") {
-        await Time.findOne({}, {companyId: req.body.companyId, employeeId: req.body.employeeId}).exec()
+        console.log(req.body);
+        await Time.findOne({companyId: req.body.companyId, employeeId: req.body.employeeId}).exec()
     .then(query=> {
         if (query) {
             console.log(`\nUser ${req.body.employeeId} found. Data:\n${query}`);
@@ -57,7 +58,7 @@ router.post('/user/time', async (req, res, next) => {
 
         
 
-        await Time.findOne({}, {companyId: req.body.companyId, employeeId: req.body.employeeId, timeEntries: {$slice: slice_num} }).exec()
+        await Time.findOne({companyId: req.body.companyId, employeeId: req.body.employeeId}).slice('timeEntries', slice_num).exec()
         .then(query=> {
             if (query) {                
                 return_arr = [] // Return SUMs array
