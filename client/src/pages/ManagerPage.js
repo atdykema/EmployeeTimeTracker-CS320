@@ -6,12 +6,14 @@ import LogoutButton from '../components/LogoutButton'
 import requests from '../services/requests'
 import loadingLogo from './loading.svg'
 import './ManagerPage.css'
+import { useNavigate } from 'react-router-dom'
 
-const Managerpage = ({ pageUpdater, employeeData, employeeDataUpdater, subordinateUpdater }) => {
+const Managerpage = ({ employeeData, employeeDataUpdater, subordinateUpdater }) => {
   // call useState on employeeObjs to be updated in useEffect
   const [employeeObjs, setEmployeeObjs] = useState([])
   const [searchText, updateSearchText] = useState('')
   const [loaded, updateLoad] = useState(0)
+  const navigator = useNavigate()
 
   // note: HTTP calls are considered side effects to rendering
   //       react components, so this must be separate, since
@@ -50,13 +52,13 @@ const Managerpage = ({ pageUpdater, employeeData, employeeDataUpdater, subordina
       return <img src={loadingLogo}></img>
     } else {
       return <div><EmployeeSearch text={searchText} updateText={updateSearchText} />
-      <EmployeeTable employeeObjs={filterEmployees(employeeObjs, searchText)} selectionUpdater={subordinateUpdater} pageUpdater={pageUpdater}/></div>
+      <EmployeeTable employeeObjs={filterEmployees(employeeObjs, searchText)} selectionUpdater={subordinateUpdater} /></div>
     }
   }
 
   return <div className='page-container'>
-      <LogoutButton pageUpdater={pageUpdater} employeeDataUpdater={employeeDataUpdater}/>
-      <div className='back-button' onClick={() => pageUpdater(1)}>Back</div>
+      <LogoutButton employeeDataUpdater={employeeDataUpdater}/>
+      <div className='back-button' onClick={() => navigator('/time')}>Back</div>
       {loadFunction()}
       </div>
 }

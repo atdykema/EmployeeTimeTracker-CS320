@@ -1,13 +1,15 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import './Login.css'
 import logo from './punchtime.png'
 import requests from '../services/requests'
 
-const Login = ({ pageUpdater, employeeDataUpdater }) => {
+const Login = ({ employeeDataUpdater }) => {
   const [usernameText, setUsername] = useState('')
   const [passwordText, setPassword] = useState('')
   const [invalidInput, setInvalidInput] = useState('')
   const [errorMessage, seterrorMessage] = useState(false)
+  const navigator = useNavigate()
 
   const submit = async (event) => {
     event.preventDefault()
@@ -19,7 +21,7 @@ const Login = ({ pageUpdater, employeeDataUpdater }) => {
       console.log('Promise fulfilled:', result)
       if (result.status === 200) {
         employeeDataUpdater(result.data.value)
-        pageUpdater(1) // switch to employee page
+        navigator('/time')
       } else {
         // display an error
         setInvalidInput('Your username or password or both was incorrect')

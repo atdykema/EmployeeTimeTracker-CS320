@@ -1,12 +1,14 @@
 import './NavigationTab.css'
+import { useNavigate } from 'react-router-dom'
 
-const NavigationTab = ({ pageUpdater }) => {
+const NavigationTab = () => {
+  const navigator = useNavigate()
   const onHome = (e) => {
-    pageUpdater(1)
+    navigator('/time')
   }
 
   const onManager = (e) => {
-    pageUpdater(2)
+    navigator('/manager/view')
   }
 
   return <div className='home-buttons'>
