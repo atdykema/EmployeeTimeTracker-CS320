@@ -4,7 +4,6 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const Time = require('../models/timeModel');
 const User = require('../models/userModel');
-const Time = require('../models/timeModel');
 
 const router = express.Router();
 router.use(cors());
@@ -66,11 +65,11 @@ router.post('/user/time', async (req, res, next) => {
                 time_entries = query.timeEntries
 
                 // Make sure they are in decending order
-                // time_entries = time_entries.sort((a, b) => {
-                //     const dateA = new Date(a.date);
-                //     const dateB = new Date(b.date);
-                //     return dateA - dateB; // switch the order to sort in opposite order
-                // });
+                time_entries = time_entries.sort((a, b) => {
+                    const dateA = new Date(a.date);
+                    const dateB = new Date(b.date);
+                    return dateA - dateB; // Least to Most recent
+                });
 
 
                 /////////// Yearly SUM OF MONEY (3 recent years) //////////
@@ -84,14 +83,13 @@ router.post('/user/time', async (req, res, next) => {
                             return temp_date.getFullYear() === three_year[i];
                         });
                         
-                        console.log(entries_of_year_X)
+                        // console.log(entries_of_year_X)
                         return_arr.push(entries_of_year_X.reduce((partialSum, a) => partialSum + a.hoursWorked, 0));
                     }
                 }
                 /////////// Monthly SUM OF MONEY (This year's 12 months) //////////
                 if(req.body.timeOption == "month") {
                     const this_year = cur_date.getFullYear();
-                    console.log(this_year);                    
 
                     for(let i=0; i<12; i++) {         
                         // Filter to entries of this year only
@@ -106,8 +104,8 @@ router.post('/user/time', async (req, res, next) => {
                 /////////// Weekly SUM OF MONEY (Last 7 days) //////////
                 if(req.body.timeOption == "week") {
                     var curr = new Date(); // get current date
-                    curr.setFullYear(2023);
-                    curr.setMonth(1, 1);
+                    // curr.setFullYear(2023);  // For test/demo
+                    // curr.setMonth(1, 1);
                     curr.setHours(0,0,0,0);
 
                     var firstday = new Date(curr);
@@ -115,20 +113,12 @@ router.post('/user/time', async (req, res, next) => {
                     var lastday = new Date(firstday); 
                     lastday.setDate(firstday.getDate()+6); // last day is the first day + 6
 
-                    console.log(curr);
-                    console.log(curr.getDate())
-                    console.log(curr.getDay())
-                    console.log(curr.getDate()-curr.getDay())
-                    console.log(firstday);
-                    console.log(lastday);
-
-
                     let entries_of_this_week = time_entries.filter((e) => {
                         const date = new Date(e.date);
                         return date.getTime() >= firstday.getTime() && date.getTime() < lastday.getTime();
                     });
 
-                    console.log(entries_of_this_week);
+                    // console.log(entries_of_this_week);
 
                     var checking_date = new Date(firstday);
                     for(let i=0; i<7; i++) {
