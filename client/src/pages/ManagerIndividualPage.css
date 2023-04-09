@@ -12,59 +12,13 @@ body{
 .page-container{
     display:flex;
     flex-direction:column;
-    justify-content: start;
+    justify-content: space-evenly;
     align-items: center;
     background-image: url(./normalBG.png);
     background-size: cover;
+    background-position: center bottom 7%;
     height: 100vh;
     width: 100vw;
-    overflow-y:scroll;
-}
-
-.daybuttons-container{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.inner-daybuttons-container{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-
-.daybuttons-form{
-    display: flex;  
-    flex-direction: column;
-    padding: 10px;
-    margin: 10px;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(255,255,255, .25);
-    border-radius: 25px;
-}
-
-.time-entry-card{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.time-entry-submit{
-    width: 90%;
-    height: 50px;
-    background-color: rgba(220,220,220, .5);
-    transition: .5s;
-    border: 3px solid whitesmoke;
-    border-radius: 25px;
-}
-
-.time-entry-submit:hover{
-    background-color: rgba(220,220,220, 1);
 }
 
 .date-info-container{
@@ -109,11 +63,4 @@ body{
 
 .non_manager{
     display: none;
-}
-
-.label{
-    background-color: rgba(220,220,220, .5);
-    transition: .5s;
-    border-radius: 25px;
-    padding: 10px;
 }

@@ -1,40 +1,46 @@
-import { useState } from 'react';
-import './Login.css';
-import logo from './punchtime.png';
-import axios from 'axios'
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import './Login.css'
+import logo from './punchtime.png'
+import requests from '../services/requests'
 
-const Login = ({ pageUpdater }) => {
+const Login = ({ employeeDataUpdater }) => {
   const [usernameText, setUsername] = useState('')
   const [passwordText, setPassword] = useState('')
-  
+  const [invalidInput, setInvalidInput] = useState('')
+  const [errorMessage, seterrorMessage] = useState(false)
+  const navigator = useNavigate()
+
   const submit = async (event) => {
     event.preventDefault()
     console.log(`${usernameText} | ${passwordText}`)
-    
-    let result = {}
-    try{
-      result = await axios.post("http://localhost:3000/user/get", {
-        username: usernameText,
-        password: passwordText
-      })
-    } catch(e){
-      console.log(e)
-      result = e
-    }
-
-    console.log(result)
-
-    if (result.status === 200){
-      pageUpdater(1) // this should be validated remove later
-    } else{
-      //throw an error
+    //  if we do not add await, we will get a promise. If we add await, we will get the data
+    // however, even if we get the data, the status code might still not be 200, so we need to check for that
+    try {
+      const result = await requests.validateLogin(usernameText, passwordText)
+      console.log('Promise fulfilled:', result)
+      if (result.status === 200) {
+        employeeDataUpdater(result.data.value)
+        navigator('/time')
+      } else {
+        // display an error
+        setInvalidInput('Your username or password or both was incorrect')
+        seterrorMessage(true)
+        setUsername('')
+        setPassword('')
+      }
+    } catch (e) {
+      setInvalidInput('Your username or password or both was incorrect')
+      seterrorMessage(true)
+      setUsername('')
+      setPassword('')
     }
   }
-  
+
   const handleUsernameChange = (event) => {
     setUsername(event.target.value)
   }
-  
+
   const handlePasswordChange = (event) => {
     setPassword(event.target.value)
   }
@@ -43,7 +49,8 @@ const Login = ({ pageUpdater }) => {
       <div className='login-form'>
           <div ><img className = 'logo' src={logo} alt='Logo'></img></div>
           <h1 className='TEXT'>   PunchTime</h1>
-          <div className="transparent-box">
+          <div className={`transparent-box${errorMessage ? ' error' : ''}`}>
+              <p className='error-message'>{invalidInput}</p>
               <form onSubmit={submit}>
                 <input id='Inputs' value={usernameText} placeholder = 'Email Address' onChange={handleUsernameChange}/><br/>
                 <input id='Inputs' value={passwordText} placeholder = 'Password' onChange={handlePasswordChange}/><br/>
@@ -54,4 +61,4 @@ const Login = ({ pageUpdater }) => {
     </div>
 }
 
-export default Login;
+export default Login
