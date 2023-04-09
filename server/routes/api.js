@@ -171,6 +171,7 @@ router.post('/user/time', async (req, res, next) => {
 
 router.delete('/todos/:id', (req, res, next) => {
 //TODO
+})
 
 router.post('/user/manage', async(req, res, next) => {
     company = req.body.companyName
