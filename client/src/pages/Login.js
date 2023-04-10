@@ -22,18 +22,19 @@ const Login = ({ employeeDataUpdater }) => {
       if (result.status === 200) {
         employeeDataUpdater(result.data.value)
         navigator('/time')
-      } else {
-        // display an error
+      }
+    } catch (e) {
+      console.log('Promise rejected:', e)
+      console.log(e.message)
+      if (e.message === 'Request failed with status code 404') {
         setInvalidInput('Your username or password or both was incorrect')
         seterrorMessage(true)
         setUsername('')
         setPassword('')
+      } else if (e.message === 'Network Error') {
+        // reroute to an error page saying that the server is down
+        navigator('/serverdown')
       }
-    } catch (e) {
-      setInvalidInput('Your username or password or both was incorrect')
-      seterrorMessage(true)
-      setUsername('')
-      setPassword('')
     }
   }
 
