@@ -1,24 +1,23 @@
 import { useState } from 'react'
+import { Route, Routes } from 'react-router-dom'
 import Login from './pages/Login'
 import EmployeePage from './pages/EmployeePage'
 import ManagerPage from './pages/ManagerPage'
 import ManagerIndividualPage from './pages/ManagerIndividualPage'
+import ErrorPage from './pages/ErrorPage'
 
 const App = () => {
-  const [pageNum, setPageNum] = useState(0)
   const [employeeData, setEmployeeData] = useState({})
   const [subordinateData, setSubordinateData] = useState({})
-  console.log(pageNum)
-
-  if (pageNum === 0) {
-    return <Login pageUpdater={setPageNum} employeeDataUpdater={setEmployeeData}/>
-  } else if (pageNum === 1) {
-    return <EmployeePage pageUpdater={setPageNum} employeeData={employeeData} employeeDataUpdater={setEmployeeData}/>
-  } else if (pageNum === 2) {
-    return <ManagerPage pageUpdater={setPageNum} employeeData={employeeData} employeeDataUpdater={setEmployeeData} subordinateUpdater={setSubordinateData}/>
-  } else if (pageNum === 3) {
-    return <ManagerIndividualPage pageUpdater={setPageNum} employeeData={employeeData} subordinateData={subordinateData}/>
-  }
+  return (
+    <Routes>
+      <Route path='/' element={<Login employeeDataUpdater={setEmployeeData}/>}/>
+      <Route path='/time' element={<EmployeePage employeeData={employeeData} employeeDataUpdater={setEmployeeData}/>}/>
+      <Route path='/manager/view' element={<ManagerPage employeeData={employeeData} employeeDataUpdater={setEmployeeData} subordinateUpdater={setSubordinateData}/>}/>
+      <Route path='/manager/view/id' element={<ManagerIndividualPage employeeData={employeeData} employeeDataUpdater={setEmployeeData} subordinateData={subordinateData}/>}/>
+      <Route path='*' element={<ErrorPage/>}/>
+    </Routes>
+  )
 }
 
 export default App

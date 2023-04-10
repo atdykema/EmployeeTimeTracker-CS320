@@ -1,8 +1,10 @@
 import './LogoutButton.css'
+import { useNavigate } from 'react-router-dom'
 
 const LogoutButton = ({ pageUpdater, employeeDataUpdater }) => {
+  const navigator = useNavigate()
   const logout = (event) => {
-    pageUpdater(0)
+    navigator('/')
     employeeDataUpdater({})
     console.log('logout')
   }

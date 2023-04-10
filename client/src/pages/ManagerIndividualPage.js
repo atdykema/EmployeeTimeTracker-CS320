@@ -1,14 +1,20 @@
 import { useState } from 'react'
 import NavigationTab from '../components/NavigationTab'
 import BarGraph from '../components/BarGraph'
-const ManagerIndividualPage = ({ pageUpdater, employeeData, subordinateData }) => {
+import LogoutButton from '../components/LogoutButton'
+import { useNavigate } from 'react-router-dom'
+
+const ManagerIndividualPage = ({ employeeData, employeeDataUpdater, subordinateData }) => {
   const [graphDisplayOption, setGraphDisplayOption] = useState('D')
   const setDaily = (e) => setGraphDisplayOption('D')
   const setMonthly = (e) => setGraphDisplayOption('M')
   const setYearly = (e) => setGraphDisplayOption('Y')
+  const navigator = useNavigate()
   console.log(subordinateData)
   return <div className='page-container'>
-        {employeeData.isManager && <NavigationTab pageUpdater={pageUpdater}/>}
+        <LogoutButton employeeDataUpdater={employeeDataUpdater}/>
+        {employeeData.isManager && <NavigationTab />}
+        <div className='back-button' onClick={() => navigator('/manager/view')}>Back</div>
         <div className='date-info-container'>
           <h1>
             {subordinateData.firstName + ' ' + subordinateData.lastName}

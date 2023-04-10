@@ -1,9 +1,11 @@
 import './EmployeeTable.css'
+import { useNavigate } from 'react-router-dom'
 
-const EmployeeTable = ({ employeeObjs, selectionUpdater, pageUpdater }) => {
+const EmployeeTable = ({ employeeObjs, selectionUpdater }) => {
+  const navigator = useNavigate()
   const handleRowClick = (employeeObj) => (e) => {
     selectionUpdater(employeeObj)
-    pageUpdater(3)
+    navigator('/manager/view/id')
   }
 
   return <div className='table-container'>
