@@ -59,6 +59,7 @@ const EmployeePage = ({ employeeData, employeeDataUpdater }) => {
         {employeeData.isManager && <NavigationTab />}
         <div className='daybuttons-container'>
           <form onSubmit={submitTime} className='daybuttons-form'>
+            <h1>Hello {employeeData.firstName}</h1>
             <h1>{`${sunday.toLocaleDateString()} — ${saturday.toLocaleDateString()}`}</h1>
             <div className='inner-daybuttons-container'>
               {nums.map(num => <TimeEntry key={num} num={num} day={days[num]} time={time} timeUpdater={handleTimeChange}/>)}
