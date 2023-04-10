@@ -27,6 +27,9 @@ const Login = ({ cookies, cookieSetter }) => {
         // the first time we login, we need to set the user name and password cookies. However, for some reason, the cookies are not being set until react goes back to app.js. Hence over here we make axios request using the username and password text
         result = await requests.validateLogin(usernameText, passwordText)
       } else {
+        console.log('here')
+        console.log('cookies.username', cookies.username)
+        console.log('cookies.password', cookies.password)
         result = await requests.validateLogin(cookies.username, cookies.password)
       }
       console.log('Promise fulfilled:', result)
