@@ -6,7 +6,7 @@
     overflow: scroll;
     justify-content: center;
     padding: 25px;
-    background-color: rgba(220, 220, 220, .25);
+    background-color: rgba(220, 220, 220, .60);
     border: 2px whitesmoke solid;
     border-radius: 25px;
 }
@@ -22,7 +22,7 @@
 
 #table-labels{
     font-size:2rem;
-    color: whitesmoke;
+    color: black;
 }
 
 tbody{
@@ -37,7 +37,7 @@ table{
     border: 2px solid whitesmoke;
     transition: .5s;
     background-color: none;
-    border-radius: 15px;
+    border-radius: 5px;
     
 }
 
