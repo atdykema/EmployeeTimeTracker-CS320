@@ -31,8 +31,7 @@ const Login = ({ employeeDataUpdater }) => {
         seterrorMessage(true)
         setUsername('')
         setPassword('')
-      }
-      else if (e.message === 'Network Error') {
+      } else if (e.message === 'Network Error') {
         // reroute to an error page saying that the server is down
         navigator('/serverdown')
       }
