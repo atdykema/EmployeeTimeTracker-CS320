@@ -4,23 +4,39 @@ import './Login.css'
 import logo from './punchtime.png'
 import requests from '../services/requests'
 
-const Login = ({ employeeDataUpdater }) => {
+const Login = ({ employeeDataUpdater, cookies, cookieSetter }) => {
   const [usernameText, setUsername] = useState('')
   const [passwordText, setPassword] = useState('')
   const [invalidInput, setInvalidInput] = useState('')
   const [errorMessage, seterrorMessage] = useState(false)
   const navigator = useNavigate()
 
+  const handleCookies = (result) => {
+    cookieSetter('data', result, { path: '/', expires: new Date(Date.now() + 50000) })
+  }
+
   const submit = async (event) => {
     event.preventDefault()
-    console.log(`${usernameText} | ${passwordText}`)
+    let result
     //  if we do not add await, we will get a promise. If we add await, we will get the data
     // however, even if we get the data, the status code might still not be 200, so we need to check for that
     try {
-      const result = await requests.validateLogin(usernameText, passwordText)
+      console.log(`${cookies.username} | ${cookies.password}`)
+      if (cookies.username === 'undefined' && cookies.password === 'undefined') {
+        cookieSetter('username', usernameText, { path: '/', expires: new Date(Date.now() + 50000) })
+        cookieSetter('password', passwordText, { path: '/', expires: new Date(Date.now() + 50000) })
+        // the first time we login, we need to set the user name and password cookies. However, for some reason, the cookies are not being set until react goes back to app.js. Hence over here we make axios request using the username and password text
+        result = await requests.validateLogin(usernameText, passwordText)
+      } else {
+        console.log('entered')
+        result = await requests.validateLogin(cookies.username, cookies.password)
+      }
+      console.log(`${cookies.username} |||| ${cookies.password}`)
+      // const result = await requests.validateLogin(cookies.username, cookies.password)
       console.log('Promise fulfilled:', result)
       if (result.status === 200) {
         employeeDataUpdater(result.data.value)
+        handleCookies(result.data.value)
         navigator('/time')
       }
     } catch (e) {
