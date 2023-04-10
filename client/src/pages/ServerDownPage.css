@@ -1,0 +1,21 @@
+
+.error-words{
+    display: flex;
+    flex-direction: column;
+    font-size: 5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url(./normalBG.png);
+    background-size: cover;
+}

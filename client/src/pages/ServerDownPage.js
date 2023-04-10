@@ -1,8 +1,17 @@
+import './ServerDownPage.css'
+import logo from './walking-duck.gif'
+
 const ServerDownPage = () => {
   return (
-      <div>
-        We are sorry. The server is down at the moment. Please try again later.
+    <div className="error-container">
+      <div className="error-words">
+        Sorry! Looks like our servers are down.
       </div>
+      <img className = 'secret-gopher' src={logo} alt='gopher'></img>
+      <div className="error-words">
+        Please try again later
+      </div>
+    </div>
   )
 }
 
