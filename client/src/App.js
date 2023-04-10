@@ -4,6 +4,7 @@ import Login from './pages/Login'
 import EmployeePage from './pages/EmployeePage'
 import ManagerPage from './pages/ManagerPage'
 import ManagerIndividualPage from './pages/ManagerIndividualPage'
+import ServerDownPage from './pages/ServerDownPage'
 import ErrorPage from './pages/ErrorPage'
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
       <Route path='/time' element={<EmployeePage employeeData={employeeData} employeeDataUpdater={setEmployeeData}/>}/>
       <Route path='/manager/view' element={<ManagerPage employeeData={employeeData} employeeDataUpdater={setEmployeeData} subordinateUpdater={setSubordinateData}/>}/>
       <Route path='/manager/view/id' element={<ManagerIndividualPage employeeData={employeeData} employeeDataUpdater={setEmployeeData} subordinateData={subordinateData}/>}/>
+      <Route path='/serverdown' element={<ServerDownPage/>}/>
       <Route path='*' element={<ErrorPage/>}/>
     </Routes>
   )
