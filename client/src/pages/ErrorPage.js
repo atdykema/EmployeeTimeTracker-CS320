@@ -7,7 +7,7 @@ const ErrorPage = () => {
   return (
     <div className="error-container">
       <div className="error-words">
-        Whoops!
+        Whoops! A 404 Error!
       </div>
       <img className = 'secret-gopher' src={logo} alt='gopher'></img>
       <div className="error-words">
