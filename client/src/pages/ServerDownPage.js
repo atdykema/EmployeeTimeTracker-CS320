@@ -1,5 +1,5 @@
 import './ServerDownPage.css'
-import logo from './dancing-gopher.gif'
+import logo from './walking-duck.gif'
 
 const ServerDownPage = () => {
   return (
