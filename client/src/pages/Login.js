@@ -4,7 +4,7 @@ import './Login.css'
 import logo from './punchtime.png'
 import requests from '../services/requests'
 
-const Login = ({ employeeDataUpdater, cookies, cookieSetter }) => {
+const Login = ({ cookies, cookieSetter }) => {
   const [usernameText, setUsername] = useState('')
   const [passwordText, setPassword] = useState('')
   const [invalidInput, setInvalidInput] = useState('')
@@ -35,7 +35,6 @@ const Login = ({ employeeDataUpdater, cookies, cookieSetter }) => {
       // const result = await requests.validateLogin(cookies.username, cookies.password)
       console.log('Promise fulfilled:', result)
       if (result.status === 200) {
-        employeeDataUpdater(result.data.value)
         handleCookies(result.data.value)
         navigator('/time')
       }
