@@ -2,11 +2,9 @@ import { useState, useEffect } from 'react'
 import EmployeeTable from '../components/EmployeeTable'
 import EmployeeSearch from '../components/EmployeeSearch'
 import LogoutButton from '../components/LogoutButton'
-// import NavigationTab from '../components/NavigationTab'
 import requests from '../services/requests'
 import loadingLogo from './loading.svg'
 import './ManagerPage.css'
-import { useNavigate } from 'react-router-dom'
 import NavigationTab from '../components/NavigationTab'
 
 const Managerpage = ({ employeeData, employeeDataUpdater, subordinateUpdater, cookieReset }) => {
