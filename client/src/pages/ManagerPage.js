@@ -14,7 +14,6 @@ const Managerpage = ({ employeeData, employeeDataUpdater, subordinateUpdater, co
   const [employeeObjs, setEmployeeObjs] = useState([])
   const [searchText, updateSearchText] = useState('')
   const [loaded, updateLoad] = useState(0)
-  const navigator = useNavigate()
 
   // note: HTTP calls are considered side effects to rendering
   //       react components, so this must be separate, since

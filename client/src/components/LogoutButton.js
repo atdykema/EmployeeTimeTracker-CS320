@@ -11,7 +11,7 @@ const LogoutButton = ({ employeeDataUpdater, cookieReset }) => {
   }
 
   return <div className='Button'>
-   <button className='logout-button' onClick={logout}>Logout</button>
+   <div className='logout-button' onClick={logout}>Logout</div>
   </div>
 }
 
