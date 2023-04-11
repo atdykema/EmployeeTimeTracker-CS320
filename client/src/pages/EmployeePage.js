@@ -1,16 +1,35 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import TimeEntry from '../components/TimeEntry'
 import LogoutButton from '../components/LogoutButton'
 import NavigationTab from '../components/NavigationTab'
 import BarGraph from '../components/BarGraph'
+import loadingLogo from './loading.svg'
+import requests from '../services/requests'
 import './EmployeePage.css'
 
 const EmployeePage = ({ employeeData, employeeDataUpdater }) => {
   const [time, setTime] = useState(['', '', '', '', '', '', ''])
-  const [graphDisplayOption, setGraphDisplayOption] = useState('D')
-  const setDaily = (e) => setGraphDisplayOption('D')
-  const setMonthly = (e) => setGraphDisplayOption('M')
-  const setYearly = (e) => setGraphDisplayOption('Y')
+  const [graphDisplayOption, setGraphDisplayOption] = useState('week')
+  const [loaded, updateLoad] = useState(0)
+  const [data, setData] = useState(0)
+  const setDaily = (e) => setGraphDisplayOption('week')
+  const setMonthly = (e) => setGraphDisplayOption('month')
+  const setYearly = (e) => setGraphDisplayOption('year')
+
+  useEffect(() => {
+    const fetchData = async () => {
+      updateLoad(0)
+      const result = await requests.getTimeData(
+        employeeData.employeeId,
+        employeeData.companyId,
+        graphDisplayOption
+      )
+      console.log(result.data.value)
+      setData(result.data.value)
+      updateLoad(1)
+    }
+    fetchData()
+  }, [graphDisplayOption]) // runs on first render and whenever the graph display changes
 
   const days = [
     'Sunday',
@@ -47,6 +66,20 @@ const EmployeePage = ({ employeeData, employeeDataUpdater }) => {
     console.log(time)
   }
 
+  const loadGraph = () => {
+    if (!loaded) {
+      return <img src={loadingLogo}></img>
+    } else {
+      return (
+        <div className='graph-container'>
+          <div className='graph'>
+            <BarGraph timeOption={graphDisplayOption} dataArr={data}/>
+          </div>
+        </div>
+      )
+    }
+  }
+
   // get current date
   const currentDate = new Date()
   // get Sunday by subtracting how far from sunday you are
@@ -78,11 +111,9 @@ const EmployeePage = ({ employeeData, employeeDataUpdater }) => {
             <button className='timescale-button' onClick={setYearly}>Yearly</button>
           </div>
 
-          <div className='graph-container'>
-            <div className='graph'>
-              <BarGraph timeOption={graphDisplayOption}/>
-            </div>
-          </div>
+          {
+            loadGraph()
+          }
 
         </div>
       </div>

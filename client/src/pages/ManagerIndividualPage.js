@@ -32,7 +32,7 @@ const ManagerIndividualPage = ({ employeeData, employeeDataUpdater, subordinateD
           </div>
           <div className='graph-container'>
             <div className='graph'>
-              <BarGraph timeOption={graphDisplayOption}/>
+              <BarGraph timeOption={graphDisplayOption} employeeData={employeeData}/>
             </div>
           </div>
         </div>
