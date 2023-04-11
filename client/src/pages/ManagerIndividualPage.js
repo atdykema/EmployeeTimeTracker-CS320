@@ -6,13 +6,14 @@ import requests from '../services/requests'
 import loadingLogo from './loading.svg'
 import { useNavigate } from 'react-router-dom'
 
-const ManagerIndividualPage = ({ employeeData, employeeDataUpdater, subordinateData }) => {
+const ManagerIndividualPage = ({ employeeData, employeeDataUpdater, subordinateData, cookieReset }) => {
   const [graphDisplayOption, setGraphDisplayOption] = useState('week')
   const [loaded, updateLoad] = useState(0)
   const [data, setData] = useState(0)
   const setDaily = (e) => setGraphDisplayOption('week')
   const setMonthly = (e) => setGraphDisplayOption('month')
   const setYearly = (e) => setGraphDisplayOption('year')
+
   const navigator = useNavigate()
   console.log(subordinateData)
 
@@ -46,7 +47,7 @@ const ManagerIndividualPage = ({ employeeData, employeeDataUpdater, subordinateD
   }
 
   return <div className='page-container'>
-        <LogoutButton employeeDataUpdater={employeeDataUpdater}/>
+        <LogoutButton employeeDataUpdater={employeeDataUpdater} cookieReset={cookieReset}/>
         {employeeData.isManager && <NavigationTab />}
         <div className='back-button' onClick={() => navigator('/manager/view')}>Back</div>
         <div className='date-info-container'>
