@@ -1,16 +1,50 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import NavigationTab from '../components/NavigationTab'
 import BarGraph from '../components/BarGraph'
 import LogoutButton from '../components/LogoutButton'
+import requests from '../services/requests'
+import loadingLogo from './loading.svg'
 import { useNavigate } from 'react-router-dom'
 
 const ManagerIndividualPage = ({ employeeData, employeeDataUpdater, subordinateData }) => {
-  const [graphDisplayOption, setGraphDisplayOption] = useState('D')
-  const setDaily = (e) => setGraphDisplayOption('D')
-  const setMonthly = (e) => setGraphDisplayOption('M')
-  const setYearly = (e) => setGraphDisplayOption('Y')
+  const [graphDisplayOption, setGraphDisplayOption] = useState('week')
+  const [loaded, updateLoad] = useState(0)
+  const [data, setData] = useState(0)
+  const setDaily = (e) => setGraphDisplayOption('week')
+  const setMonthly = (e) => setGraphDisplayOption('month')
+  const setYearly = (e) => setGraphDisplayOption('year')
   const navigator = useNavigate()
   console.log(subordinateData)
+
+  useEffect(() => {
+    const fetchData = async () => {
+      updateLoad(0)
+      const result = await requests.getTimeData(
+        subordinateData.employeeId,
+        subordinateData.companyId,
+        graphDisplayOption
+      )
+      console.log(result.data.value)
+      setData(result.data.value)
+      updateLoad(1)
+    }
+    fetchData()
+  }, [graphDisplayOption]) // runs on first render and whenever the graph display changes
+
+  const loadGraph = () => {
+    if (!loaded) {
+      return <img src={loadingLogo}></img>
+    } else {
+      return (
+        <div className='graph-container'>
+          <div className='graph'>
+            <BarGraph timeOption={graphDisplayOption} dataArr={data}/>
+          </div>
+        </div>
+      )
+    }
+  }
+
   return <div className='page-container'>
         <LogoutButton employeeDataUpdater={employeeDataUpdater}/>
         {employeeData.isManager && <NavigationTab />}
@@ -19,22 +53,15 @@ const ManagerIndividualPage = ({ employeeData, employeeDataUpdater, subordinateD
           <h1>
             {subordinateData.firstName + ' ' + subordinateData.lastName}
           </h1>
-          {/* <div className=''> */}
-            {/* <h1>
-              {employeeData.Id}
-            </h1> */}
-          {/* </div> */}
           <div className='payment-history-title'>Payment History</div>
           <div className='time-scale-button-container'>
             <button className='timescale-button' onClick={setDaily}>Weekly</button>
             <button className='timescale-button' onClick={setMonthly}>Monthly</button>
             <button className='timescale-button' onClick={setYearly}>Yearly</button>
           </div>
-          <div className='graph-container'>
-            <div className='graph'>
-              <BarGraph timeOption={graphDisplayOption} employeeData={employeeData}/>
-            </div>
-          </div>
+          {
+            loadGraph()
+          }
         </div>
       </div>
 }
