@@ -10,7 +10,7 @@ const LogoutButton = ({ pageUpdater, employeeDataUpdater }) => {
   }
 
   return <div className='Button'>
-   <button className='logout-button' onClick={logout}>Logout</button>
+   <div className='logout-button' onClick={logout}>Logout</div>
   </div>
 }
 
