@@ -1,39 +1,28 @@
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ReferenceLine, LabelList } from 'recharts'
+// import getTimeData from '../services/requests'
 
-const BarGraph = ({ timeOption }) => {
+const BarGraph = ({ timeOption, dataArr }) => {
   let data = null
   let xAxisName = null
-  if (timeOption === 'D') {
-    data = [
-      { name: 'Monday', value: 10, pay: 10 },
-      { name: 'Tuesday', value: 20, pay: 10 },
-      { name: 'Wednesday', value: 15, pay: 10 },
-      { name: 'Thursday', value: 25, pay: 10 },
-      { name: 'Friday', value: 30, pay: 10 }
-    ]
+  // https://stackoverflow.com/questions/32937181/javascript-es6-map-multiple-arrays
+  const zip = (a1, a2) => a1.map((x, i) => [x, a2[i]])
+  const days = [
+    'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'
+  ]
+  const months = [
+    'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+  ]
+  const years = [
+    '2021', '2022', '2023'
+  ]
+  if (timeOption === 'week') {
+    data = zip(days, dataArr).map(([day, hours]) => ({ name: day, value: hours, pay: 10 }))
     xAxisName = 'Day'
-  } else if (timeOption === 'M') {
-    data = [{ name: 'Jan', value: (170 * Math.random()).toFixed(2), pay: ((170 * Math.random()) * 22.5).toFixed(2) },
-      { name: 'Feb', value: (170 * Math.random()).toFixed(2), pay: ((170 * Math.random()) * 22.5).toFixed(2) },
-      { name: 'Mar', value: (170 * Math.random()).toFixed(2), pay: ((170 * Math.random()) * 22.5).toFixed(2) },
-      { name: 'Apr', value: (170 * Math.random()).toFixed(2), pay: ((170 * Math.random()) * 22.5).toFixed(2) },
-      { name: 'May', value: (170 * Math.random()).toFixed(2), pay: ((170 * Math.random()) * 22.5).toFixed(2) },
-      { name: 'Jun', value: (170 * Math.random()).toFixed(2), pay: ((170 * Math.random()) * 22.5).toFixed(2) },
-      { name: 'Jul', value: (170 * Math.random()).toFixed(2), pay: ((170 * Math.random()) * 22.5).toFixed(2) },
-      { name: 'Aug', value: (170 * Math.random()).toFixed(2), pay: ((170 * Math.random()) * 22.5).toFixed(2) },
-      { name: 'Sep', value: (170 * Math.random()).toFixed(2), pay: ((170 * Math.random()) * 22.5).toFixed(2) },
-      { name: 'Oct', value: (170 * Math.random()).toFixed(2), pay: ((170 * Math.random()) * 22.5).toFixed(2) },
-      { name: 'Nov', value: (170 * Math.random()).toFixed(2), pay: ((170 * Math.random()) * 22.5).toFixed(2) },
-      { name: 'Dec', value: (170 * Math.random()).toFixed(2), pay: ((170 * Math.random()) * 22.5).toFixed(2) }
-    ]
+  } else if (timeOption === 'month') {
+    data = zip(months, dataArr).map(([month, hours]) => ({ name: month, value: hours, pay: 10 }))
     xAxisName = 'Month'
-  } else if (timeOption === 'Y') {
-    data = [
-      { name: '2020', value: (2000 * Math.random()).toFixed(2), pay: ((2000 * Math.random()) * 22.5).toFixed(2) },
-      { name: '2021', value: (2000 * Math.random()).toFixed(2), pay: ((2000 * Math.random()) * 22.5).toFixed(2) },
-      { name: '2022', value: (2000 * Math.random()).toFixed(2), pay: ((2000 * Math.random()) * 22.5).toFixed(2) },
-      { name: '2023', value: (2000 * Math.random()).toFixed(2), pay: ((2000 * Math.random()) * 22.5).toFixed(2) }
-    ]
+  } else if (timeOption === 'year') {
+    data = zip(years, dataArr).map(([year, hours]) => ({ name: year, value: hours, pay: 10 }))
     xAxisName = 'Year'
   }
 
