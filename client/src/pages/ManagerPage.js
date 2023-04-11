@@ -8,7 +8,7 @@ import loadingLogo from './loading.svg'
 import './ManagerPage.css'
 import { useNavigate } from 'react-router-dom'
 
-const Managerpage = ({ employeeData, employeeDataUpdater, subordinateUpdater }) => {
+const Managerpage = ({ employeeData, employeeDataUpdater, subordinateUpdater, cookieReset }) => {
   // call useState on employeeObjs to be updated in useEffect
   const [employeeObjs, setEmployeeObjs] = useState([])
   const [searchText, updateSearchText] = useState('')
@@ -57,7 +57,7 @@ const Managerpage = ({ employeeData, employeeDataUpdater, subordinateUpdater }) 
   }
 
   return <div className='page-container'>
-      <LogoutButton employeeDataUpdater={employeeDataUpdater}/>
+      <LogoutButton employeeDataUpdater={employeeDataUpdater} cookieReset= {cookieReset}/>
       <div className='back-button' onClick={() => navigator('/time')}>Back</div>
       {loadFunction()}
       </div>

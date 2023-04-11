@@ -11,30 +11,23 @@ const Login = ({ cookies, cookieSetter }) => {
   const [errorMessage, seterrorMessage] = useState(false)
   const navigator = useNavigate()
 
-  const handleCookies = (result) => {
-    cookieSetter('data', result, { path: '/', expires: new Date(Date.now() + 50000) })
-  }
-
   const submit = async (event) => {
     event.preventDefault()
     let result
     //  if we do not add await, we will get a promise. If we add await, we will get the data
     // however, even if we get the data, the status code might still not be 200, so we need to check for that
     try {
-      if (cookies.username === '' && cookies.password === '') {
-        cookieSetter('username', usernameText, { path: '/', expires: new Date(Date.now() + 50000) })
-        cookieSetter('password', passwordText, { path: '/', expires: new Date(Date.now() + 50000) })
+      if (cookies.data === undefined) {
+        console.log(cookies.data)
         // the first time we login, we need to set the user name and password cookies. However, for some reason, the cookies are not being set until react goes back to app.js. Hence over here we make axios request using the username and password text
         result = await requests.validateLogin(usernameText, passwordText)
       } else {
-        console.log('here')
-        console.log('cookies.username', cookies.username)
-        console.log('cookies.password', cookies.password)
-        result = await requests.validateLogin(cookies.username, cookies.password)
+        result = await requests.validateLogin(cookies.data.email, cookies.data.password)
       }
       console.log('Promise fulfilled:', result)
       if (result.status === 200) {
-        handleCookies(result.data.value)
+        console.log(result.data.value)
+        cookieSetter('data', result.data.value, { path: '/', expires: new Date(Date.now() + 50000000) })
         navigator('/time')
       }
     } catch (e) {
@@ -45,8 +38,6 @@ const Login = ({ cookies, cookieSetter }) => {
         seterrorMessage(true)
         setUsername('')
         setPassword('')
-        cookieSetter('username', '', { path: '/', expires: new Date(Date.now() + 50000) })
-        cookieSetter('password', '', { path: '/', expires: new Date(Date.now() + 50000) })
       } else if (e.message === 'Network Error') {
         // reroute to an error page saying that the server is down
         navigator('/serverdown')
