@@ -2,18 +2,16 @@ import { useState, useEffect } from 'react'
 import EmployeeTable from '../components/EmployeeTable'
 import EmployeeSearch from '../components/EmployeeSearch'
 import LogoutButton from '../components/LogoutButton'
-// import NavigationTab from '../components/NavigationTab'
 import requests from '../services/requests'
 import loadingLogo from './loading.svg'
 import './ManagerPage.css'
-import { useNavigate } from 'react-router-dom'
+import NavigationTab from '../components/NavigationTab'
 
-const Managerpage = ({ employeeData, employeeDataUpdater, subordinateUpdater }) => {
+const Managerpage = ({ employeeData, employeeDataUpdater, subordinateUpdater, cookieReset }) => {
   // call useState on employeeObjs to be updated in useEffect
   const [employeeObjs, setEmployeeObjs] = useState([])
   const [searchText, updateSearchText] = useState('')
   const [loaded, updateLoad] = useState(0)
-  const navigator = useNavigate()
 
   // note: HTTP calls are considered side effects to rendering
   //       react components, so this must be separate, since
@@ -57,8 +55,8 @@ const Managerpage = ({ employeeData, employeeDataUpdater, subordinateUpdater }) 
   }
 
   return <div className='page-container'>
-      <LogoutButton employeeDataUpdater={employeeDataUpdater}/>
-      <div className='back-button' onClick={() => navigator('/time')}>Back</div>
+      {employeeData.isManager && <NavigationTab />}
+      <LogoutButton employeeDataUpdater={employeeDataUpdater} cookieReset= {cookieReset}/>
       {loadFunction()}
       </div>
 }
