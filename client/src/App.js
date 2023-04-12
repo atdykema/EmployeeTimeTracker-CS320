@@ -1,13 +1,12 @@
 import { useState } from 'react'
-import { Navigate, Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import Login from './pages/Login'
 import EmployeePage from './pages/EmployeePage'
 import ManagerPage from './pages/ManagerPage'
 import ManagerIndividualPage from './pages/ManagerIndividualPage'
 import ServerDownPage from './pages/ServerDownPage'
 import ErrorPage from './pages/ErrorPage'
-import { useEffect } from 'react'
-import { Cookies, useCookies } from 'react-cookie'
+import { useCookies } from 'react-cookie'
 
 const App = () => {
   const [cookies, setCookie, removeCookie] = useCookies(['data', 'subData'])

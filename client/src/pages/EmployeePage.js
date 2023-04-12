@@ -8,7 +8,7 @@ import requests from '../services/requests'
 import './EmployeePage.css'
 
 const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset }) => {
-  const [time, setTime] = useState(['', '', '', '', '', '', ''])
+  const [time, setTime] = useState(['0', '0', '0', '0', '0', '0', '0'])
   const [graphDisplayOption, setGraphDisplayOption] = useState('week')
   const [loaded, updateLoad] = useState(0)
   const [data, setData] = useState(0)
@@ -16,20 +16,46 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset }) => {
   const setMonthly = (e) => setGraphDisplayOption('month')
   const setYearly = (e) => setGraphDisplayOption('year')
 
+  const fetchData = async () => {
+    updateLoad(0)
+    const result = await requests.getTimeData(
+      employeeData.employeeId,
+      employeeData.companyId,
+      graphDisplayOption
+    )
+    console.log(result.data.value)
+    setData(result.data.value)
+    updateLoad(1)
+  }
+
   useEffect(() => {
-    const fetchData = async () => {
-      updateLoad(0)
-      const result = await requests.getTimeData(
-        employeeData.employeeId,
-        employeeData.companyId,
-        graphDisplayOption
-      )
-      console.log(result.data.value)
-      setData(result.data.value)
-      updateLoad(1)
-    }
     fetchData()
   }, [graphDisplayOption]) // runs on first render and whenever the graph display changes
+
+  const sendData = async () => {
+    // get current date
+    const currentDate = new Date()
+
+    const timeEntries = time.map(
+      (e, i) => ({ date: new Date(currentDate.setDate(currentDate.getDate() - currentDate.getDay() + i)).toISOString().slice(0, 10), hoursWorked: e })
+    )
+
+    console.log('employeeId: ')
+    console.log(employeeData.employeeId)
+
+    console.log('companyId: ')
+    console.log(employeeData.companyId)
+
+    // console.log(timeEntries)
+    console.log('timeEntries: ')
+    console.log(timeEntries)
+
+    console.log('MAKING A REQUEST')
+    const resp = await requests.sendTimeData(employeeData.employeeId, employeeData.companyId, timeEntries)
+    console.log('Got it!')
+    console.log(resp)
+    fetchData()
+  }
 
   const days = [
     'Sunday',
@@ -49,7 +75,7 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset }) => {
     setTime(timeCopy)
   }
 
-  const submitTime = (event) => {
+  const submitTime = async (event) => {
     event.preventDefault()
     if (time.some(t => isNaN(t))) {
       alert('All inputs must be numbers!')
@@ -64,6 +90,7 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset }) => {
       return
     }
     console.log(time)
+    await sendData()
   }
 
   const loadGraph = () => {
