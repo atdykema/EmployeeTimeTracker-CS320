@@ -50,15 +50,7 @@ router.post('/user/time', async (req, res, next) => {
     }
 
     else {
-        let slice_num = 0;
-        if(req.body.timeOption == "week") { slice_num = 7 }
-        else if(req.body.timeOption == "month") { slice_num = 366; } // ALWAYS assume leap year, sort later
-        else if(req.body.timeOption == "year") { slice_num = 1098; } // ALWAYS assume leap year, sort later
-        else { res.status(500).send({response: "FAILURE: timeOption error."}); }
-
-        
-
-        await Time.findOne({companyId: req.body.companyId, employeeId: req.body.employeeId}).slice('timeEntries', slice_num).exec()
+        await Time.findOne({companyId: req.body.companyId, employeeId: req.body.employeeId}).exec()
         .then(query=> {
             if (query) {                
                 return_arr = [] // Return SUMs array
@@ -118,8 +110,6 @@ router.post('/user/time', async (req, res, next) => {
                         const date = new Date(e.date);
                         return date.getTime() >= firstday.getTime() && date.getTime() < lastday.getTime();
                     });
-
-                    // console.log(entries_of_this_week);
 
                     var checking_date = new Date(firstday);
                     for(let i=0; i<7; i++) {
