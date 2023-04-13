@@ -1,6 +1,5 @@
 import './LogoutButton.css'
 import { useNavigate } from 'react-router-dom'
-import { useCookies } from 'react-cookie'
 
 const LogoutButton = ({ employeeDataUpdater, cookieReset }) => {
   const navigator = useNavigate()
