@@ -28,9 +28,22 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset }) => {
     updateLoad(1)
   }
 
+  const loadTimeEntry = async () => {
+    const result = await requests.getTimeData(
+      employeeData.employeeId,
+      employeeData.companyId,
+      'week'
+    )
+    setTime(result.data.value)
+  }
+
   useEffect(() => {
     fetchData()
   }, [graphDisplayOption]) // runs on first render and whenever the graph display changes
+
+  useEffect(() => {
+    loadTimeEntry()
+  }, []) // runs on first render and whenever the graph display changes
 
   const sendData = async () => {
     // get current date
@@ -46,7 +59,6 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset }) => {
     console.log('companyId: ')
     console.log(employeeData.companyId)
 
-    // console.log(timeEntries)
     console.log('timeEntries: ')
     console.log(timeEntries)
 
@@ -54,6 +66,8 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset }) => {
     const resp = await requests.sendTimeData(employeeData.employeeId, employeeData.companyId, timeEntries)
     console.log('Got it!')
     console.log(resp)
+
+    // // sanity check
     fetchData()
   }
 
