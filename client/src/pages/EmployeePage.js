@@ -23,7 +23,6 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset }) => {
       employeeData.companyId,
       graphDisplayOption
     )
-    console.log(result.data.value)
     setData(result.data.value)
     updateLoad(1)
   }
@@ -43,7 +42,7 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset }) => {
 
   useEffect(() => {
     loadTimeEntry()
-  }, []) // runs on first render and whenever the graph display changes
+  }, []) // populates time entry, only once
 
   const sendData = async () => {
     // get current date
@@ -52,22 +51,10 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset }) => {
     const timeEntries = time.map(
       (e, i) => ({ date: new Date(currentDate.setDate(currentDate.getDate() - currentDate.getDay() + i)).toISOString().slice(0, 10), hoursWorked: e })
     )
-
-    console.log('employeeId: ')
-    console.log(employeeData.employeeId)
-
-    console.log('companyId: ')
-    console.log(employeeData.companyId)
-
-    console.log('timeEntries: ')
-    console.log(timeEntries)
-
-    console.log('MAKING A REQUEST')
     const resp = await requests.sendTimeData(employeeData.employeeId, employeeData.companyId, timeEntries)
-    console.log('Got it!')
-    console.log(resp)
+    console.log(resp) // TODO: Error handling
 
-    // // sanity check
+    // reload the graph
     fetchData()
   }
 
@@ -103,7 +90,6 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset }) => {
       alert('Time input is too long')
       return
     }
-    console.log(time)
     await sendData()
   }
 
