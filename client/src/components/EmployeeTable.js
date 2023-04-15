@@ -1,10 +1,11 @@
+
 import './EmployeeTable.css'
 import { useNavigate } from 'react-router-dom'
 
 const EmployeeTable = ({ employeeObjs, selectionUpdater }) => {
   const navigator = useNavigate()
   const handleRowClick = (employeeObj) => (e) => {
-    selectionUpdater(employeeObj)
+    selectionUpdater('subData', employeeObj, { path: '/', expires: new Date(Date.now() + 50000000) })
     navigator('/manager/view/id')
   }
 
