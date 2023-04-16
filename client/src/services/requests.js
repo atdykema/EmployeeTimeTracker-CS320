@@ -26,6 +26,30 @@ const getManagerViewData = (employeeId, companyName, isManager) => {
   }
 }
 
-const methods = { validateLogin, getManagerViewData } // Recent React needs this to be a separate obj
+const sendTimeData = (employeeId, companyId, times) => {
+  try {
+    return axios.post(`${baseURL}/user/addTime`, {
+      employeeId, companyId, times // employeeID company id, times (array of objs {"date" YYYY-MM-DD, "hoursWorked"})
+    })
+  } catch (e) {
+    console.log('Error: Unable to get sendTimeData')
+    console.log(e)
+    return e
+  }
+}
+
+const getTimeData = (employeeId, companyId, timeOption) => {
+  try {
+    return axios.post(`${baseURL}/user/time`, {
+      employeeId, companyId, timeOption
+    })
+  } catch (e) {
+    console.log('Error: Unable to get getTimeData')
+    console.log(e)
+    return e
+  }
+}
+
+const methods = { validateLogin, getManagerViewData, sendTimeData, getTimeData } // Recent React needs this to be a separate obj
 
 export default methods
