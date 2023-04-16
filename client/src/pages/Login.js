@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './Login.css'
 import logo from './punchtime.png'
@@ -53,20 +53,36 @@ const Login = ({ cookies, cookieSetter }) => {
     setPassword(event.target.value)
   }
 
-  return <div className='outerContainer'>
-      <div className='login-form'>
-          <div ><img className = 'logo' src={logo} alt='Logo'></img></div>
-          <h1 className='TEXT'>   PunchTime</h1>
+  useEffect(() => {
+    if (cookies.data === undefined) {
+      // Display login form
+      return
+    }
+
+    // Navigate to '/time'
+    navigator('/time')
+  }, [cookies.data, navigator])
+
+  const handleLogin = () => {
+    return (
+      <div className='outerContainer'>
+        <div className='login-form'>
+          <div><img className='logo' src={logo} alt='Logo' /></div>
+          <h1 className='TEXT'>PunchTime</h1>
           <div className={`transparent-box${errorMessage ? ' error' : ''}`}>
-              <p className='error-message'>{invalidInput}</p>
-              <form onSubmit={submit}>
-                <input id='Inputs' value={usernameText} placeholder = 'Email Address' onChange={handleUsernameChange}/><br/>
-                <input id='Inputs' value={passwordText} placeholder = 'Password' onChange={handlePasswordChange}/><br/>
-                <button className='loginBut' id='Inputs' type="submit">Login</button>
-              </form>
+            <p className='error-message'>{invalidInput}</p>
+            <form onSubmit={submit}>
+              <input id='Inputs' value={usernameText} placeholder='Email Address' onChange={handleUsernameChange} /><br />
+              <input id='Inputs' value={passwordText} placeholder='Password' onChange={handlePasswordChange} /><br />
+              <button className='loginBut' id='Inputs' type="submit">Login</button>
+            </form>
           </div>
+        </div>
       </div>
-    </div>
+    )
+  }
+
+  return <div>{handleLogin()}</div>
 }
 
 export default Login

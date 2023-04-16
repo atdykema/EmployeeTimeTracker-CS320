@@ -6,7 +6,7 @@ import requests from '../services/requests'
 import loadingLogo from './loading.svg'
 import { useNavigate } from 'react-router-dom'
 
-const ManagerIndividualPage = ({ employeeData, employeeDataUpdater, subordinateData, cookieReset }) => {
+const ManagerIndividualPage = ({ employeeData, employeeDataUpdater, subordinateData, cookieReset, cookies }) => {
   const [graphDisplayOption, setGraphDisplayOption] = useState('week')
   const [loaded, updateLoad] = useState(0)
   const [data, setData] = useState(0)
@@ -15,6 +15,12 @@ const ManagerIndividualPage = ({ employeeData, employeeDataUpdater, subordinateD
   const setYearly = (e) => setGraphDisplayOption('year')
 
   const navigator = useNavigate()
+  useEffect(() => {
+    if (cookies.data === undefined) {
+      // Display login form
+      navigator('/')
+    }
+  }, [])
   console.log(subordinateData)
 
   useEffect(() => {
@@ -46,7 +52,9 @@ const ManagerIndividualPage = ({ employeeData, employeeDataUpdater, subordinateD
     }
   }
 
-  return <div className='page-container'>
+  return (cookies.data === undefined)
+    ? <div/>
+    : (<div className='page-container'>
         <LogoutButton employeeDataUpdater={employeeDataUpdater} cookieReset={cookieReset}/>
         {employeeData.isManager && <NavigationTab />}
         <div className='back-button' onClick={() => navigator('/manager/view')}>Back</div>
@@ -64,6 +72,6 @@ const ManagerIndividualPage = ({ employeeData, employeeDataUpdater, subordinateD
             loadGraph()
           }
         </div>
-      </div>
+      </div>)
 }
 export default ManagerIndividualPage

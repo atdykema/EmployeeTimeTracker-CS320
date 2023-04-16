@@ -6,8 +6,17 @@ import BarGraph from '../components/BarGraph'
 import loadingLogo from './loading.svg'
 import requests from '../services/requests'
 import './EmployeePage.css'
+import { useNavigate } from 'react-router-dom'
 
-const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset }) => {
+const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset, cookies }) => {
+  const navigator = useNavigate()
+  useEffect(() => {
+    if (cookies.data === undefined) {
+      // Display login form
+      navigator('/')
+    }
+  }, [])
+
   const [time, setTime] = useState(['0', '0', '0', '0', '0', '0', '0'])
   const [graphDisplayOption, setGraphDisplayOption] = useState('week')
   const [loaded, updateLoad] = useState(0)
@@ -114,7 +123,10 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset }) => {
   // get Saturday by finding sunday, adding 6
   const saturday = new Date(currentDate.setDate(currentDate.getDate() - currentDate.getDay() + 6))
 
-  return <div className='page-container'>
+  return cookies.data === undefined
+    ? <div></div>
+    : (
+      <div className='page-container'>
         <LogoutButton employeeDataUpdater={employeeDataUpdater} cookieReset = {cookieReset}/>
         {employeeData.isManager && <NavigationTab />}
         <div className='daybuttons-container'>
@@ -145,6 +157,7 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset }) => {
 
         </div>
       </div>
+      )
 }
 
 export default EmployeePage
