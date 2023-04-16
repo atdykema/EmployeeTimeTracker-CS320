@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+import { useState } from 'react'
+>>>>>>> bdb46e6f40eb0cc9d1594581901a77bb0680be91
 import { Route, Routes } from 'react-router-dom'
 import Login from './pages/Login'
 import EmployeePage from './pages/EmployeePage'
