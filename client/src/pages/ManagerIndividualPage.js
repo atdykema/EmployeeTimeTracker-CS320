@@ -6,7 +6,7 @@ import requests from '../services/requests'
 import loadingLogo from './loading.svg'
 import { useNavigate } from 'react-router-dom'
 
-const ManagerIndividualPage = ({ employeeData, employeeDataUpdater, subordinateData, cookieReset }) => {
+const ManagerIndividualPage = ({ employeeData, employeeDataUpdater, subordinateData, cookieReset, cookies }) => {
   const [graphDisplayOption, setGraphDisplayOption] = useState('week')
   const [loaded, updateLoad] = useState(0)
   const [data, setData] = useState(0)
@@ -15,6 +15,12 @@ const ManagerIndividualPage = ({ employeeData, employeeDataUpdater, subordinateD
   const setYearly = (e) => setGraphDisplayOption('year')
 
   const navigator = useNavigate()
+  useEffect(() => {
+    if (cookies.data === undefined) {
+      // Display login form
+      navigator('/')
+    }
+  }, [])
   console.log(subordinateData)
 
   useEffect(() => {

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-import { useState } from 'react'
->>>>>>> bdb46e6f40eb0cc9d1594581901a77bb0680be91
 import { Route, Routes } from 'react-router-dom'
 import Login from './pages/Login'
 import EmployeePage from './pages/EmployeePage'
@@ -18,8 +14,8 @@ const App = () => {
     <Routes>
       <Route path='/' element={<Login cookies = {cookies} cookieSetter = {setCookie}/>}/>
       <Route path='/time' element={<EmployeePage employeeData={cookies.data} employeeDataUpdater = {setCookie} cookieReset={removeCookie} cookies={cookies}/>}/>
-      <Route path='/manager/view' element={<ManagerPage employeeData={cookies.data} employeeDataUpdater={setCookie} cookieReset={removeCookie}/>}/>
-      <Route path='/manager/view/id' element={<ManagerIndividualPage employeeData={cookies.data} employeeDataUpdater={setCookie} subordinateData={cookies.subData} cookieReset={removeCookie}/>}/>
+      <Route path='/manager/view' element={<ManagerPage employeeData={cookies.data} employeeDataUpdater={setCookie} cookieReset={removeCookie} cookies={cookies}/>}/>
+      <Route path='/manager/view/id' element={<ManagerIndividualPage employeeData={cookies.data} employeeDataUpdater={setCookie} subordinateData={cookies.subData} cookieReset={removeCookie} cookies={cookies}/>}/>
       <Route path='/serverdown' element={<ServerDownPage/>}/>
       <Route path='*' element={<ErrorPage/>}/>
     </Routes>

@@ -6,17 +6,30 @@ import requests from '../services/requests'
 import loadingLogo from './loading.svg'
 import './ManagerPage.css'
 import NavigationTab from '../components/NavigationTab'
+import { useNavigate } from 'react-router-dom'
 
-const Managerpage = ({ employeeData, employeeDataUpdater, cookieReset }) => {
+const Managerpage = ({ employeeData, employeeDataUpdater, cookieReset, cookies }) => {
   // call useState on employeeObjs to be updated in useEffect
   const [employeeObjs, setEmployeeObjs] = useState([])
   const [searchText, updateSearchText] = useState('')
   const [loaded, updateLoad] = useState(0)
+  const navigator = useNavigate()
+
+  console.log('yup cookies.data: ' + cookies.data)
+  useEffect(() => {
+    console.log('well hello there')
+    if (cookies.data === undefined) {
+      // Display login form
+      console.log('redirecting to login')
+      navigator('/')
+    }
+  }, [])
 
   // note: HTTP calls are considered side effects to rendering
   //       react components, so this must be separate, since
   //       HTTP calls must be asynchronous
   useEffect(() => {
+    console.log('is it printed?')
     const fetchData = async () => {
       updateLoad(0)
       const result = await requests.getManagerViewData(
@@ -54,11 +67,17 @@ const Managerpage = ({ employeeData, employeeDataUpdater, cookieReset }) => {
     }
   }
 
-  return <div className='page-container'>
-      {employeeData.isManager && <NavigationTab />}
-      <LogoutButton employeeDataUpdater={employeeDataUpdater} cookieReset= {cookieReset}/>
-      {loadFunction()}
-      </div>
+  return (cookies.data === undefined)
+    ? <div/>
+    : (
+        <div className='page-container'>
+        {console.log('1 it is' + cookies.data)}
+        {console.log('2 it is' + cookies.data)}
+        {employeeData.isManager && <NavigationTab />}
+        <LogoutButton employeeDataUpdater={employeeDataUpdater} cookieReset= {cookieReset}/>
+        {loadFunction()}
+        </div>
+      )
 }
 
 export default Managerpage
