@@ -13,7 +13,7 @@ const App = () => {
   return (
     <Routes>
       <Route path='/' element={<Login cookies = {cookies} cookieSetter = {setCookie}/>}/>
-      <Route path='/time' element={<EmployeePage employeeData={cookies.data} employeeDataUpdater = {setCookie} cookieReset={removeCookie}/>}/>
+      <Route path='/time' element={<EmployeePage employeeData={cookies.data} employeeDataUpdater = {setCookie} cookieReset={removeCookie} cookies={cookies}/>}/>
       <Route path='/manager/view' element={<ManagerPage employeeData={cookies.data} employeeDataUpdater={setCookie} cookieReset={removeCookie}/>}/>
       <Route path='/manager/view/id' element={<ManagerIndividualPage employeeData={cookies.data} employeeDataUpdater={setCookie} subordinateData={cookies.subData} cookieReset={removeCookie}/>}/>
       <Route path='/serverdown' element={<ServerDownPage/>}/>
