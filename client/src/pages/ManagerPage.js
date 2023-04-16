@@ -15,9 +15,7 @@ const Managerpage = ({ employeeData, employeeDataUpdater, cookieReset, cookies }
   const [loaded, updateLoad] = useState(0)
   const navigator = useNavigate()
 
-  console.log('yup cookies.data: ' + cookies.data)
   useEffect(() => {
-    console.log('well hello there')
     if (cookies.data === undefined) {
       // Display login form
       console.log('redirecting to login')
@@ -29,7 +27,6 @@ const Managerpage = ({ employeeData, employeeDataUpdater, cookieReset, cookies }
   //       react components, so this must be separate, since
   //       HTTP calls must be asynchronous
   useEffect(() => {
-    console.log('is it printed?')
     const fetchData = async () => {
       updateLoad(0)
       const result = await requests.getManagerViewData(
@@ -71,8 +68,6 @@ const Managerpage = ({ employeeData, employeeDataUpdater, cookieReset, cookies }
     ? <div/>
     : (
         <div className='page-container'>
-        {console.log('1 it is' + cookies.data)}
-        {console.log('2 it is' + cookies.data)}
         {employeeData.isManager && <NavigationTab />}
         <LogoutButton employeeDataUpdater={employeeDataUpdater} cookieReset= {cookieReset}/>
         {loadFunction()}

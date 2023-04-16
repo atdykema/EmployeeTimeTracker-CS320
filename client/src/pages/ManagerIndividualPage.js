@@ -52,7 +52,9 @@ const ManagerIndividualPage = ({ employeeData, employeeDataUpdater, subordinateD
     }
   }
 
-  return <div className='page-container'>
+  return (cookies.data === undefined)
+    ? <div/>
+    : (<div className='page-container'>
         <LogoutButton employeeDataUpdater={employeeDataUpdater} cookieReset={cookieReset}/>
         {employeeData.isManager && <NavigationTab />}
         <div className='back-button' onClick={() => navigator('/manager/view')}>Back</div>
@@ -70,6 +72,6 @@ const ManagerIndividualPage = ({ employeeData, employeeDataUpdater, subordinateD
             loadGraph()
           }
         </div>
-      </div>
+      </div>)
 }
 export default ManagerIndividualPage
