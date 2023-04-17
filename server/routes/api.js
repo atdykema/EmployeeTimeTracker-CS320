@@ -127,7 +127,7 @@ router.post('/user/time', async (req, res, next) => {
                     for(let i=0; i<7; i++) {
                         let hour_work = 0;
 
-                        console.log(checking_date);
+                        // console.log(checking_date);
 
                         let found = entries_of_this_week.find((e) => {
                             const entry_date = new Date(e.date);
