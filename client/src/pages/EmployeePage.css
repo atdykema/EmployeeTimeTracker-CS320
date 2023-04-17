@@ -70,6 +70,7 @@ body{
     transition: .5s;
     border: 3px solid whitesmoke;
     border-radius: 25px;
+    cursor: pointer;
 }
 
 .time-entry-submit:hover{
@@ -124,6 +125,7 @@ body{
     width: 200px;
     font-size: 1.5rem;
     margin: 0 5px 0 5px;
+    cursor: pointer;
 }
 
 .timescale-button:hover{
