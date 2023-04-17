@@ -38,6 +38,7 @@ table{
     transition: .5s;
     background-color: none;
     border-radius: 5px;
+    cursor: pointer;
     
 }
 
