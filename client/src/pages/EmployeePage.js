@@ -107,10 +107,8 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset, cookies 
       return <img src={loadingLogo}></img>
     } else {
       return (
-        <div className='graph-container'>
-          <div className='graph'>
-            <BarGraph timeOption={graphDisplayOption} dataArr={data}/>
-          </div>
+        <div className='graph'>
+          <BarGraph timeOption={graphDisplayOption} dataArr={data}/>
         </div>
       )
     }
@@ -129,32 +127,36 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset, cookies 
       <div className='page-container'>
         <LogoutButton employeeDataUpdater={employeeDataUpdater} cookieReset = {cookieReset}/>
         {employeeData.isManager && <NavigationTab />}
-        <div className='daybuttons-container'>
-          <form onSubmit={submitTime} className='daybuttons-form'>
-            <h1>Hello {employeeData.firstName}</h1>
-            <h1>{`${sunday.toLocaleDateString()} — ${saturday.toLocaleDateString()}`}</h1>
-            <div className='inner-daybuttons-container'>
-              {nums.map(num => <TimeEntry key={num} num={num} day={days[num]} time={time} timeUpdater={handleTimeChange}/>)}
+        <div className='content-container'>
+          <div className='daybuttons-container'>
+            <div className='info-container'>
+              <div className='employee-name'>Hello, {employeeData.firstName}</div>
+              <div className='current-date'>{`${sunday.toLocaleDateString()} — ${saturday.toLocaleDateString()}`}</div>
             </div>
-            <button className='time-entry-submit' type='submit'>Submit</button>
-          </form>
-        </div>
-        <div className='date-info-container'>
-          <div className=''>
+            <form onSubmit={submitTime} className='daybuttons-form'>
+              <div className='inner-daybuttons-container'>
+                {nums.map(num => <TimeEntry key={num} num={num} day={days[num]} time={time} timeUpdater={handleTimeChange}/>)}
+              </div>
+              <button className='time-entry-submit' type='submit'>Submit</button>
+            </form>
+          </div>
+          <div className='date-info-container'>
+            <div className='time-scale-button-container'>
+              <div className='pht-container'>
+                <div className='payment-history-title'>Payment History</div>
+              </div>
+              <button className='timescale-button' onClick={setDaily}>Weekly</button>
+              <button className='timescale-button' onClick={setMonthly}>Monthly</button>
+              <button className='timescale-button' onClick={setYearly}>Yearly</button>
+            </div>
+
+            <div className='graph-container'>
+            {
+              loadGraph()
+            }
+            </div>
 
           </div>
-          <div className='payment-history-title'>Payment History</div>
-
-          <div className='time-scale-button-container'>
-            <button className='timescale-button' onClick={setDaily}>Weekly</button>
-            <button className='timescale-button' onClick={setMonthly}>Monthly</button>
-            <button className='timescale-button' onClick={setYearly}>Yearly</button>
-          </div>
-
-          {
-            loadGraph()
-          }
-
         </div>
       </div>
       )
