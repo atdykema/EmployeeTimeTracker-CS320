@@ -9,5 +9,10 @@
     margin: 5px;
     border: whitesmoke 2px solid;
     cursor: pointer;
+    transition: .5s
     
   }
+
+.Button:hover{
+  background-color: rgba(220, 220, 220, 1);
+}

@@ -50,15 +50,7 @@ router.post('/user/time', async (req, res, next) => {
     }
 
     else {
-        let slice_num = 0;
-        if(req.body.timeOption == "week") { slice_num = 7 }
-        else if(req.body.timeOption == "month") { slice_num = 366; } // ALWAYS assume leap year, sort later
-        else if(req.body.timeOption == "year") { slice_num = 1098; } // ALWAYS assume leap year, sort later
-        else { res.status(500).send({response: "FAILURE: timeOption error."}); }
-
-        
-
-        await Time.findOne({companyId: req.body.companyId, employeeId: req.body.employeeId}).slice('timeEntries', slice_num).exec()
+        await Time.findOne({companyId: req.body.companyId, employeeId: req.body.employeeId}).exec()
         .then(query=> {
             if (query) {                
                 return_arr = [] // Return SUMs array
@@ -75,13 +67,14 @@ router.post('/user/time', async (req, res, next) => {
 
                 /////////// Yearly SUM OF MONEY (3 recent years) //////////
                 if(req.body.timeOption == "year") {
-                    const three_year = [cur_date.getFullYear(), (cur_date.getFullYear())-1, (cur_date.getFullYear())-2]; // Three years
+                    const three_year = [cur_date.getUTCFullYear(), (cur_date.getUTCFullYear())-1, (cur_date.getUTCFullYear())-2]; // Three years
 
                     for(let i=0; i<3; i++) {
                         // Filter to entries of year X only
                         let entries_of_year_X = time_entries.filter((e) => {
                             const temp_date = new Date(e.date);
-                            return temp_date.getFullYear() === three_year[i];
+                            temp_date.setUTCHours(0,0,0,0);
+                            return temp_date.getUTCFullYear() === three_year[i];
                         });
                         
                         // console.log(entries_of_year_X)
@@ -90,13 +83,14 @@ router.post('/user/time', async (req, res, next) => {
                 }
                 /////////// Monthly SUM OF MONEY (This year's 12 months) //////////
                 if(req.body.timeOption == "month") {
-                    const this_year = cur_date.getFullYear();
+                    const this_year = cur_date.getUTCFullYear();
 
                     for(let i=0; i<12; i++) {         
                         // Filter to entries of this year only
                         let entries_of_month_X = time_entries.filter((e) => {
                             const date = new Date(e.date);
-                            return date.getFullYear() === this_year && date.getMonth() === i+1;
+                            date.setUTCHours(0,0,0,0);
+                            return date.getUTCFullYear() === this_year && date.getUTCMonth() === i+1;
                         });
 
                         return_arr.push(entries_of_month_X.reduce((partialSum, a) => partialSum + a.hoursWorked, 0));
@@ -107,27 +101,39 @@ router.post('/user/time', async (req, res, next) => {
                     var curr = new Date(); // get current date
                     // curr.setFullYear(2023);  // For test/demo
                     // curr.setMonth(1, 1);
-                    curr.setHours(0,0,0,0);
+                    curr.setUTCHours(0,0,0,0);
 
                     var firstday = new Date(curr);
-                    firstday.setDate(curr.getDate()-curr.getDay()); // First day is the day of the month - the day of the week
+                    firstday.setUTCDate(curr.getUTCDate()-curr.getUTCDay()); // First day is the day of the month - the day of the week
                     var lastday = new Date(firstday); 
-                    lastday.setDate(firstday.getDate()+6); // last day is the first day + 6
+                    lastday.setUTCDate(firstday.getUTCDate()+7); // last day is the first day + 6
 
                     let entries_of_this_week = time_entries.filter((e) => {
                         const date = new Date(e.date);
-                        return date.getTime() >= firstday.getTime() && date.getTime() < lastday.getTime();
+                        date.setUTCHours(0,0,0,0);
+                        // return date.getUTCTime() >= firstday.getUTCTime() && date.getUTCTime() < lastday.getUTCTime();
+                        return date >= firstday && date < lastday;
                     });
 
+                    // console.log("\nHere");
+                    // console.log(curr);
+                    // console.log(firstday);
+                    // console.log(lastday);
                     // console.log(entries_of_this_week);
 
                     var checking_date = new Date(firstday);
+                    checking_date.setUTCHours(0,0,0,0);
+                    
                     for(let i=0; i<7; i++) {
                         let hour_work = 0;
 
+                        // console.log(checking_date);
+
                         let found = entries_of_this_week.find((e) => {
-                            const date = new Date(e.date);
-                            return date.getDate() === checking_date.getDate() && date.getMonth() === checking_date.getMonth() && date.getFullYear() === checking_date.getFullYear();
+                            const entry_date = new Date(e.date);
+                            entry_date.setUTCHours(0,0,0,0);
+
+                            return entry_date.toUTCString() === checking_date.toUTCString();
                         })
                         
                         if(found) {
@@ -135,7 +141,7 @@ router.post('/user/time', async (req, res, next) => {
                         }
 
                         return_arr.push(hour_work);
-                        checking_date.setDate(checking_date.getDate()+1);
+                        checking_date.setUTCDate(checking_date.getUTCDate()+1);
 
                     }
 

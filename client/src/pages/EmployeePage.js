@@ -6,9 +6,18 @@ import BarGraph from '../components/BarGraph'
 import loadingLogo from './loading.svg'
 import requests from '../services/requests'
 import './EmployeePage.css'
+import { useNavigate } from 'react-router-dom'
 
-const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset }) => {
-  const [time, setTime] = useState(['', '', '', '', '', '', ''])
+const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset, cookies }) => {
+  const navigator = useNavigate()
+  useEffect(() => {
+    if (cookies.data === undefined) {
+      // Display login form
+      navigator('/')
+    }
+  }, [])
+
+  const [time, setTime] = useState(['0', '0', '0', '0', '0', '0', '0'])
   const [graphDisplayOption, setGraphDisplayOption] = useState('week')
   const [loaded, updateLoad] = useState(0)
   const [data, setData] = useState(0)
@@ -16,20 +25,47 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset }) => {
   const setMonthly = (e) => setGraphDisplayOption('month')
   const setYearly = (e) => setGraphDisplayOption('year')
 
+  const fetchData = async () => {
+    updateLoad(0)
+    const result = await requests.getTimeData(
+      employeeData.employeeId,
+      employeeData.companyId,
+      graphDisplayOption
+    )
+    setData(result.data.value)
+    updateLoad(1)
+  }
+
+  const loadTimeEntry = async () => {
+    const result = await requests.getTimeData(
+      employeeData.employeeId,
+      employeeData.companyId,
+      'week'
+    )
+    setTime(result.data.value)
+  }
+
   useEffect(() => {
-    const fetchData = async () => {
-      updateLoad(0)
-      const result = await requests.getTimeData(
-        employeeData.employeeId,
-        employeeData.companyId,
-        graphDisplayOption
-      )
-      console.log(result.data.value)
-      setData(result.data.value)
-      updateLoad(1)
-    }
     fetchData()
   }, [graphDisplayOption]) // runs on first render and whenever the graph display changes
+
+  useEffect(() => {
+    loadTimeEntry()
+  }, []) // populates time entry, only once
+
+  const sendData = async () => {
+    // get current date
+    const currentDate = new Date()
+
+    const timeEntries = time.map(
+      (e, i) => ({ date: new Date(currentDate.setDate(currentDate.getDate() - currentDate.getDay() + i)).toISOString().slice(0, 10), hoursWorked: e })
+    )
+    const resp = await requests.sendTimeData(employeeData.employeeId, employeeData.companyId, timeEntries)
+    console.log(resp) // TODO: Error handling
+
+    // reload the graph
+    fetchData()
+  }
 
   const days = [
     'Sunday',
@@ -49,7 +85,7 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset }) => {
     setTime(timeCopy)
   }
 
-  const submitTime = (event) => {
+  const submitTime = async (event) => {
     event.preventDefault()
     if (time.some(t => isNaN(t))) {
       alert('All inputs must be numbers!')
@@ -63,7 +99,7 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset }) => {
       alert('Time input is too long')
       return
     }
-    console.log(time)
+    await sendData()
   }
 
   const loadGraph = () => {
@@ -71,10 +107,8 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset }) => {
       return <img src={loadingLogo}></img>
     } else {
       return (
-        <div className='graph-container'>
-          <div className='graph'>
-            <BarGraph timeOption={graphDisplayOption} dataArr={data}/>
-          </div>
+        <div className='graph'>
+          <BarGraph timeOption={graphDisplayOption} dataArr={data}/>
         </div>
       )
     }
@@ -87,37 +121,45 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset }) => {
   // get Saturday by finding sunday, adding 6
   const saturday = new Date(currentDate.setDate(currentDate.getDate() - currentDate.getDay() + 6))
 
-  return <div className='page-container'>
+  return cookies.data === undefined
+    ? <div></div>
+    : (
+      <div className='page-container'>
         <LogoutButton employeeDataUpdater={employeeDataUpdater} cookieReset = {cookieReset}/>
         {employeeData.isManager && <NavigationTab />}
-        <div className='daybuttons-container'>
-          <form onSubmit={submitTime} className='daybuttons-form'>
-            <h1>Hello {employeeData.firstName}</h1>
-            <h1>{`${sunday.toLocaleDateString()} — ${saturday.toLocaleDateString()}`}</h1>
-            <div className='inner-daybuttons-container'>
-              {nums.map(num => <TimeEntry key={num} num={num} day={days[num]} time={time} timeUpdater={handleTimeChange}/>)}
+        <div className='content-container'>
+          <div className='daybuttons-container'>
+            <div className='info-container'>
+              <div className='employee-name'>Hello, {employeeData.firstName}</div>
+              <div className='current-date'>{`${sunday.toLocaleDateString()} — ${saturday.toLocaleDateString()}`}</div>
             </div>
-            <button className='time-entry-submit' type='submit'>Submit</button>
-          </form>
-        </div>
-        <div className='date-info-container'>
-          <div className=''>
+            <form onSubmit={submitTime} className='daybuttons-form'>
+              <div className='inner-daybuttons-container'>
+                {nums.map(num => <TimeEntry key={num} num={num} day={days[num]} time={time} timeUpdater={handleTimeChange}/>)}
+              </div>
+              <button className='time-entry-submit' type='submit'>Submit</button>
+            </form>
+          </div>
+          <div className='date-info-container'>
+            <div className='time-scale-button-container'>
+              <div className='pht-container'>
+                <div className='payment-history-title'>Payment History</div>
+              </div>
+              <button className='timescale-button' onClick={setDaily}>Weekly</button>
+              <button className='timescale-button' onClick={setMonthly}>Monthly</button>
+              <button className='timescale-button' onClick={setYearly}>Yearly</button>
+            </div>
+
+            <div className='graph-container'>
+            {
+              loadGraph()
+            }
+            </div>
 
           </div>
-          <div className='payment-history-title'>Payment History</div>
-
-          <div className='time-scale-button-container'>
-            <button className='timescale-button' onClick={setDaily}>Weekly</button>
-            <button className='timescale-button' onClick={setMonthly}>Monthly</button>
-            <button className='timescale-button' onClick={setYearly}>Yearly</button>
-          </div>
-
-          {
-            loadGraph()
-          }
-
         </div>
       </div>
+      )
 }
 
 export default EmployeePage

@@ -6,7 +6,7 @@ import requests from '../services/requests'
 import loadingLogo from './loading.svg'
 import { useNavigate } from 'react-router-dom'
 
-const ManagerIndividualPage = ({ employeeData, employeeDataUpdater, subordinateData, cookieReset }) => {
+const ManagerIndividualPage = ({ employeeData, employeeDataUpdater, subordinateData, cookieReset, cookies }) => {
   const [graphDisplayOption, setGraphDisplayOption] = useState('week')
   const [loaded, updateLoad] = useState(0)
   const [data, setData] = useState(0)
@@ -15,6 +15,12 @@ const ManagerIndividualPage = ({ employeeData, employeeDataUpdater, subordinateD
   const setYearly = (e) => setGraphDisplayOption('year')
 
   const navigator = useNavigate()
+  useEffect(() => {
+    if (cookies.data === undefined) {
+      // Display login form
+      navigator('/')
+    }
+  }, [])
   console.log(subordinateData)
 
   useEffect(() => {
@@ -46,24 +52,36 @@ const ManagerIndividualPage = ({ employeeData, employeeDataUpdater, subordinateD
     }
   }
 
-  return <div className='page-container'>
+  return (cookies.data === undefined)
+    ? <div/>
+    : (<div className='page-container'>
         <LogoutButton employeeDataUpdater={employeeDataUpdater} cookieReset={cookieReset}/>
         {employeeData.isManager && <NavigationTab />}
         <div className='back-button' onClick={() => navigator('/manager/view')}>Back</div>
-        <div className='date-info-container'>
-          <h1>
-            {subordinateData.firstName + ' ' + subordinateData.lastName}
-          </h1>
-          <div className='payment-history-title'>Payment History</div>
-          <div className='time-scale-button-container'>
-            <button className='timescale-button' onClick={setDaily}>Weekly</button>
-            <button className='timescale-button' onClick={setMonthly}>Monthly</button>
-            <button className='timescale-button' onClick={setYearly}>Yearly</button>
+        <div className='content-container'>
+          <div className='name-container-man'>
+            <div className='employee-name-man'>
+              {subordinateData.firstName + ' ' + subordinateData.lastName}
+            </div>
           </div>
-          {
-            loadGraph()
-          }
+          <div className='date-info-container'>
+            <div className='time-scale-button-container'>
+              <div className='pht-container'>
+                <div className='payment-history-title'>Payment History</div>
+              </div>
+              <button className='timescale-button' onClick={setDaily}>Weekly</button>
+              <button className='timescale-button' onClick={setMonthly}>Monthly</button>
+              <button className='timescale-button' onClick={setYearly}>Yearly</button>
+            </div>
+
+            <div className='graph-container'>
+            {
+              loadGraph()
+            }
+            </div>
+
+          </div>
         </div>
-      </div>
+      </div>)
 }
 export default ManagerIndividualPage
