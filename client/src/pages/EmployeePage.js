@@ -7,6 +7,7 @@ import loadingLogo from './loading.svg'
 import requests from '../services/requests'
 import './EmployeePage.css'
 import { useNavigate } from 'react-router-dom'
+import Calendar from '../components/Calendar'
 
 const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset, cookies }) => {
   const navigator = useNavigate()
@@ -24,6 +25,11 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset, cookies 
   const setDaily = (e) => setGraphDisplayOption('week')
   const setMonthly = (e) => setGraphDisplayOption('month')
   const setYearly = (e) => setGraphDisplayOption('year')
+  const now = new Date()
+  // here im trying to convert to utc which is what i think it needs but its still not working
+  const nowUtc = new Date(now.toUTCString().slice(0, -4))
+  console.log(nowUtc.toString())
+  const [startDate, setStartDate] = useState(nowUtc.toString())
 
   const fetchData = async () => {
     updateLoad(0)
@@ -151,6 +157,7 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset, cookies 
             </div>
 
             <div className='graph-container'>
+            <Calendar dateFormat="MM-dd-yyyy" startDate={startDate} setStartDate={setStartDate} />
             {
               loadGraph()
             }
