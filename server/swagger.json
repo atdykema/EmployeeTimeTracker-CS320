@@ -1,183 +1,91 @@
 {
-    "openapi" : "3.0.0",
-    "servers" : [ {
-      "description" : "SwaggerHub API Auto Mocking",
-      "url" : "https://virtserver.swaggerhub.com/Unseenmocha/PunchTime/1.0.0"
-    } ],
-    "info" : {
-      "description" : "PunchTime by Silicon Savants backend documentation",
-      "version" : "1.0.0",
-      "title" : "PunchTime",
-      "contact" : {
-        "email" : "andrewlin@umass.edu"
-      },
-      "license" : {
-        "name" : "Apache 2.0",
-        "url" : "http://www.apache.org/licenses/LICENSE-2.0.html"
-      }
+  "openapi": "3.0.0",
+  "info": {
+    "title": "PunchTime",
+    "description": "PunchTime by Silicon Savants backend documentation",
+    "contact": {
+      "email": "andrewlin@umass.edu"
     },
-    "tags" : [ {
-      "name" : "developers",
-      "description" : "Operations available to regular developers"
-    } ],
-    "paths" : {
-      "/login" : {
-        "post" : {
-          "tags" : [ "developers" ],
-          "summary" : "validates login and reutrns user object",
-          "operationId" : "login",
-          "description" : "By passing the user's email and password, we validate the credentials, sending back the Employee document associated with the user if successful, and a failure object with a 404 status code if otherwise\n",
-          "parameters" : [ {
-            "in" : "query",
-            "name" : "email",
-            "description" : "email for login",
-            "required" : true,
-            "schema" : {
-              "type" : "string"
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    },
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://virtserver.swaggerhub.com/Unseenmocha/PunchTime/1.0.0",
+      "description": "SwaggerHub API Auto Mocking"
+    }
+  ],
+  "tags": [
+    {
+      "name": "developers",
+      "description": "Operations available to regular developers"
+    }
+  ],
+  "paths": {
+    "/login": {
+      "post": {
+        "tags": [
+          "developers"
+        ],
+        "summary": "validates login and returns user object",
+        "description": "After passing the user's email and password, we validate the credentials, sending back the Employee document associated with the user if successful, and a failure object with a 404 status code if otherwise\n",
+        "operationId": "login",
+        "parameters": [
+          {
+            "name": "email",
+            "in": "query",
+            "description": "email for login",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
             },
-            "example" : "Betty_Burke@gizmogram.com"
-          }, {
-            "in" : "query",
-            "name" : "password",
-            "description" : "password for login",
-            "schema" : {
-              "type" : "string",
-              "example" : "burkebe"
-            }
-          } ],
-          "responses" : {
-            "200" : {
-              "description" : "login validated",
-              "content" : {
-                "application/json" : {
-                  "schema" : {
-                    "type" : "object",
-                    "properties" : {
-                      "response" : {
-                        "type" : "string",
-                        "example" : "OK"
-                      },
-                      "value" : {
-                        "$ref" : "#/components/schemas/Employee"
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            "404" : {
-              "description" : "login failed, user with given credentials not found",
-              "content" : {
-                "application/json" : {
-                  "schema" : {
-                    "type" : "object",
-                    "properties" : {
-                      "response" : {
-                        "type" : "string",
-                        "example" : "FAILURE"
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            "500" : {
-              "description" : "unexpected error",
-              "content" : {
-                "application/json" : {
-                  "schema" : {
-                    "type" : "object",
-                    "properties" : {
-                      "response" : {
-                        "type" : "string",
-                        "example" : "FAILURE"
-                      }
-                    }
-                  }
-                }
-              }
+            "example": "Betty_Burke@gizmogram.com"
+          },
+          {
+            "name": "password",
+            "in": "query",
+            "description": "password for login",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "example": "burkebe"
             }
           }
-        }
-      },
-      "/user/time" : {
-        "post" : {
-          "tags" : [ "developers" ],
-          "summary" : "returns array of user daily user time objects depending on given parameter range",
-          "operationId" : "getTimeData",
-          "description" : "by passing an employee's employeeId, companyId and an optional timeOption parameter, an array of timeEntry objects can be requested. On success, either all or some will be returned depending on the value of timeOption\n",
-          "parameters" : [ {
-            "in" : "query",
-            "name" : "employeeId",
-            "schema" : {
-              "type" : "integer",
-              "example" : 1
-            }
-          }, {
-            "in" : "query",
-            "name" : "companyId",
-            "schema" : {
-              "type" : "integer",
-              "example" : 3
-            }
-          }, {
-            "in" : "query",
-            "name" : "timeOption",
-            "required" : false,
-            "schema" : {
-              "type" : "string",
-              "example" : "week"
-            }
-          } ],
-          "responses" : {
-            "200" : {
-              "description" : "time data found for given employee info",
-              "content" : {
-                "application/json" : {
-                  "schema" : {
-                    "type" : "object",
-                    "properties" : {
-                      "response" : {
-                        "type" : "string",
-                        "example" : "OK"
-                      },
-                      "value" : {
-                        "$ref" : "#/components/schemas/Employeetimeentry"
-                      }
-                    }
-                  }
+        ],
+        "responses": {
+          "200": {
+            "description": "login validated",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/inline_response_200"
                 }
               }
-            },
-            "404" : {
-              "description" : "employee with given employeeId and companyId not found",
-              "content" : {
-                "application/json" : {
-                  "schema" : {
-                    "type" : "object",
-                    "properties" : {
-                      "response" : {
-                        "type" : "string",
-                        "example" : "FAILURE"
-                      }
-                    }
-                  }
+            }
+          },
+          "404": {
+            "description": "login failed, user with given credentials not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/inline_response_404"
                 }
               }
-            },
-            "500" : {
-              "description" : "unexpected error or timeoption error",
-              "content" : {
-                "application/json" : {
-                  "schema" : {
-                    "type" : "object",
-                    "properties" : {
-                      "response" : {
-                        "type" : "string",
-                        "example" : "FAILURE: timeOption error."
-                      }
-                    }
-                  }
+            }
+          },
+          "500": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/inline_response_404"
                 }
               }
             }
@@ -185,99 +93,215 @@
         }
       }
     },
-    "components" : {
-      "schemas" : {
-        "Employee" : {
-          "type" : "object",
-          "required" : [ "_id", "firstname", "lastname", "employeeId", "companyName", "positionTitle", "startDate", "isManager", "password" ],
-          "properties" : {
-            "_id" : {
-              "type" : "object",
-              "properties" : {
-                "oid" : {
-                  "type" : "string",
-                  "example" : "641a8aee8c1eff050b518093"
-                }
-              }
-            },
-            "firstname" : {
-              "type" : "string",
-              "example" : "Betty"
-            },
-            "lastname" : {
-              "type" : "string",
-              "example" : "Burke"
-            },
-            "employeeId" : {
-              "type" : "integer",
-              "example" : 1
-            },
-            "companyName" : {
-              "type" : "string",
-              "example" : "GizmoGram"
-            },
-            "positionTitle" : {
-              "type" : "string",
-              "example" : "CEO"
-            },
-            "startDate" : {
-              "type" : "string",
-              "format" : "datetime",
-              "example" : "2014-10-05"
-            },
-            "isManager" : {
-              "type" : "boolean",
-              "example" : true
-            },
-            "password" : {
-              "type" : "string",
-              "example" : "burkebe"
+    "/user/time": {
+      "post": {
+        "tags": [
+          "developers"
+        ],
+        "summary": "returns array of user daily user time objects depending on given parameter range",
+        "description": "By passing an employee's employeeId, companyId and an optional timeOption parameter, an array of timeEntry objects can be requested. On success, either all or some will be returned depending on the value of timeOption.\n",
+        "operationId": "getTimeData",
+        "parameters": [
+          {
+            "name": "employeeId",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer",
+              "example": 1
+            }
+          },
+          {
+            "name": "companyId",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer",
+              "example": 3
+            }
+          },
+          {
+            "name": "timeOption",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "example": "week"
             }
           }
-        },
-        "Employeetimeentry" : {
-          "type" : "object",
-          "required" : [ "_id", "employeeId", "companyId", "timeentries" ],
-          "properties" : {
-            "_id" : {
-              "type" : "object",
-              "properties" : {
-                "oid" : {
-                  "type" : "string",
-                  "example" : "641a8aee8c1eff050b518093"
+        ],
+        "responses": {
+          "200": {
+            "description": "time data found for given employee info",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/inline_response_200_1"
                 }
               }
-            },
-            "employeeId" : {
-              "type" : "integer",
-              "example" : 1
-            },
-            "companyId" : {
-              "type" : "integer",
-              "example" : 3
-            },
-            "timeentries" : {
-              "type" : "array",
-              "items" : {
-                "type" : "object",
-                "properties" : {
-                  "date" : {
-                    "type" : "string",
-                    "example" : "2023-02-01"
-                  },
-                  "hoursWorked" : {
-                    "type" : "number",
-                    "example" : 7.52
-                  },
-                  "_id" : {
-                    "type" : "object",
-                    "properties" : {
-                      "oid" : {
-                        "type" : "string",
-                        "example" : "641a8aee8c1eff050b518093"
-                      }
-                    }
+            }
+          },
+          "404": {
+            "description": "employee with given employeeId and companyId not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/inline_response_404"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "unexpected error or timeoption error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/inline_response_500"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/user/manage": {
+      "post": {
+        "tags": [
+          "developers"
+        ],
+        "summary": "returns an array of the Employee objects of all employees under a given manager",
+        "description": "By passing the employeeId, companyName and isManager fields of an Employee object, returns an array containing the Employee object of all employees under the manager specified by the paramters\n",
+        "operationId": "getManagerSubordinates",
+        "parameters": [
+          {
+            "name": "employeeId",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer",
+              "example": 3
+            }
+          },
+          {
+            "name": "companyName",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "example": "Gizmogram"
+            }
+          },
+          {
+            "name": "isManager",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "boolean",
+              "example": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "manaager found and subordinates retrieved successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Employee"
                   }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/user/addTime": {
+      "post": {
+        "tags": [
+          "developers"
+        ],
+        "summary": "record time entries for an employee",
+        "description": "Receives an employee's employeeId, companyId, and an array containing the employee's time entry data and upates it in their Employeetimeentry object\n",
+        "operationId": "postTime",
+        "parameters": [
+          {
+            "name": "employeeId",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer",
+              "example": 1
+            }
+          },
+          {
+            "name": "companyId",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer",
+              "example": 3
+            }
+          },
+          {
+            "name": "times",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/times"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successfully updated employee time entries",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Employeetimeentry"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "specified employee not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/inline_response_404_1"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/inline_response_500_1"
                 }
               }
             }
@@ -285,4 +309,196 @@
         }
       }
     }
+  },
+  "components": {
+    "schemas": {
+      "Employee": {
+        "required": [
+          "_id",
+          "companyName",
+          "employeeId",
+          "firstname",
+          "isManager",
+          "lastname",
+          "password",
+          "positionTitle",
+          "startDate"
+        ],
+        "type": "object",
+        "properties": {
+          "_id": {
+            "$ref": "#/components/schemas/Employee__id"
+          },
+          "firstname": {
+            "type": "string",
+            "example": "Betty"
+          },
+          "lastname": {
+            "type": "string",
+            "example": "Burke"
+          },
+          "employeeId": {
+            "type": "integer",
+            "example": 1
+          },
+          "companyName": {
+            "type": "string",
+            "example": "GizmoGram"
+          },
+          "positionTitle": {
+            "type": "string",
+            "example": "CEO"
+          },
+          "startDate": {
+            "type": "string",
+            "format": "datetime",
+            "example": "2014-10-05"
+          },
+          "isManager": {
+            "type": "boolean",
+            "example": true
+          },
+          "password": {
+            "type": "string",
+            "example": "burkebe"
+          }
+        }
+      },
+      "Employeetimeentry": {
+        "required": [
+          "_id",
+          "companyId",
+          "employeeId",
+          "timeentries"
+        ],
+        "type": "object",
+        "properties": {
+          "_id": {
+            "$ref": "#/components/schemas/Employee__id"
+          },
+          "employeeId": {
+            "type": "integer",
+            "example": 1
+          },
+          "companyId": {
+            "type": "integer",
+            "example": 3
+          },
+          "timeentries": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Employeetimeentry_timeentries"
+            }
+          }
+        }
+      },
+      "inline_response_200": {
+        "type": "object",
+        "properties": {
+          "response": {
+            "type": "string",
+            "example": "OK"
+          },
+          "value": {
+            "$ref": "#/components/schemas/Employee"
+          }
+        }
+      },
+      "inline_response_404": {
+        "type": "object",
+        "properties": {
+          "response": {
+            "type": "string",
+            "example": "FAILURE"
+          }
+        }
+      },
+      "inline_response_200_1": {
+        "type": "object",
+        "properties": {
+          "response": {
+            "type": "string",
+            "example": "OK"
+          },
+          "value": {
+            "$ref": "#/components/schemas/Employeetimeentry"
+          }
+        }
+      },
+      "inline_response_500": {
+        "type": "object",
+        "properties": {
+          "response": {
+            "type": "string",
+            "example": "FAILURE: timeOption error."
+          }
+        }
+      },
+      "times": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/times"
+        }
+      },
+      "inline_response_404_1": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "example": "Employee not found"
+          }
+        }
+      },
+      "inline_response_500_1": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "example": "failed to update user"
+          },
+          "error": {
+            "$ref": "#/components/schemas/inline_response_500_1_error"
+          }
+        }
+      },
+      "Employee__id": {
+        "type": "object",
+        "properties": {
+          "oid": {
+            "type": "string",
+            "example": "641a8aee8c1eff050b518093"
+          }
+        }
+      },
+      "Employeetimeentry_timeentries": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "example": "2023-02-01"
+          },
+          "hoursWorked": {
+            "type": "number",
+            "example": 7.52
+          },
+          "_id": {
+            "$ref": "#/components/schemas/Employee__id"
+          }
+        }
+      },
+      "inline_response_500_1_error": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "ValidationError"
+          },
+          "message": {
+            "type": "string",
+            "example": "Validation failed"
+          }
+        }
+      }
+    }
   }
+}
