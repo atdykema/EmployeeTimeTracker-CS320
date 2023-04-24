@@ -78,7 +78,7 @@ router.post('/user/time', async (req, res, next) => {
                         });
                         
                         // console.log(entries_of_year_X)
-                        return_arr.push(entries_of_year_X.reduce((partialSum, a) => partialSum + a.hoursWorked, 0));
+                        return_arr.push((entries_of_year_X.reduce((partialSum, a) => partialSum + a.hoursWorked, 0)).toFixed(2));
                     }
                 }
                 /////////// Monthly SUM OF MONEY (This year's 12 months) //////////
@@ -93,7 +93,7 @@ router.post('/user/time', async (req, res, next) => {
                             return date.getUTCFullYear() === this_year && date.getUTCMonth() === i+1;
                         });
 
-                        return_arr.push(entries_of_month_X.reduce((partialSum, a) => partialSum + a.hoursWorked, 0));
+                        return_arr.push((entries_of_month_X.reduce((partialSum, a) => partialSum + a.hoursWorked, 0)).toFixed(2));
                     }
                 }
                 /////////// Weekly SUM OF MONEY (Last 7 days) //////////
