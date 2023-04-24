@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { useState, useEffect } from 'react'
 import BarGraph from '../components/BarGraph'
+import ListViewTable from '../components/ListViewTable'
 import loadingLogo from '../pages/loading.svg'
 import listpic from './listpic.png'
 import graphpic from './graphpic.png'
@@ -63,9 +64,8 @@ const PaymentHistoryWindow = ({ isListPresent, setListPresence, employeeData }) 
         return <img src={loadingLogo}></img>
       } else {
         return (
-          <div className='graph'>
-            {/* {listData.toString()} */}
-            {listData.map(e => e.date + ' | ' + e.hoursWorked + '\n\n')}
+          <div className='list'>
+            <ListViewTable dayObjs={listData}/>
           </div>
         )
       }
