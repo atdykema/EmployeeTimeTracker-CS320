@@ -22,6 +22,7 @@ const BarGraph = ({ timeOption, dataArr }) => {
     data = zip(months, dataArr).map(([month, hours]) => ({ name: month, value: hours, pay: 10 }))
     xAxisName = 'Month'
   } else if (timeOption === 'year') {
+    dataArr = dataArr.reverse()
     data = zip(years, dataArr).map(([year, hours]) => ({ name: year, value: hours, pay: 10 }))
     xAxisName = 'Year'
   }
