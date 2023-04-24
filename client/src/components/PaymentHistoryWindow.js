@@ -11,12 +11,16 @@ const PaymentHistoryWindow = ({ isListPresent, setListPresence, employeeData }) 
   const [graphDisplayOption, setGraphDisplayOption] = useState('week')
   const [graphLoaded, updateGraphLoad] = useState(0)
   const [listLoaded, updateListLoad] = useState(0)
+  const [listData, updateListData] = useState(undefined)
 
   const setDaily = (e) => setGraphDisplayOption('week')
   const setMonthly = (e) => setGraphDisplayOption('month')
   const setYearly = (e) => setGraphDisplayOption('year')
   const setGraph = (e) => setListPresence(false)
-  const setList = (e) => setListPresence(true)
+  const setList = (e) => {
+    setListPresence(true)
+    fetchData()
+  }
 
   const [graphData, setGraphData] = useState(0)
 
@@ -33,9 +37,13 @@ const PaymentHistoryWindow = ({ isListPresent, setListPresence, employeeData }) 
 
   const fetchListData = async () => {
     updateListLoad(0)
-    /*
-    put list request here
-    */
+    const result = await requests.getAllTime(
+      employeeData.employeeId,
+      employeeData.companyId
+    )
+    console.log(result)
+    updateListData(result.data.value)
+    // console.log(listData)
     updateListLoad(1)
   }
 
@@ -56,7 +64,8 @@ const PaymentHistoryWindow = ({ isListPresent, setListPresence, employeeData }) 
       } else {
         return (
           <div className='graph'>
-            List here
+            {/* {listData.toString()} */}
+            {listData.map(e => e.date + ' | ' + e.hoursWorked + '\n\n')}
           </div>
         )
       }
