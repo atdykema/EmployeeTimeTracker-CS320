@@ -29,11 +29,20 @@ const Managerpage = ({ employeeData, employeeDataUpdater, cookieReset, cookies }
   useEffect(() => {
     const fetchData = async () => {
       updateLoad(0)
-      const result = await requests.getManagerViewData(
-        employeeData.employeeId,
-        employeeData.companyName,
-        employeeData.isManager
-      )
+      let result
+      try {
+        result = await requests.getManagerViewData(
+          employeeData.employeeId,
+          employeeData.companyName,
+          employeeData.isManager
+        )
+      } catch (err) {
+        console.log(err)
+        if (err.message === 'Network Error') {
+          // reroute to an error page saying that the server is down
+          navigator('/serverdown')
+        }
+      }
       setEmployeeObjs(result.data.value) // update data
       updateLoad(1)
     }

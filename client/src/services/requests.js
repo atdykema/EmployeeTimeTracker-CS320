@@ -22,7 +22,7 @@ const getManagerViewData = (employeeId, companyName, isManager) => {
   } catch (e) {
     console.log('Error: Unable to get managerViewData')
     console.log(e)
-    return e
+    throw e
   }
 }
 
@@ -34,7 +34,7 @@ const sendTimeData = (employeeId, companyId, times) => {
   } catch (e) {
     console.log('Error: Unable to get sendTimeData')
     console.log(e)
-    return e
+    throw e
   }
 }
 
@@ -44,9 +44,10 @@ const getTimeData = (employeeId, companyId, timeOption) => {
       employeeId, companyId, timeOption
     })
   } catch (e) {
+    // console.log('Error: Unable to get getTimeData')
+    // console.log(e)
     console.log('Error: Unable to get getTimeData')
-    console.log(e)
-    return e
+    throw e
   }
 }
 
