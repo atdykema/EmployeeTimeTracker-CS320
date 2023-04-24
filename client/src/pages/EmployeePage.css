@@ -28,7 +28,6 @@ body{
     justify-content: center;
     align-items: center;
     height: 100%;
-    width: 100%;
 }
 
 .daybuttons-container{
@@ -38,9 +37,7 @@ body{
     align-items: center;
     flex-direction: column;
     margin: 10px;
-    transition: .5s;
 }
-
 
 .inner-daybuttons-container{
     display: flex;
@@ -57,13 +54,6 @@ body{
     align-items: center;
     background-color: rgba(220,220,220, .5);
     border-radius: 25px;
-}
-
-.day-container{
-    transition: .5s;
-}
-.day-container:hover{
-    transform: scale(1.1);
 }
 
 .time-entry-card{
@@ -85,7 +75,6 @@ body{
 
 .time-entry-submit:hover{
     background-color: rgba(220,220,220, 1);
-    transform: scale(1.05);
 }
 
 .info-container{
@@ -104,9 +93,9 @@ body{
     align-items: center;
     border-radius: 25px;
     min-height: 40vh;
-    min-width:70vw;
-    padding: 25px 25px 25px 0;
-    margin: 10px 10px 10px 0;
+    min-width:80vw;
+    padding: 25px;
+    margin: 10px;
 }
 
 .time-scale-button-container{
@@ -117,24 +106,15 @@ body{
     width: 90%;
 }
 
-.graph{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-}
-
 .graph-container{
     background-color: rgba(220,220,220, .5);
     border-radius: 25px 25px 25px 25px;
-    width: 70vw;
-    height: 30vh;
+    min-width: 90%;
+    min-height: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: .5s;
 }
 
 .timescale-button{
@@ -152,7 +132,7 @@ body{
     background-color: rgba(220,220,220, 1);
     z-index: 2;
     border-radius: 25px;
-    transform: translate(0, -5px);
+    transform: translate(-5px, 5px);
 }
 
 .pht-container{
@@ -210,52 +190,3 @@ body{
     align-items: center;
 }
 
-.outer-di-container{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-
-.side-tab-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 50px;
-    
-}
-
-.side-tab{
-    writing-mode: vertical-rl;
-    margin: 10px 0 10px 0;
-    font-size: 2rem;
-    background-color: rgba(220,220,220, .5);
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 3px solid whitesmoke;
-    border-radius: 25px 0px 0px 25px;
-    transition: .5s;
-    cursor: pointer;
-    padding: 3px;
-}
-
-.side-tab:hover{
-    background-color: rgba(220,220,220, 1);
-    border-radius: 25px;
-    transform: translate(-5px, 0px);
-    z-index: 2;
-}
-
-.graphpic{
-    height: 50px;
-    transition: .5s;
-}
-
-
-.listpic{
-    height: 50px;
-    transition: .5s;
-}
