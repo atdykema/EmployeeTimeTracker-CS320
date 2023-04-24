@@ -27,11 +27,20 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset, cookies 
 
   const fetchData = async () => {
     updateLoad(0)
-    const result = await requests.getTimeData(
-      employeeData.employeeId,
-      employeeData.companyId,
-      graphDisplayOption
-    )
+    let result
+    try {
+      result = await requests.getTimeData(
+        employeeData.employeeId,
+        employeeData.companyId,
+        graphDisplayOption
+      )
+    } catch (err) {
+      console.log(err)
+      if (err.message === 'Network Error') {
+        // reroute to an error page saying that the server is down
+        navigator('/serverdown')
+      }
+    }
     setData(result.data.value)
     updateLoad(1)
   }
@@ -60,8 +69,18 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset, cookies 
     const timeEntries = time.map(
       (e, i) => ({ date: new Date(currentDate.setDate(currentDate.getDate() - currentDate.getDay() + i)).toISOString().slice(0, 10), hoursWorked: e })
     )
-    const resp = await requests.sendTimeData(employeeData.employeeId, employeeData.companyId, timeEntries)
-    console.log(resp) // TODO: Error handling
+    let resp
+    try {
+      resp = await requests.sendTimeData(employeeData.employeeId, employeeData.companyId, timeEntries)
+    } catch (err) {
+      console.log(err)
+      if (err.message === 'Network Error') {
+        // reroute to an error page saying that the server is down
+        navigator('/serverdown')
+      }
+    }
+
+    console.log(resp)
 
     // reload the graph
     fetchData()

@@ -148,6 +148,22 @@ router.post('/user/time', async (req, res, next) => {
 
                 
                 }
+
+                /////////// Custom Time entries //////////
+                if(req.body.timeOption == "custom") {
+                    const startDate = new Date(req.body.startDate);
+                    const endDate = new Date(req.body.endDate);
+                    startDate.setUTCHours(0,0,0,0);
+                    endDate.setUTCHours(0,0,0,0);
+
+                    return_arr = time_entries.filter((e) => {
+                        const date = new Date(e.date);
+                        date.setUTCHours(0,0,0,0);
+                        return date >= startDate && date < endDate;
+                    });
+                    
+                }
+
                 /////////// Send RESPONSE //////////
                 
                 // console.log(`\nUser ${req.body.employeeId} found. Data:\n${query}`);
@@ -206,7 +222,13 @@ router.post('/user/addTime', async(req, res, next) => {
         if(!employee){      
             return res.status(404).json({message: 'Employee not found'});
         } 
-        for(const timedata of req.body.times){       
+        for(const timedata of req.body.times){   
+            filtered = employee.timeEntries.filter(e => e.date === timedata.date);
+            if(filtered.length>0){
+                index = employee.timeEntries.indexOf(filtered[0])
+                employee.timeEntries[index].hoursWorked = timedata.hoursWorked;
+                continue
+            }         
             employee.timeEntries.push({
                 "date": timedata.date,
                 "hoursWorked": timedata.hoursWorked

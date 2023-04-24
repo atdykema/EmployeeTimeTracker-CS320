@@ -9,7 +9,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
 }
 
 .day-label{
@@ -18,18 +18,46 @@
     align-items: center;
     padding: 5px;
     margin: 5px;
-    border: whitesmoke 3px solid;
-    border-radius: 20px;
-    background-color: rgba(220,220,220, .5);
+    border-radius: 25px;
+    border: 1px grey solid;
     height: 100px;
     width: 125px;
     font-size: 1.5rem;
+
+}
+
+#Sunday{
+    background-color: rgba(255, 0, 0, .5);
+}
+
+#Monday{
+    background-color: rgba(255, 140, 0, 0.5);
+}
+
+#Tuesday{
+    background-color: rgba(255, 238, 0, 0.5);
+}
+
+#Wednesday{
+    background-color: rgba(30, 255, 0, 0.5);
+}
+
+#Thursday{
+    background-color: rgba(0, 42, 255, 0.5);
+}
+
+#Friday{
+    background-color: rgba(217, 0, 255, 0.5);
+}
+
+#Saturday{
+    background-color: rgba(255, 0, 183, 0.5);
 }
 
 input{
     padding: 5px;
     margin: 5px;
     border-radius: 25px;
-    border: 1px gray solid;
+    border: 1px grey solid;
 }
 

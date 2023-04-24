@@ -4,6 +4,8 @@ const mongoose = require('mongoose');
 const routes = require('./routes/api');
 const dotenv = require('dotenv');
 dotenv.config({path: 'process.env'});
+const swaggerui = require("swagger-ui-express");
+const swaggerSpec = require("./swagger.json");
 
 //initialize app and middleware 
 const express = require('express');
@@ -31,6 +33,7 @@ app.use((req, res, next) => {
 });
 app.use(bodyParser.json());
 app.use('/', routes);
+app.use('/api-docs', swaggerui.serve, swaggerui.setup(swaggerSpec));
 app.use((err, req, res, next) => {
   console.log(err);
   next();
