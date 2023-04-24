@@ -26,11 +26,19 @@ const ManagerIndividualPage = ({ employeeData, employeeDataUpdater, subordinateD
   useEffect(() => {
     const fetchData = async () => {
       updateLoad(0)
-      const result = await requests.getTimeData(
-        subordinateData.employeeId,
-        subordinateData.companyId,
-        graphDisplayOption
-      )
+      let result
+      try {
+        result = await requests.getTimeData(
+          subordinateData.employeeId,
+          subordinateData.companyId,
+          graphDisplayOption)
+      } catch (err) {
+        console.log(err)
+        if (err.message === 'Network Error') {
+          // reroute to an error page saying that the server is down
+          navigator('/serverdown')
+        }
+      }
       console.log(result.data.value)
       setData(result.data.value)
       updateLoad(1)
