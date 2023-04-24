@@ -2,14 +2,15 @@ import { useState, useEffect } from 'react'
 import TimeEntry from '../components/TimeEntry'
 import LogoutButton from '../components/LogoutButton'
 import NavigationTab from '../components/NavigationTab'
-import BarGraph from '../components/BarGraph'
-import loadingLogo from './loading.svg'
+import PaymentHistoryWindow from '../components/PaymentHistoryWindow'
 import requests from '../services/requests'
 import './EmployeePage.css'
 import { useNavigate } from 'react-router-dom'
 
 const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset, cookies }) => {
   const navigator = useNavigate()
+  const [isListPresent, setListPresence] = useState(false)
+
   useEffect(() => {
     if (cookies.data === undefined) {
       // Display login form
@@ -18,32 +19,6 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset, cookies 
   }, [])
 
   const [time, setTime] = useState(['0', '0', '0', '0', '0', '0', '0'])
-  const [graphDisplayOption, setGraphDisplayOption] = useState('week')
-  const [loaded, updateLoad] = useState(0)
-  const [data, setData] = useState(0)
-  const setDaily = (e) => setGraphDisplayOption('week')
-  const setMonthly = (e) => setGraphDisplayOption('month')
-  const setYearly = (e) => setGraphDisplayOption('year')
-
-  const fetchData = async () => {
-    updateLoad(0)
-    let result
-    try {
-      result = await requests.getTimeData(
-        employeeData.employeeId,
-        employeeData.companyId,
-        graphDisplayOption
-      )
-    } catch (err) {
-      console.log(err)
-      if (err.message === 'Network Error') {
-        // reroute to an error page saying that the server is down
-        navigator('/serverdown')
-      }
-    }
-    setData(result.data.value)
-    updateLoad(1)
-  }
 
   const loadTimeEntry = async () => {
     const result = await requests.getTimeData(
@@ -53,10 +28,6 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset, cookies 
     )
     setTime(result.data.value)
   }
-
-  useEffect(() => {
-    fetchData()
-  }, [graphDisplayOption]) // runs on first render and whenever the graph display changes
 
   useEffect(() => {
     loadTimeEntry()
@@ -83,7 +54,7 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset, cookies 
     console.log(resp)
 
     // reload the graph
-    fetchData()
+    // fetchData()
   }
 
   const days = [
@@ -121,25 +92,12 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset, cookies 
     await sendData()
   }
 
-  const loadGraph = () => {
-    if (!loaded) {
-      return <img src={loadingLogo}></img>
-    } else {
-      return (
-        <div className='graph'>
-          <BarGraph timeOption={graphDisplayOption} dataArr={data}/>
-        </div>
-      )
-    }
-  }
-
   // get current date
   const currentDate = new Date()
   // get Sunday by subtracting how far from sunday you are
   const sunday = new Date(currentDate.setDate(currentDate.getDate() - currentDate.getDay()))
   // get Saturday by finding sunday, adding 6
   const saturday = new Date(currentDate.setDate(currentDate.getDate() - currentDate.getDay() + 6))
-
   return cookies.data === undefined
     ? <div></div>
     : (
@@ -147,7 +105,7 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset, cookies 
         <LogoutButton employeeDataUpdater={employeeDataUpdater} cookieReset = {cookieReset}/>
         {employeeData.isManager && <NavigationTab />}
         <div className='content-container'>
-          <div className='daybuttons-container'>
+          <div className='daybuttons-container' style={isListPresent ? { opacity: '0%', zIndex: -1, maxHeight: '0vh' } : { opacity: '100%', zIndex: 1, maxHeight: '100vh' }}>
             <div className='info-container'>
               <div className='employee-name'>Hello, {employeeData.firstName}</div>
               <div className='current-date'>{`${sunday.toLocaleDateString()} — ${saturday.toLocaleDateString()}`}</div>
@@ -159,23 +117,7 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset, cookies 
               <button className='time-entry-submit' type='submit'>Submit</button>
             </form>
           </div>
-          <div className='date-info-container'>
-            <div className='time-scale-button-container'>
-              <div className='pht-container'>
-                <div className='payment-history-title'>Payment History</div>
-              </div>
-              <button className='timescale-button' onClick={setDaily}>Weekly</button>
-              <button className='timescale-button' onClick={setMonthly}>Monthly</button>
-              <button className='timescale-button' onClick={setYearly}>Yearly</button>
-            </div>
-
-            <div className='graph-container'>
-            {
-              loadGraph()
-            }
-            </div>
-
-          </div>
+          <PaymentHistoryWindow isListPresent={isListPresent} setListPresence={setListPresence} employeeData={employeeData}/>
         </div>
       </div>
       )
