@@ -148,6 +148,22 @@ router.post('/user/time', async (req, res, next) => {
 
                 
                 }
+
+                /////////// Custom Time entries //////////
+                if(req.body.timeOption == "custom") {
+                    const startDate = new Date(req.body.startDate);
+                    const endDate = new Date(req.body.endDate);
+                    startDate.setUTCHours(0,0,0,0);
+                    endDate.setUTCHours(0,0,0,0);
+
+                    return_arr = time_entries.filter((e) => {
+                        const date = new Date(e.date);
+                        date.setUTCHours(0,0,0,0);
+                        return date >= startDate && date < endDate;
+                    });
+                    
+                }
+
                 /////////// Send RESPONSE //////////
                 
                 // console.log(`\nUser ${req.body.employeeId} found. Data:\n${query}`);
