@@ -16,7 +16,7 @@ const EmployeeSearch = ({ text, updateText }) => {
 
   return <div className="search-container">
     <form className="search-form" onSubmit={submit}>
-      <input className="employee-search-input" value = {text} placeholder = 'Enter the name of employee' onChange={handleEmployeeNameChange}/><br/>
+      <input className="employee-search-input" value = {text} label='Search Employee Name' placeholder = 'Enter the name of employee' onChange={handleEmployeeNameChange}/><br/>
     </form>
   </div>
 }

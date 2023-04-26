@@ -72,8 +72,8 @@ const Login = ({ cookies, cookieSetter }) => {
           <div className={`transparent-box${errorMessage ? ' error' : ''}`}>
             <p className='error-message'>{invalidInput}</p>
             <form onSubmit={submit}>
-              <input id='Inputs' value={usernameText} placeholder='Email Address' onChange={handleUsernameChange} /><br />
-              <input id='Inputs' value={passwordText} placeholder='Password' onChange={handlePasswordChange} /><br />
+              <input id='Inputs' value={usernameText} placeholder='Email Address' onChange={handleUsernameChange} aria-label='Email Address Input'/><br />
+              <input id='Inputs' value={passwordText} placeholder='Password' onChange={handlePasswordChange} aria-label='Password Input'/><br />
               <button className='loginBut' id='Inputs' type="submit">Login</button>
             </form>
           </div>
