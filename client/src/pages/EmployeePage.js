@@ -27,9 +27,11 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset, cookies 
   const setYearly = (e) => setGraphDisplayOption('year')
   const now = new Date()
   // here im trying to convert to utc which is what i think it needs but its still not working
+  // console.log(now.toUTCString())
+  // eslint-disable-next-line no-unused-vars
   const nowUtc = new Date(now.toUTCString().slice(0, -4))
-  console.log(nowUtc.toString())
-  const [startDate, setStartDate] = useState(nowUtc.toString())
+  console.log(nowUtc)
+  const [startDate, setStartDate] = useState('Mon Apr 24 2023 15:01:09 GMT-0400 (Eastern Daylight Time)')
 
   const fetchData = async () => {
     updateLoad(0)
