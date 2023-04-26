@@ -8,6 +8,9 @@ const EmployeeTable = ({ employeeObjs, selectionUpdater }) => {
     selectionUpdater('subData', employeeObj, { path: '/', expires: new Date(Date.now() + 50000000) })
     navigator('/manager/view/id')
   }
+  // the slice is to make a copy, since sort is in place
+  const sortedEmployees = employeeObjs.slice().sort((e1, e2) => e1.employeeId - e2.employeeId)
+  console.log(sortedEmployees)
 
   return <div className='table-container'>
     <table>
@@ -20,7 +23,7 @@ const EmployeeTable = ({ employeeObjs, selectionUpdater }) => {
           <th>Payrate</th>
         </tr>
         {
-          employeeObjs.map(employeeObj => {
+          sortedEmployees.map(employeeObj => {
             console.log(employeeObj)
             return <tr className='table-row' key={employeeObj.employeeId} onClick={handleRowClick(employeeObj)}>
               <th className='table-item'>
