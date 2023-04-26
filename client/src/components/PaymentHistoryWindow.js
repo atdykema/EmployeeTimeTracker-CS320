@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { useState, useEffect } from 'react'
 import BarGraph from '../components/BarGraph'
 import loadingLogo from '../pages/loading.svg'
@@ -7,7 +6,7 @@ import graphpic from './graphpic.png'
 import requests from '../services/requests'
 import './PaymentHistoryWindow.css'
 
-const PaymentHistoryWindow = ({ isListPresent, setListPresence, employeeData }) => {
+const PaymentHistoryWindow = ({ isListPresent, setListPresence, employeeData, graphUpdates }) => {
   const [graphDisplayOption, setGraphDisplayOption] = useState('week')
   const [graphLoaded, updateGraphLoad] = useState(0)
   const [listLoaded, updateListLoad] = useState(0)
@@ -69,7 +68,7 @@ const PaymentHistoryWindow = ({ isListPresent, setListPresence, employeeData }) 
 
   useEffect(() => {
     fetchData()
-  }, [graphDisplayOption]) // runs on first render and whenever the graph display changes
+  }, [graphDisplayOption, graphUpdates]) // runs on first render and whenever the graph display changes
 
   return (
     <div className='outer-di-container'>
