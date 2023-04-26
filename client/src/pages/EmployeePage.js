@@ -10,6 +10,8 @@ import { useNavigate } from 'react-router-dom'
 const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset, cookies }) => {
   const navigator = useNavigate()
   const [isListPresent, setListPresence] = useState(false)
+  // acts as an updater to the child components to force a rerender
+  const [graphUpdates, setGraphUpdates] = useState(0)
 
   useEffect(() => {
     if (cookies.data === undefined) {
@@ -34,6 +36,7 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset, cookies 
   }, []) // populates time entry, only once
 
   const sendData = async () => {
+    console.log('send')
     // get current date
     const currentDate = new Date()
 
@@ -52,9 +55,6 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset, cookies 
     }
 
     console.log(resp)
-
-    // reload the graph
-    // fetchData()
   }
 
   const days = [
@@ -90,6 +90,9 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset, cookies 
       return
     }
     await sendData()
+
+    // updates graph child component
+    setGraphUpdates(graphUpdates + 1)
   }
 
   // get current date
@@ -117,7 +120,7 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset, cookies 
               <button className='time-entry-submit' type='submit'>Submit</button>
             </form>
           </div>
-          <PaymentHistoryWindow isListPresent={isListPresent} setListPresence={setListPresence} employeeData={employeeData}/>
+          <PaymentHistoryWindow isListPresent={isListPresent} setListPresence={setListPresence} employeeData={employeeData} graphUpdates={graphUpdates}/>
         </div>
       </div>
       )
