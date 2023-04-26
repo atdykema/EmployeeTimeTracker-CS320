@@ -3,7 +3,6 @@
 .search-form{
     display: flex;
     flex-direction: row;
-    margin-bottom: 10vh;
     justify-content: center;
 }
 

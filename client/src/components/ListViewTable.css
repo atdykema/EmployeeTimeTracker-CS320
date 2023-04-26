@@ -1,15 +1,12 @@
 
-.table-container{
+.table-container-list{
     display: flex;
-    max-height: 70vh;
-    min-width: 70vw;
+    max-height: 60vh;
+    min-width: 60vw;
+    overflow-x: hidden;
     overflow-y: scroll;
-    overflow-x: none;
     justify-content: center;
     padding: 25px;
-    background-color: rgba(220, 220, 220, .60);
-    border: 2px whitesmoke solid;
-    border-radius: 25px;
 
 }
 
