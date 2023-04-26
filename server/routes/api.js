@@ -27,6 +27,21 @@ router.post('/login', async (req, res, next) => {
     });
 });
 
+router.post('/employeeGet', async (req, res, next) => {
+    await User.findOne({employeeId: req.body.employeeId, companyId: req.body.companyId}).exec()
+    .then(query=> {
+        if (query) {
+            res.status(200).send({response: "OK", value: query});
+        } else {
+            res.status(404).send({response: "FAILURE"});
+        }
+    })
+    .catch(error=> {
+        console.log(`Failed. ${error}`);
+        res.status(500).send({response: "FAILURE"});
+    });
+});
+
 
 // GET TIME: get user time given the options
 router.post('/user/time', async (req, res, next) => {
