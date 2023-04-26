@@ -6,6 +6,7 @@ import loadingLogo from '../pages/loading.svg'
 import listpic from './listpic.png'
 import graphpic from './graphpic.png'
 import requests from '../services/requests'
+import DaySearch from './DaySearch'
 import './PaymentHistoryWindow.css'
 
 const PaymentHistoryWindow = ({ isListPresent, setListPresence, employeeData }) => {
@@ -13,6 +14,7 @@ const PaymentHistoryWindow = ({ isListPresent, setListPresence, employeeData }) 
   const [graphLoaded, updateGraphLoad] = useState(0)
   const [listLoaded, updateListLoad] = useState(0)
   const [listData, updateListData] = useState(undefined)
+  const [searchText, updateSearchText] = useState('')
 
   const setDaily = (e) => setGraphDisplayOption('week')
   const setMonthly = (e) => setGraphDisplayOption('month')
@@ -48,6 +50,23 @@ const PaymentHistoryWindow = ({ isListPresent, setListPresence, employeeData }) 
     updateListLoad(1)
   }
 
+  const filterDays = (days, text) => {
+    // return all employees if text is empty
+    console.log(days)
+    console.log(text)
+    if (text === '') {
+      return days
+    }
+
+    // otherwise check if text is in the ID or name
+    // currently assumes that the manager will type
+    // in first name, then last name, but can change
+    const hasText = (txt) => (day) => {
+      return day.date.toString().startsWith(txt)
+    }
+    return days.filter(hasText(text))
+  }
+
   const setDisplay = () => {
     if (!isListPresent) {
       if (!graphLoaded) {
@@ -65,7 +84,8 @@ const PaymentHistoryWindow = ({ isListPresent, setListPresence, employeeData }) 
       } else {
         return (
           <div className='list'>
-            <ListViewTable dayObjs={listData}/>
+            <DaySearch text={searchText} updateText={updateSearchText} />
+            <ListViewTable dayObjs={filterDays(listData, searchText)}/>
           </div>
         )
       }
