@@ -51,6 +51,18 @@ const getTimeData = (employeeId, companyId, timeOption) => {
   }
 }
 
-const methods = { validateLogin, getManagerViewData, sendTimeData, getTimeData } // Recent React needs this to be a separate obj
+const getAllTime = (employeeId, companyId) => {
+  try {
+    return axios.post(`${baseURL}/user/time`, {
+      employeeId, companyId, timeOption: ''
+    })
+  } catch (e) {
+    console.log('Error: Unable to get getAllTime')
+    console.log(e)
+    return e
+  }
+}
+
+const methods = { validateLogin, getManagerViewData, sendTimeData, getTimeData, getAllTime } // Recent React needs this to be a separate obj
 
 export default methods

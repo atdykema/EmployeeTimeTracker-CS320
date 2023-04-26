@@ -27,6 +27,21 @@ router.post('/login', async (req, res, next) => {
     });
 });
 
+router.post('/employeeGet', async (req, res, next) => {
+    await User.findOne({employeeId: req.body.employeeId, companyId: req.body.companyId}).exec()
+    .then(query=> {
+        if (query) {
+            res.status(200).send({response: "OK", value: query});
+        } else {
+            res.status(404).send({response: "FAILURE"});
+        }
+    })
+    .catch(error=> {
+        console.log(`Failed. ${error}`);
+        res.status(500).send({response: "FAILURE"});
+    });
+});
+
 
 // GET TIME: get user time given the options
 router.post('/user/time', async (req, res, next) => {
@@ -78,7 +93,7 @@ router.post('/user/time', async (req, res, next) => {
                         });
                         
                         // console.log(entries_of_year_X)
-                        return_arr.push(entries_of_year_X.reduce((partialSum, a) => partialSum + a.hoursWorked, 0));
+                        return_arr.push((entries_of_year_X.reduce((partialSum, a) => partialSum + a.hoursWorked, 0)).toFixed(2));
                     }
                 }
                 /////////// Monthly SUM OF MONEY (This year's 12 months) //////////
@@ -93,7 +108,7 @@ router.post('/user/time', async (req, res, next) => {
                             return date.getUTCFullYear() === this_year && date.getUTCMonth() === i+1;
                         });
 
-                        return_arr.push(entries_of_month_X.reduce((partialSum, a) => partialSum + a.hoursWorked, 0));
+                        return_arr.push((entries_of_month_X.reduce((partialSum, a) => partialSum + a.hoursWorked, 0)).toFixed(2));
                     }
                 }
                 /////////// Weekly SUM OF MONEY (Last 7 days) //////////
