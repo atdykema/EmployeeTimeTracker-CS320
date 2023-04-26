@@ -7,8 +7,10 @@ import loadingLogo from './loading.svg'
 import './ManagerPage.css'
 import NavigationTab from '../components/NavigationTab'
 import { useNavigate } from 'react-router-dom'
+import PaymentHistoryWindow from '../components/PaymentHistoryWindow'
 
 const Managerpage = ({ employeeData, employeeDataUpdater, cookieReset, cookies }) => {
+  const [isListPresent, setListPresence] = useState(false)
   // call useState on employeeObjs to be updated in useEffect
   const [employeeObjs, setEmployeeObjs] = useState([])
   const [searchText, updateSearchText] = useState('')
@@ -80,6 +82,7 @@ const Managerpage = ({ employeeData, employeeDataUpdater, cookieReset, cookies }
         {employeeData.isManager && <NavigationTab />}
         <LogoutButton employeeDataUpdater={employeeDataUpdater} cookieReset= {cookieReset}/>
         {loadFunction()}
+        <PaymentHistoryWindow isListPresent={isListPresent} setListPresence={setListPresence} employeeData={employeeData}/>
         </div>
       )
 }
