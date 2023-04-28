@@ -51,6 +51,7 @@ router.post('/user/time', async (req, res, next) => {
     } 
 });
 
+//used for /user/time and /aggregateData routes
 async function getTimeData(req, res) {
     let successResult = null;
     // Default ALL timeEntries returned
@@ -216,34 +217,40 @@ router.post('/user/manage', async(req, res, next) => {
     res.send(result);
 });
 
+//used for /user/manage and /aggregateData routes
 async function getSubordinates(req, res) {
-    company = req.body.companyName
-    person = req.body
-    queryList = []
-    checkedList = []
-    employees = []
-    if(req.body.isManager){
-        queryList.push(person)
-    }
-    while(queryList.length > 0){
-        person = queryList.shift();
-        checkedList.push(person.employeeId)
-        await User.find({managerId: person.employeeId, companyName: company}).exec()
-        .then(query=> {
-            if(query){
-                checkedList.push(person.employeeId)
-                while(query.length > 0){
-                    person = query.shift()
-                    employees.push(person)
-                    if(!checkedList.includes(person.employeeId)){
-                        queryList.push(person)
+    try {
+        company = req.body.companyName
+        person = req.body
+        queryList = []
+        checkedList = []
+        employees = []
+        if(req.body.isManager){
+            queryList.push(person)
+        }
+        while(queryList.length > 0){
+            person = queryList.shift();
+            checkedList.push(person.employeeId)
+            await User.find({managerId: person.employeeId, companyName: company}).exec()
+            .then(query=> {
+                if(query.length > 0){
+                    checkedList.push(person.employeeId)
+                    while(query.length > 0){
+                        person = query.shift()
+                        employees.push(person)
+                        if(!checkedList.includes(person.employeeId)){
+                            queryList.push(person)
+                        }
                     }
-                }
-            }                
-            
-        })
+                }              
+            })
+        }
+        return {response: "OK", value: employees};
     }
-    return {response: "OK", value: employees};
+    catch (e) {
+        res.send({response:"FAILURE"});
+    }
+
 }
 
 router.post('/user/addTime', async(req, res, next) => {
@@ -276,11 +283,20 @@ router.post('/user/addTime', async(req, res, next) => {
     
 });
 
+//route to get aggregateDate, works exactly the same as /user/time except returns aggregated time values for
+//all employees under the one specified in req.body
 router.post('/aggregateData', async(req, res, next) => {
+    //get array of employees under one specified in req.body
     let employees = await getSubordinates(req, res);
     employees = employees.value;
+    if (employees.length === 0) {
+        res.send({response: "FAILURE"});
+        return;
+    }
     let aggregateData = null;
+    //for each employee, get their respective time data and add it to aggregateData
     for (const employee of employees) {
+        //req object to pass to getTimeData
         let pseudoReq = {body: {
             employeeId: employee.employeeId,
             companyId: employee.companyId,
@@ -290,13 +306,15 @@ router.post('/aggregateData', async(req, res, next) => {
         }};
         let data = await getTimeData(pseudoReq, res);
         data = data.value;
-        
+        //if aggregateData is null init to first value of data retrieved
         if (!aggregateData) {
             aggregateData = data;
         }
+        //if one of the summarized time options
         else if (req.body.timeOption !== "" && req.body.startDate === "" && req.body.endDate === "") {
             data.forEach((val, i)=>{aggregateData[i]+= Number(val)});
         }
+        //if no options specified or range specified
         else {
             data.forEach((entry) => {
                 let existingIndex = aggregateData.findIndex(existingEntry=> existingEntry.date === entry.date);
