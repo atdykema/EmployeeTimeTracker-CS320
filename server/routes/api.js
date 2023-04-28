@@ -101,7 +101,7 @@ async function getTimeData(req, res) {
                         });
                         
                         // console.log(entries_of_year_X)
-                        return_arr.push((entries_of_year_X.reduce((partialSum, a) => partialSum + a.hoursWorked, 0)).toFixed(2));
+                        return_arr.push(Number((entries_of_year_X.reduce((partialSum, a) => partialSum + a.hoursWorked, 0)).toFixed(2)));
                     }
                 }
                 /////////// Monthly SUM OF MONEY (This year's 12 months) //////////
@@ -113,10 +113,10 @@ async function getTimeData(req, res) {
                         let entries_of_month_X = time_entries.filter((e) => {
                             const date = new Date(e.date);
                             date.setUTCHours(0,0,0,0);
-                            return date.getUTCFullYear() === this_year && date.getUTCMonth() === i+1;
+                            return date.getUTCFullYear() === this_year && date.getUTCMonth() === i;
                         });
 
-                        return_arr.push((entries_of_month_X.reduce((partialSum, a) => partialSum + a.hoursWorked, 0)).toFixed(2));
+                        return_arr.push(Number((entries_of_month_X.reduce((partialSum, a) => partialSum + a.hoursWorked, 0)).toFixed(2)));
                     }
                 }
                 /////////// Weekly SUM OF MONEY (Last 7 days) //////////
@@ -276,8 +276,42 @@ router.post('/user/addTime', async(req, res, next) => {
     
 });
 
-
-
+router.post('/aggregateData', async(req, res, next) => {
+    let employees = await getSubordinates(req, res);
+    employees = employees.value;
+    let aggregateData = null;
+    for (const employee of employees) {
+        let pseudoReq = {body: {
+            employeeId: employee.employeeId,
+            companyId: employee.companyId,
+            timeOption: req.body.timeOption,
+            startDate: req.body.startDate,
+            endDate: req.body.endDate
+        }};
+        let data = await getTimeData(pseudoReq, res);
+        data = data.value;
+        
+        if (!aggregateData) {
+            aggregateData = data;
+        }
+        else if (req.body.timeOption !== "" && req.body.startDate === "" && req.body.endDate === "") {
+            data.forEach((val, i)=>{aggregateData[i]+= Number(val)});
+        }
+        else {
+            data.forEach((entry) => {
+                let existingIndex = aggregateData.findIndex(existingEntry=> existingEntry.date === entry.date);
+                if (existingIndex >= 0) {
+                    aggregateData[existingIndex].hoursWorked += entry.hoursWorked;
+                } else {
+                    aggregateData.push(entry);
+                }
+            })
+            aggregateData.sort((e1,e2) => new Date(e1.date) - new Date(e2.date));
+        }
+    }
+    
+    res.send({response: "OK", value: aggregateData});
+})
 
 //export router (used in index.js)
 module.exports = router;
