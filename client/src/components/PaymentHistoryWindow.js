@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { useState, useEffect } from 'react'
 import BarGraph from '../components/BarGraph'
 import ListViewTable from '../components/ListViewTable'
@@ -9,7 +8,7 @@ import requests from '../services/requests'
 import DaySearch from './DaySearch'
 import './PaymentHistoryWindow.css'
 
-const PaymentHistoryWindow = ({ isListPresent, setListPresence, employeeData }) => {
+const PaymentHistoryWindow = ({ isListPresent, setListPresence, employeeData, graphUpdates }) => {
   const [graphDisplayOption, setGraphDisplayOption] = useState('week')
   const [graphLoaded, updateGraphLoad] = useState(0)
   const [listLoaded, updateListLoad] = useState(0)
@@ -98,13 +97,13 @@ const PaymentHistoryWindow = ({ isListPresent, setListPresence, employeeData }) 
 
   useEffect(() => {
     fetchData()
-  }, [graphDisplayOption]) // runs on first render and whenever the graph display changes
+  }, [graphDisplayOption, graphUpdates]) // runs on first render and whenever the graph display changes
 
   return (
     <div className='outer-di-container'>
       <div className='side-tab-container'>
-        <div className='side-tab' id='graph-tab' style={!isListPresent ? { backgroundColor: 'rgba(220,220,220, 1)' } : { backgroundColor: 'rgba(220,220,220, .5)' }} onClick={setGraph}><img className='graphpic' src={graphpic}></img></div>
-        <div className='side-tab' id='list-tab' style={isListPresent ? { backgroundColor: 'rgba(220,220,220, 1)' } : { backgroundColor: 'rgba(220,220,220, .5)' }} onClick={setList}><img className='listpic' src={listpic}></img></div>
+        <div className='side-tab' id='graph-tab' style={!isListPresent ? { backgroundColor: 'rgba(220,220,220, 1)' } : { backgroundColor: 'rgba(220,220,220, .5)' }} onClick={setGraph}><img className='graphpic' alt='Graph View' src={graphpic}></img></div>
+        <div className='side-tab' id='list-tab' style={isListPresent ? { backgroundColor: 'rgba(220,220,220, 1)' } : { backgroundColor: 'rgba(220,220,220, .5)' }} onClick={setList}><img className='listpic' alt='List View' src={listpic}></img></div>
       </div>
       <div className='date-info-container'>
         <div className='time-scale-button-container'>
