@@ -45,6 +45,14 @@ router.post('/employeeGet', async (req, res, next) => {
 
 // GET TIME: get user time given the options
 router.post('/user/time', async (req, res, next) => {
+    let data = await getTimeData(req, res);
+    if (data) {
+        res.send(data);
+    } 
+});
+
+async function getTimeData(req, res) {
+    let successResult = null;
     // Default ALL timeEntries returned
     if(req.body.timeOption == "") {
         console.log(req.body);
@@ -52,7 +60,7 @@ router.post('/user/time', async (req, res, next) => {
     .then(query=> {
         if (query) {
             console.log(`\nUser ${req.body.employeeId} found. Data:\n${query}`);
-            res.send({response: "OK", value: query.timeEntries});
+            successResult = {response: "OK", value: query.timeEntries};
         } else {
             console.log(`\nEither companyId ${req.body.companyId} or employeeId ${req.body.employeeId} incorrect`);
             res.status(404).send({response: "FAILURE"});
@@ -182,7 +190,7 @@ router.post('/user/time', async (req, res, next) => {
                 /////////// Send RESPONSE //////////
                 
                 // console.log(`\nUser ${req.body.employeeId} found. Data:\n${query}`);
-                res.send({response: "OK", value: return_arr});
+                successResult = {response: "OK", value: return_arr};
 
                 
             } else {
@@ -195,13 +203,20 @@ router.post('/user/time', async (req, res, next) => {
             res.status(500).send({response: "FAILURE"});
         });
     }
-});
+
+    return successResult;
+}
 
 router.delete('/todos/:id', (req, res, next) => {
 //TODO
 })
 
 router.post('/user/manage', async(req, res, next) => {
+    let result = await getSubordinates(req, res);
+    res.send(result);
+});
+
+async function getSubordinates(req, res) {
     company = req.body.companyName
     person = req.body
     queryList = []
@@ -228,8 +243,8 @@ router.post('/user/manage', async(req, res, next) => {
             
         })
     }
-    res.send({response: "OK", value: employees});
-});
+    return {response: "OK", value: employees};
+}
 
 router.post('/user/addTime', async(req, res, next) => {
     
@@ -260,6 +275,8 @@ router.post('/user/addTime', async(req, res, next) => {
     })
     
 });
+
+
 
 
 //export router (used in index.js)
