@@ -63,6 +63,31 @@ const getAllTime = (employeeId, companyId) => {
   }
 }
 
-const methods = { validateLogin, getManagerViewData, sendTimeData, getTimeData, getAllTime } // Recent React needs this to be a separate obj
+const getAggregateData = (employeeId, companyName, timeOption, isManager) => {
+  try {
+    return axios.post(`${baseURL}/aggregateData`, {
+      employeeId, companyName, isManager, timeOption
+    })
+  } catch (e) {
+    // console.log('Error: Unable to get getTimeData')
+    // console.log(e)
+    console.log('Error: Unable to get getTimeData')
+    throw e
+  }
+}
+
+const getAllAggregate = (employeeId, companyName, isManager) => {
+  try {
+    return axios.post(`${baseURL}/aggregateData`, {
+      employeeId, companyName, isManager, timeOption: ''
+    })
+  } catch (e) {
+    console.log('Error: Unable to get getAllTime')
+    console.log(e)
+    return e
+  }
+}
+
+const methods = { validateLogin, getManagerViewData, sendTimeData, getTimeData, getAllTime, getAggregateData, getAllAggregate } // Recent React needs this to be a separate obj
 
 export default methods
