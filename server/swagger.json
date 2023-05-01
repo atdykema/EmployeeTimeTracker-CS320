@@ -105,7 +105,7 @@
           {
             "name": "employeeId",
             "in": "query",
-            "required": false,
+            "required": true,
             "style": "form",
             "explode": true,
             "schema": {
@@ -116,7 +116,7 @@
           {
             "name": "companyId",
             "in": "query",
-            "required": false,
+            "required": true,
             "style": "form",
             "explode": true,
             "schema": {
@@ -127,12 +127,34 @@
           {
             "name": "timeOption",
             "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "example": "'week', 'month', 'year', 'custom', or <blank>"
+            }
+          },
+          {
+            "name": "startDate",
+            "in": "query",
             "required": false,
             "style": "form",
             "explode": true,
             "schema": {
               "type": "string",
-              "example": "week"
+              "example": "2022-01-01"
+            }
+          },
+          {
+            "name": "endDate",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "example": "2023-01-01"
             }
           }
         ],
