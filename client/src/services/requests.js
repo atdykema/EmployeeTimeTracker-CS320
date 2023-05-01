@@ -63,7 +63,7 @@ const getAllTime = (employeeId, companyId) => {
   }
 }
 
-const getAggregateData = (employeeId, companyName, timeOption, isManager) => {
+const getAggregateData = (employeeId, companyName, isManager, timeOption) => {
   try {
     return axios.post(`${baseURL}/aggregateData`, {
       employeeId, companyName, isManager, timeOption
