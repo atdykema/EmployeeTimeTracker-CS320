@@ -7,8 +7,26 @@ import graphpic from './graphpic.png'
 import requests from '../services/requests'
 import DaySearch from './DaySearch'
 import './PaymentHistoryWindow.css'
+import Calendar from 'react-calendar'
+import 'react-calendar/dist/Calendar.css'
 
 const PaymentHistoryWindow = ({ isListPresent, setListPresence, employeeData, graphUpdates }) => {
+  const [date, setDate] = useState('')
+  const [showCalendar, setShowCalendar] = useState(false)
+
+  const onChange = (newDate) => {
+    updateSearchText('')
+    setDate(newDate)
+    const wordsArr = newDate.toString().split(' ')
+    const month = wordsArr[1] === 'Jan' ? '-01-' : wordsArr[1] === 'Feb' ? '-02-' : wordsArr[1] === 'Mar' ? '-03-' : wordsArr[1] === 'Apr' ? '-04-' : wordsArr[1] === 'May' ? '-05-' : wordsArr[1] === 'Jun' ? '-06-' : wordsArr[1] === 'Jul' ? '-07-' : wordsArr[1] === 'Aug' ? '-08-' : wordsArr[1] === 'Sep' ? '-09-' : wordsArr[1] === 'Oct' ? '-10-' : wordsArr[1] === 'Nov' ? '-11-' : '-12-'
+    updateSearchText(wordsArr[3] + month + wordsArr[2])
+    setShowCalendar(false)
+  }
+
+  const toggleCalendar = () => {
+    setShowCalendar(!showCalendar)
+  }
+
   const [graphDisplayOption, setGraphDisplayOption] = useState('week')
   const [graphLoaded, updateGraphLoad] = useState(0)
   const [listLoaded, updateListLoad] = useState(0)
@@ -83,6 +101,12 @@ const PaymentHistoryWindow = ({ isListPresent, setListPresence, employeeData, gr
       } else {
         return (
           <div className='list'>
+            <div>
+              <button style={{ marginTop: '10px' }} onClick={toggleCalendar}>Calendar Search</button>
+              {showCalendar && (
+                <Calendar value={date} onChange={onChange} />
+              )}
+            </div>
             <DaySearch text={searchText} updateText={updateSearchText} />
             <ListViewTable dayObjs={filterDays(listData, searchText)}/>
           </div>
