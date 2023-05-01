@@ -4,7 +4,7 @@
     "title": "PunchTime",
     "description": "PunchTime by Silicon Savants backend documentation",
     "contact": {
-      "email": "andrewlin@umass.edu"
+      "email": ["andrewlin@umass.edu", "bhackenson@umass.edu"]
     },
     "license": {
       "name": "Apache 2.0",
@@ -14,7 +14,7 @@
   },
   "servers": [
     {
-      "url": "https://virtserver.swaggerhub.com/Unseenmocha/PunchTime/1.0.0",
+      "url": "https://virtserver.swaggerhub.com/SiliconSavants/PunchTime/1.0.0",
       "description": "SwaggerHub API Auto Mocking"
     }
   ],
@@ -50,7 +50,7 @@
             "name": "password",
             "in": "query",
             "description": "password for login",
-            "required": false,
+            "required": true,
             "style": "form",
             "explode": true,
             "schema": {
@@ -93,19 +93,19 @@
         }
       }
     },
-    "/user/time": {
+    "/employeeGet": {
       "post": {
         "tags": [
           "developers"
         ],
-        "summary": "returns array of user daily user time objects depending on given parameter range",
-        "description": "By passing an employee's employeeId, companyId and an optional timeOption parameter, an array of timeEntry objects can be requested. On success, either all or some will be returned depending on the value of timeOption.\n",
-        "operationId": "getTimeData",
+        "summary": "returns Employee object of an employee specified by companyId and employeeId\n",
+        "description": "Pass employeeId and companyId to receive corresponding Employee object from database\n",
+        "operationId": "getEmployee",
         "parameters": [
           {
             "name": "employeeId",
             "in": "query",
-            "required": false,
+            "required": true,
             "style": "form",
             "explode": true,
             "schema": {
@@ -116,7 +116,73 @@
           {
             "name": "companyId",
             "in": "query",
-            "required": false,
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer",
+              "example": 3
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "employee object found for given employee info",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/inline_response_200"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "employee object not found for given employee info",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/inline_response_404"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/inline_response_404"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/user/time": {
+      "post": {
+        "tags": [
+          "developers"
+        ],
+        "summary": "returns array of user daily user time objects depending on given parameter range",
+        "description": "By passing an employee's employeeId, companyId and an optional timeOption parameter, an array of timeEntry objects can be requested. On success, either all or some will be returned depending on the value of timeOption. Additionally, timeOption=\"custom\" can be specified along with providing a startDate and endDate to get all time entries between those dates\n",
+        "operationId": "getTimeData",
+        "parameters": [
+          {
+            "name": "employeeId",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer",
+              "example": 1
+            }
+          },
+          {
+            "name": "companyId",
+            "in": "query",
+            "required": true,
             "style": "form",
             "explode": true,
             "schema": {
@@ -133,6 +199,28 @@
             "schema": {
               "type": "string",
               "example": "week"
+            }
+          },
+          {
+            "name": "startDate",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "example": "01-01-2022"
+            }
+          },
+          {
+            "name": "endDate",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "example": "01-01-2024"
             }
           }
         ],
@@ -308,6 +396,116 @@
           }
         }
       }
+    },
+    "/aggregateData": {
+      "post": {
+        "tags": [
+          "developers"
+        ],
+        "summary": "get aggregate data for team under a manager",
+        "description": "Receives companyName, employeeId, isManager, timeOption specifying type of range of time data is requested, and possibly startDate and endDate specifying a custom range of dates for which aggregate time data is requested\n",
+        "operationId": "aggregateData",
+        "parameters": [
+          {
+            "name": "companyName",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "example": "GizmoGram"
+            }
+          },
+          {
+            "name": "employeeId",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer",
+              "example": 1
+            }
+          },
+          {
+            "name": "isManager",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "boolean",
+              "example": true
+            }
+          },
+          {
+            "name": "timeOption",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "example": "week"
+            }
+          },
+          {
+            "name": "startDate",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "example": "01-01-2022"
+            }
+          },
+          {
+            "name": "endDate",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "example": "01-01-2024"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "aggregate time data successfully retrieved",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/inline_response_200_1"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "employee with given employeeId and companyId not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/inline_response_404"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "unexpected error or timeoption error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/inline_response_404"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -421,7 +619,25 @@
             "example": "OK"
           },
           "value": {
-            "$ref": "#/components/schemas/Employeetimeentry"
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Employeetimeentry"
+              },
+              {
+                "minItems": 3,
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                },
+                "enum": [
+                  [
+                    12,
+                    7,
+                    3
+                  ]
+                ]
+              }
+            ]
           }
         }
       },
