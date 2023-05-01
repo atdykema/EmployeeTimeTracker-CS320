@@ -5,7 +5,7 @@ import LogoutButton from '../components/LogoutButton'
 import requests from '../services/requests'
 import loadingLogo from './loading.svg'
 import './ManagerPage.css'
-import NavigationTab from '../components/NavigationTab'
+// import NavigationTab from '../components/NavigationTab'
 import { useNavigate } from 'react-router-dom'
 import AggregateHistoryWindow from '../components/AggregateHistoryWindow'
 
@@ -79,7 +79,7 @@ const Managerpage = ({ employeeData, employeeDataUpdater, cookieReset, cookies }
     ? <div/>
     : (
         <div className='page-container'>
-        {employeeData.isManager && <NavigationTab />}
+        {/* {employeeData.isManager && <NavigationTab />} */}
         <LogoutButton employeeDataUpdater={employeeDataUpdater} cookieReset= {cookieReset}/>
         {loadFunction()}
         <AggregateHistoryWindow isListPresent={isListPresent} setListPresence={setListPresence} employeeData={employeeData}/>
