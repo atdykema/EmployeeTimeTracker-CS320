@@ -28,13 +28,6 @@ const AggregateHistoryWindow = ({ isListPresent, setListPresence, employeeData, 
 
   const fetchData = async () => {
     updateGraphLoad(0)
-    console.log(typeof (employeeData.isManager))
-    console.log(typeof (employeeData.isManager))
-    console.log(typeof (employeeData.isManager))
-    console.log(typeof (employeeData.isManager))
-    console.log(typeof (employeeData.isManager))
-    console.log(typeof (employeeData.isManager))
-    console.log(typeof (employeeData.isManager))
     const result = await requests.getAggregateData(
       employeeData.employeeId,
       employeeData.companyName,
