@@ -14,15 +14,15 @@ router.post('/login', async (req, res, next) => {
     await User.findOne({email: req.body.username, password: req.body.password}).exec()
     .then(query=> {
         if (query) {
-            ////console.log(`\nUser ${req.body.username} found. Data:\n${query}`);
+            //////console.log(`\nUser ${req.body.username} found. Data:\n${query}`);
             res.status(200).send({response: "OK", value: query});
         } else {
-            ////console.log(`\nEither username ${req.body.username} or password ${req.body.password} incorrect`);
+            //////console.log(`\nEither username ${req.body.username} or password ${req.body.password} incorrect`);
             res.status(404).send({response: "FAILURE"});
         }
     })
     .catch(error=> {
-        //console.log(`Failed. ${error}`);
+        ////console.log(`Failed. ${error}`);
         res.status(500).send({response: "FAILURE"});
     });
 });
@@ -37,7 +37,7 @@ router.post('/employeeGet', async (req, res, next) => {
         }
     })
     .catch(error=> {
-        //console.log(`Failed. ${error}`);
+        ////console.log(`Failed. ${error}`);
         res.status(500).send({response: "FAILURE"});
     });
 });
@@ -56,19 +56,19 @@ async function getTimeData(req, res) {
     let successResult = null;
     // Default ALL timeEntries returned
     if(req.body.timeOption == "") {
-        // //console.log(req.body);
+        // ////console.log(req.body);
         await Time.findOne({companyId: req.body.companyId, employeeId: req.body.employeeId}).exec()
     .then(query=> {
         if (query) {
-            //console.log(`\nUser ${req.body.employeeId} found. Data:\n${query}`);
+            ////console.log(`\nUser ${req.body.employeeId} found. Data:\n${query}`);
             successResult = {response: "OK", value: query.timeEntries};
         } else {
-            //console.log(`\nEither companyId ${req.body.companyId} or employeeId ${req.body.employeeId} incorrect`);
+            ////console.log(`\nEither companyId ${req.body.companyId} or employeeId ${req.body.employeeId} incorrect`);
             res.status(404).send({response: "FAILURE"});
         }
     })
     .catch(error=> {
-        //console.log(`Failed. ${error}`);
+        ////console.log(`Failed. ${error}`);
         res.status(500).send({response: "FAILURE"});
     });
     }
@@ -101,7 +101,7 @@ async function getTimeData(req, res) {
                             return temp_date.getUTCFullYear() === three_year[i];
                         });
                         
-                        // //console.log(entries_of_year_X)
+                        // ////console.log(entries_of_year_X)
                         return_arr.push(Number((entries_of_year_X.reduce((partialSum, a) => partialSum + a.hoursWorked, 0)).toFixed(2)));
                     }
                 }
@@ -139,11 +139,11 @@ async function getTimeData(req, res) {
                         return date >= firstday && date < lastday;
                     });
 
-                    // //console.log("\nHere");
-                    // //console.log(curr);
-                    // //console.log(firstday);
-                    // //console.log(lastday);
-                    // //console.log(entries_of_this_week);
+                    // ////console.log("\nHere");
+                    // ////console.log(curr);
+                    // ////console.log(firstday);
+                    // ////console.log(lastday);
+                    // ////console.log(entries_of_this_week);
 
                     var checking_date = new Date(firstday);
                     checking_date.setUTCHours(0,0,0,0);
@@ -151,7 +151,7 @@ async function getTimeData(req, res) {
                     for(let i=0; i<7; i++) {
                         let hour_work = 0;
 
-                        // //console.log(checking_date);
+                        // ////console.log(checking_date);
 
                         let found = entries_of_this_week.find((e) => {
                             const entry_date = new Date(e.date);
@@ -190,17 +190,17 @@ async function getTimeData(req, res) {
 
                 /////////// Send RESPONSE //////////
                 
-                // //console.log(`\nUser ${req.body.employeeId} found. Data:\n${query}`);
+                // ////console.log(`\nUser ${req.body.employeeId} found. Data:\n${query}`);
                 successResult = {response: "OK", value: return_arr};
 
                 
             } else {
-                //console.log(`\nEither companyId ${req.body.companyId} or employeeId ${req.body.employeeId} incorrect`);
+                ////console.log(`\nEither companyId ${req.body.companyId} or employeeId ${req.body.employeeId} incorrect`);
                 res.status(404).send({response: "FAILURE"});
             }
         })
         .catch(error=> {
-            //console.log(`Failed. ${error}`);
+            ////console.log(`Failed. ${error}`);
             res.status(500).send({response: "FAILURE"});
         });
     }
@@ -254,16 +254,16 @@ async function getSubordinates(req, res) {
 }
 
 router.post('/user/addTime', async(req, res, next) => {
-    //console.log("ROCKS")
-    //console.log("ROCKS")
-    //console.log("ROCKS")
-    //console.log("ROCKS")
-    //console.log("ROCKS")
+    ////console.log("ROCKS")
+    ////console.log("ROCKS")
+    ////console.log("ROCKS")
+    ////console.log("ROCKS")
+    ////console.log("ROCKS")
 
-    //console.log("ROCKS")
-    //console.log("ROCKS")
-    //console.log("ROCKS")
-    //console.log("ROCKS")
+    ////console.log("ROCKS")
+    ////console.log("ROCKS")
+    ////console.log("ROCKS")
+    ////console.log("ROCKS")
     
     await Time.findOne({employeeId: req.body.employeeId, companyId:req.body.companyId}).exec().then(employee => {
         if(!employee){      
@@ -296,9 +296,10 @@ router.post('/user/addTime', async(req, res, next) => {
 //route to get aggregateDate, works exactly the same as /user/time except returns aggregated time values for
 //all employees under the one specified in req.body
 router.post('/aggregateData', async(req, res, next) => {
-    // console.log("ROCKS")
-    // console.log(req.body)
-    // console.log("ROCKS")
+    // //console.log("ROCKS")
+    // //console.log(req.body)
+    // //console.log("ROCKS")
+    console.log(req.body.startDate)
     //get array of employees under one specified in req.body
     let employees = await getSubordinates(req, res);
     employees = employees.value;
@@ -325,32 +326,33 @@ router.post('/aggregateData', async(req, res, next) => {
             aggregateData = data;
         }
         //if one of the summarized time options
-        else if (req.body.timeOption !== "" && req.body.startDate === "" && req.body.endDate === "") {
+        else if (req.body.timeOption !== "" && req.body.startDate === undefined && req.body.endDate === undefined) {
+            console.log(employee)
             data.forEach((val, i)=>{aggregateData[i]+= Number(val)});
         }
         //if no options specified or range specified
         else {
             data.forEach((entry) => {
-                console.log(entry)
+                //console.log(entry)
                 let existingIndex = aggregateData.findIndex(existingEntry=> existingEntry.date === entry.date);
-                console.log(`entry completed ${existingIndex} \n`)
+                //console.log(`entry completed ${existingIndex} \n`)
                 if (entry.hoursWorked <= 24){
                     if (existingIndex >= 0) {
-                        console.log("adding")
+                        //console.log("adding")
                         aggregateData[existingIndex].hoursWorked += entry.hoursWorked;
-                        console.log("done adding")
+                        //console.log("done adding")
                     } else {
-                        console.log("making new")
+                        //console.log("making new")
                         aggregateData.push(entry);
-                        console.log("done making new")
+                        //console.log("done making new")
                     }
                 }
             })
-            console.log("sorting")
+            //console.log("sorting")
             aggregateData.sort((e1,e2) => new Date(e1.date) - new Date(e2.date));
         }
     }
-    console.log("exiting gracefully")
+    //console.log("exiting gracefully")
     res.send({response: "OK", value: aggregateData});
 })
 
