@@ -2,6 +2,17 @@ import axios from 'axios'
 
 const baseURL = 'http://localhost:5000'
 
+const getEmployee = async (employeeId, companyId) => {
+  try {
+    return axios.post(`${baseURL}/employeeGet`, {
+      employeeId, companyId
+    })
+  } catch (e) {
+    console.log(`Error detected: ${e}`)
+    throw e
+  }
+}
+
 const validateLogin = async (username, password) => {
   try {
     return axios.post(`${baseURL}/login`, {
@@ -88,6 +99,6 @@ const getAllAggregate = (employeeId, companyName, isManager) => {
   }
 }
 
-const methods = { validateLogin, getManagerViewData, sendTimeData, getTimeData, getAllTime, getAggregateData, getAllAggregate } // Recent React needs this to be a separate obj
+const methods = { validateLogin, getEmployee, getManagerViewData, sendTimeData, getTimeData, getAllTime, getAggregateData, getAllAggregate } // Recent React needs this to be a separate obj
 
 export default methods
