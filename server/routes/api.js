@@ -277,6 +277,8 @@ router.post('/user/addTime', async(req, res, next) => {
 router.post('/aggregateData', async(req, res, next) => {
     //get array of employees under one specified in req.body
     let employees = await getSubordinates(req, res);
+    // console.log(employees.value)
+    employees.value.forEach(e => console.log(e.firstName))
     employees = employees.value;
     if (employees.length === 0) {
         res.send({response: "FAILURE"});
