@@ -210,11 +210,11 @@ router.post('/user/manage', async(req, res, next) => {
 //used for /user/manage and /aggregateData routes
 async function getSubordinates(req, res) {
     try {
-        company = req.body.companyName
-        person = req.body
-        queryList = []
-        checkedList = []
-        employees = []
+        const company = req.body.companyName
+        let person = req.body
+        const queryList = []
+        const checkedList = []
+        const employees = []
         if(req.body.isManager){
             queryList.push(person)
         }
@@ -277,8 +277,6 @@ router.post('/user/addTime', async(req, res, next) => {
 router.post('/aggregateData', async(req, res, next) => {
     //get array of employees under one specified in req.body
     let employees = await getSubordinates(req, res);
-    // console.log(employees.value)
-    employees.value.forEach(e => console.log(e.firstName))
     employees = employees.value;
     if (employees.length === 0) {
         res.send({response: "FAILURE"});
