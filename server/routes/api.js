@@ -254,17 +254,6 @@ async function getSubordinates(req, res) {
 }
 
 router.post('/user/addTime', async(req, res, next) => {
-    ////console.log("ROCKS")
-    ////console.log("ROCKS")
-    ////console.log("ROCKS")
-    ////console.log("ROCKS")
-    ////console.log("ROCKS")
-
-    ////console.log("ROCKS")
-    ////console.log("ROCKS")
-    ////console.log("ROCKS")
-    ////console.log("ROCKS")
-    
     await Time.findOne({employeeId: req.body.employeeId, companyId:req.body.companyId}).exec().then(employee => {
         if(!employee){      
             return res.status(404).json({message: 'Employee not found'});
@@ -299,9 +288,11 @@ router.post('/aggregateData', async(req, res, next) => {
     // //console.log("ROCKS")
     // //console.log(req.body)
     // //console.log("ROCKS")
-    console.log(req.body.startDate)
+    // console.log(req.body.startDate)
     //get array of employees under one specified in req.body
     let employees = await getSubordinates(req, res);
+    // console.log(employees.value)
+    employees.value.forEach(e => console.log(e.firstName))
     employees = employees.value;
     if (employees.length === 0) {
         res.send({response: "FAILURE"});
@@ -327,7 +318,7 @@ router.post('/aggregateData', async(req, res, next) => {
         }
         //if one of the summarized time options
         else if (req.body.timeOption !== "" && req.body.startDate === undefined && req.body.endDate === undefined) {
-            console.log(employee)
+            // console.log(employee)
             data.forEach((val, i)=>{aggregateData[i]+= Number(val)});
         }
         //if no options specified or range specified
