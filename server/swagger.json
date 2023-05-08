@@ -99,8 +99,8 @@
           "developers"
         ],
         "summary": "returns Employee object of an employee specified by companyId and employeeId\n",
-        "description": "Pass employeeId and companyId to receive corresponding Employee object from database\n",
-        "operationId": "getEmployee",
+        "description": "Endpoint receives as input an employeeId and a companyId, and the employee object is returned if the employee was found, throws an error otherwise\n",
+        "operationId": "employeeGet",
         "parameters": [
           {
             "name": "employeeId",
@@ -137,7 +137,7 @@
             }
           },
           "404": {
-            "description": "employee object not found for given employee info",
+            "description": "could not find employee with given parameters",
             "content": {
               "application/json": {
                 "schema": {

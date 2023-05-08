@@ -148,6 +148,8 @@ body{
 }
 
 .timescale-button{
+    display: flex;
+    justify-content: center;
     background-color: rgba(220,220,220, .5);
     transition: .5s;
     border: 3px solid whitesmoke;

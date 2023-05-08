@@ -27,31 +27,31 @@
 }
 
 #Sunday{
-    background-color: rgba(255, 0, 0, .5);
+    background-color: rgba(220, 220, 220, 0.5);
 }
 
 #Monday{
-    background-color: rgba(255, 140, 0, 0.5);
+    background-color: rgba(220, 220, 220, 0.5);
 }
 
 #Tuesday{
-    background-color: rgba(255, 238, 0, 0.5);
+    background-color: rgba(220, 220, 220, 0.5);
 }
 
 #Wednesday{
-    background-color: rgba(30, 255, 0, 0.5);
+    background-color: rgba(220, 220, 220, 0.5);
 }
 
 #Thursday{
-    background-color: rgba(0, 42, 255, 0.5);
+    background-color: rgba(220, 220, 220, 0.5);
 }
 
 #Friday{
-    background-color: rgba(217, 0, 255, 0.5);
+    background-color: rgba(220, 220, 220, 0.5);
 }
 
 #Saturday{
-    background-color: rgba(255, 0, 183, 0.5);
+    background-color: rgba(220, 220, 220, 0.5);
 }
 
 input{
