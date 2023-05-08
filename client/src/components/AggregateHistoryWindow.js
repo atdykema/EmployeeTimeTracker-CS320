@@ -2,32 +2,13 @@ import { useState, useEffect } from 'react'
 import BarGraph from '../components/BarGraph'
 import ListViewTable from '../components/ListViewTable'
 import loadingLogo from '../pages/loading.svg'
-import listpic from './list-ul.webp'
+import listpic from './listpic.png'
 import graphpic from './graphpic.png'
-import calpic from './calpic.png'
 import requests from '../services/requests'
 import DaySearch from './DaySearch'
-import './PaymentHistoryWindow.css'
-import Calendar from 'react-calendar'
-import 'react-calendar/dist/Calendar.css'
+import './AggregateHistoryWindow.css'
 
-const PaymentHistoryWindow = ({ isListPresent, setListPresence, employeeData, graphUpdates }) => {
-  const [date, setDate] = useState('')
-  const [showCalendar, setShowCalendar] = useState(false)
-
-  const onChange = (newDate) => {
-    updateSearchText('')
-    setDate(newDate)
-    const wordsArr = newDate.toString().split(' ')
-    const month = wordsArr[1] === 'Jan' ? '-01-' : wordsArr[1] === 'Feb' ? '-02-' : wordsArr[1] === 'Mar' ? '-03-' : wordsArr[1] === 'Apr' ? '-04-' : wordsArr[1] === 'May' ? '-05-' : wordsArr[1] === 'Jun' ? '-06-' : wordsArr[1] === 'Jul' ? '-07-' : wordsArr[1] === 'Aug' ? '-08-' : wordsArr[1] === 'Sep' ? '-09-' : wordsArr[1] === 'Oct' ? '-10-' : wordsArr[1] === 'Nov' ? '-11-' : '-12-'
-    updateSearchText(wordsArr[3] + month + wordsArr[2])
-    setShowCalendar(false)
-  }
-
-  const toggleCalendar = () => {
-    setShowCalendar(!showCalendar)
-  }
-
+const AggregateHistoryWindow = ({ isListPresent, setListPresence, employeeData, graphUpdates }) => {
   const [graphDisplayOption, setGraphDisplayOption] = useState('week')
   const [graphLoaded, updateGraphLoad] = useState(0)
   const [listLoaded, updateListLoad] = useState(0)
@@ -47,22 +28,25 @@ const PaymentHistoryWindow = ({ isListPresent, setListPresence, employeeData, gr
 
   const fetchData = async () => {
     updateGraphLoad(0)
-    const result = await requests.getTimeData(
+    const result = await requests.getAggregateData(
       employeeData.employeeId,
-      employeeData.companyId,
+      employeeData.companyName,
+      employeeData.isManager,
       graphDisplayOption
     )
+    console.log('ROCKS')
+    console.log(result)
     setGraphData(result.data.value)
     updateGraphLoad(1)
   }
 
   const fetchListData = async () => {
     updateListLoad(0)
-    const result = await requests.getAllTime(
+    const result = await requests.getAllAggregate(
       employeeData.employeeId,
-      employeeData.companyId
+      employeeData.companyName,
+      employeeData.isManager
     )
-    console.log(result)
     updateListData(result.data.value)
     // console.log(listData)
     updateListLoad(1)
@@ -102,13 +86,7 @@ const PaymentHistoryWindow = ({ isListPresent, setListPresence, employeeData, gr
       } else {
         return (
           <div className='list'>
-            <div className='search-container'>
-              <DaySearch text={searchText} updateText={updateSearchText} />
-              <div className='calender-button' style={{ marginTop: '10px' }} onClick={toggleCalendar}><img className='calpic' alt='Calender Search' src={calpic} style={{ height: '50px' }}></img></div>
-              {showCalendar && (
-                <Calendar value={date} onChange={onChange} />
-              )}
-            </div>
+            <DaySearch text={searchText} updateText={updateSearchText} />
             <ListViewTable dayObjs={filterDays(listData, searchText)}/>
           </div>
         )
@@ -135,9 +113,9 @@ const PaymentHistoryWindow = ({ isListPresent, setListPresence, employeeData, gr
           <div className='pht-container'>
             <div className='payment-history-title'>Payment History</div>
           </div>
-          <button className='timescale-button' onClick={setDaily} style={ isListPresent ? { display: 'none' } : { display: 'flex' }}>Weekly</button>
-          <button className='timescale-button' onClick={setMonthly} style={ isListPresent ? { display: 'none' } : { display: 'flex' }}>Monthly</button>
-          <button className='timescale-button' onClick={setYearly} style={ isListPresent ? { display: 'none' } : { display: 'flex' }}>Yearly</button>
+          <button className='timescale-button' onClick={setDaily}>Weekly</button>
+          <button className='timescale-button' onClick={setMonthly}>Monthly</button>
+          <button className='timescale-button' onClick={setYearly}>Yearly</button>
         </div>
 
         <div className='graph-container' style={isListPresent ? { minHeight: '70vh' } : { minHeight: '0vh' }}>
@@ -150,4 +128,4 @@ const PaymentHistoryWindow = ({ isListPresent, setListPresence, employeeData, gr
   )
 }
 
-export default PaymentHistoryWindow
+export default AggregateHistoryWindow

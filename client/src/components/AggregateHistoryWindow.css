@@ -50,26 +50,6 @@
 
 
 .listpic{
-  height: 40px;
+  height: 50px;
   transition: .5s;
-}
-
-.search-container{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.calender-button{
-  display: flex;
-  transition: .5s;
-}
-
-.calender-button:hover{
-  background-color: rgba(220,220,220, 1);
-  padding: 5px;
-  margin: 5px;
-  border-radius: 10px;
-  z-index: 2;
 }
