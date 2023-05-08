@@ -34,7 +34,7 @@ const Login = ({ cookies, cookieSetter }) => {
       console.log('Promise rejected:', e)
       console.log(e.message)
       if (e.message === 'Request failed with status code 404') {
-        setInvalidInput('Your username or password or both was incorrect')
+        setInvalidInput('Incorrect username or password')
         seterrorMessage(true)
         setUsername('')
         setPassword('')
@@ -73,7 +73,7 @@ const Login = ({ cookies, cookieSetter }) => {
             <p className='error-message'>{invalidInput}</p>
             <form onSubmit={submit}>
               <input id='Inputs' value={usernameText} placeholder='Email Address' onChange={handleUsernameChange} aria-label='Email Address Input'/><br />
-              <input id='Inputs' value={passwordText} placeholder='Password' onChange={handlePasswordChange} aria-label='Password Input'/><br />
+              <input id='Inputs' value={passwordText} type='password' placeholder='Password' onChange={handlePasswordChange} aria-label='Password Input'/><br />
               <button className='loginBut' id='Inputs' type="submit">Login</button>
             </form>
           </div>
