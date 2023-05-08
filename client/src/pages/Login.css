@@ -43,7 +43,7 @@ body {
   }
   .transparent-box {
     position: relative;
-    background-color: rgba(193,194,192,0.4); /* Set the background color to a greyish color with an alpha (transparency) value of 0.5. The lower you make alpha, the more transperant the box */
+    background-color: rgba(193,194,192,0.8); /* Set the background color to a greyish color with an alpha (transparency) value of 0.5. The lower you make alpha, the more transperant the box */
     padding: 25px; /* Add padding around the content inside the box */
     border-radius: 10px; /* Add rounded corners to the box */
     width: 35%; /* Set the width of the box to 50% of the container element */
@@ -57,9 +57,10 @@ body {
 }
 .error-message {
     color: red;
-    font-size: 0.8em;
+    font-size: 1em;
     margin-top: 0;
     margin-bottom: 0;
+    /* -webkit-text-stroke: 0.21px white; */
 }
 
 #Inputs {
@@ -70,6 +71,7 @@ body {
 }
 .loginBut {
     position: absolute;
+    cursor: pointer;
     right: 0;
 }
 button:hover {

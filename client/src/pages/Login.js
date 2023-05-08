@@ -34,7 +34,7 @@ const Login = ({ cookies, cookieSetter }) => {
       console.log('Promise rejected:', e)
       console.log(e.message)
       if (e.message === 'Request failed with status code 404') {
-        setInvalidInput('Your username or password or both was incorrect')
+        setInvalidInput('Incorrect username or password')
         seterrorMessage(true)
         setUsername('')
         setPassword('')
