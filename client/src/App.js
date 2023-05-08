@@ -8,14 +8,14 @@ import ErrorPage from './pages/ErrorPage'
 import { useCookies } from 'react-cookie'
 
 const App = () => {
-  const [cookies, setCookie, removeCookie] = useCookies(['data'])
+  const [cookies, setCookie, removeCookie] = useCookies(['data', 'subData'])
 
   return (
     <Routes>
       <Route path='/' element={<Login cookies = {cookies} cookieSetter = {setCookie}/>}/>
       <Route path='/time' element={<EmployeePage employeeData={cookies.data} employeeDataUpdater = {setCookie} cookieReset={removeCookie} cookies={cookies}/>}/>
       <Route path='/manager/view' element={<ManagerPage employeeData={cookies.data} employeeDataUpdater={setCookie} cookieReset={removeCookie} cookies={cookies}/>}/>
-      <Route path='/manager/view/:id' element={<ManagerIndividualPage employeeData={cookies.data} employeeDataUpdater={setCookie} cookieReset={removeCookie} cookies={cookies}/>}/>
+      <Route path='/manager/view/id' element={<ManagerIndividualPage employeeData={cookies.data} employeeDataUpdater={setCookie} subordinateData={cookies.subData} cookieReset={removeCookie} cookies={cookies}/>}/>
       <Route path='/serverdown' element={<ServerDownPage/>}/>
       <Route path='*' element={<ErrorPage/>}/>
     </Routes>

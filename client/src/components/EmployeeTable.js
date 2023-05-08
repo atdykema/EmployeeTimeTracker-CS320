@@ -6,7 +6,7 @@ const EmployeeTable = ({ employeeObjs, selectionUpdater }) => {
   const navigator = useNavigate()
   const handleRowClick = (employeeObj) => (e) => {
     selectionUpdater('subData', employeeObj, { path: '/', expires: new Date(Date.now() + 50000000) })
-    navigator(`/manager/view/${employeeObj.employeeId}`)
+    navigator('/manager/view/id')
   }
   // the slice is to make a copy, since sort is in place
   const sortedEmployees = employeeObjs.slice().sort((e1, e2) => e1.employeeId - e2.employeeId)
