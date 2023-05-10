@@ -2,6 +2,7 @@
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const routes = require('./routes/api');
+const s_routes = require('./routes/swagger-api');
 const dotenv = require('dotenv');
 dotenv.config({path: 'process.env'});
 const swaggerui = require("swagger-ui-express");
@@ -33,6 +34,7 @@ app.use((req, res, next) => {
 });
 app.use(bodyParser.json());
 app.use('/', routes);
+app.use('/documentation', s_routes), 
 app.use('/api-docs', swaggerui.serve, swaggerui.setup(swaggerSpec));
 app.use((err, req, res, next) => {
   console.log(err);
