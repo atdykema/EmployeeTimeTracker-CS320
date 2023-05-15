@@ -153,3 +153,4 @@ const uploadFilesToDB = async  () => {
     await timeEntries.insertMany(allData);
     mongoose.disconnect();
 };
+uploadFilesToDB();

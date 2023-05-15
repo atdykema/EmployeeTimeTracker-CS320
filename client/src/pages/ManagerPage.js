@@ -7,7 +7,7 @@ import loadingLogo from './loading.svg'
 import './ManagerPage.css'
 import NavigationTab from '../components/NavigationTab'
 import { useNavigate } from 'react-router-dom'
-import PaymentHistoryWindow from '../components/PaymentHistoryWindow'
+import AggregateHistoryWindow from '../components/AggregateHistoryWindow'
 
 const Managerpage = ({ employeeData, employeeDataUpdater, cookieReset, cookies }) => {
   const [isListPresent, setListPresence] = useState(false)
@@ -30,9 +30,10 @@ const Managerpage = ({ employeeData, employeeDataUpdater, cookieReset, cookies }
   //       HTTP calls must be asynchronous
   useEffect(() => {
     const fetchData = async () => {
-      updateLoad(0)
+      // updateLoad(0)
       let result
       try {
+        // eslint-disable-next-line no-unused-vars
         result = await requests.getManagerViewData(
           employeeData.employeeId,
           employeeData.companyName,
@@ -45,7 +46,10 @@ const Managerpage = ({ employeeData, employeeDataUpdater, cookieReset, cookies }
           navigator('/serverdown')
         }
       }
-      setEmployeeObjs(result.data.value) // update data
+      // console.log(result.data.value)
+      const empDataResult = result.data.value
+      const filteredEmployeeData = empDataResult.filter(obj => empDataResult.indexOf(obj) === empDataResult.findIndex(o => o.employeeId === obj.employeeId))
+      setEmployeeObjs(filteredEmployeeData) // update data
       updateLoad(1)
     }
     fetchData()
@@ -83,6 +87,7 @@ const Managerpage = ({ employeeData, employeeDataUpdater, cookieReset, cookies }
         <LogoutButton employeeDataUpdater={employeeDataUpdater} cookieReset= {cookieReset}/>
         <PaymentHistoryWindow isListPresent={isListPresent} setListPresence={setListPresence} employeeData={employeeData}/>
         {loadFunction()}
+        <AggregateHistoryWindow isListPresent={isListPresent} setListPresence={setListPresence} employeeData={employeeData}/>
         </div>
       )
 }

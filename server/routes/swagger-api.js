@@ -5,13 +5,13 @@ const mongoose = require('mongoose');
 const Time = require('../models/timeModel');
 const User = require('../models/userModel');
 
-const router = express.Router();
-router.use(cors());
-router.use(express.json());
+const s_router = express.Router();
+s_router.use(cors());
+s_router.use(express.json());
 
 
-router.post('/login', async (req, res, next) => {
-    await User.findOne({email: req.body.username, password: req.body.password}).exec()
+s_router.post('/s_login', async (req, res, next) => {
+    await User.findOne({email: req.query.username, password: req.query.password}).exec()
     .then(query=> {
         if (query) {
             // console.log(`\nUser ${req.body.username} found. Data:\n${query}`);
@@ -27,8 +27,8 @@ router.post('/login', async (req, res, next) => {
     });
 });
 
-router.post('/employeeGet', async (req, res, next) => {
-    await User.findOne({employeeId: req.body.employeeId, companyId: req.body.companyId}).exec()
+s_router.post('/s_employeeGet', async (req, res, next) => {
+    await User.findOne({employeeId: req.query.employeeId, companyId: req.query.companyId}).exec()
     .then(query=> {
         if (query) {
             res.status(200).send({response: "OK", value: query});
@@ -44,7 +44,7 @@ router.post('/employeeGet', async (req, res, next) => {
 
 
 // GET TIME: get user time given the options
-router.post('/user/time', async (req, res, next) => {
+s_router.get('/s_user/time', async (req, res, next) => {
     let data = await getTimeData(req, res);
     if (data) {
         res.send(data);
@@ -55,8 +55,8 @@ router.post('/user/time', async (req, res, next) => {
 async function getTimeData(req, res) {
     let successResult = null;
     // Default ALL timeEntries returned
-    if(req.body.timeOption == "") {
-        await Time.findOne({companyId: req.body.companyId, employeeId: req.body.employeeId}).exec()
+    if(req.query.timeOption == "") {
+        await Time.findOne({companyId: req.query.companyId, employeeId: req.query.employeeId}).exec()
     .then(query=> {
         if (query) {
             // console.log(`\nUser ${req.body.employeeId} found. Data:\n${query}`);
@@ -73,7 +73,7 @@ async function getTimeData(req, res) {
     }
 
     else {
-        await Time.findOne({companyId: req.body.companyId, employeeId: req.body.employeeId}).exec()
+        await Time.findOne({companyId: req.query.companyId, employeeId: req.query.employeeId}).exec()
         .then(query=> {
             if (query) {                
                 return_arr = [] // Return SUMs array
@@ -89,7 +89,7 @@ async function getTimeData(req, res) {
 
 
                 /////////// Yearly SUM OF MONEY (3 recent years) //////////
-                if(req.body.timeOption == "year") {
+                if(req.query.timeOption == "year") {
                     const three_year = [cur_date.getUTCFullYear(), (cur_date.getUTCFullYear())-1, (cur_date.getUTCFullYear())-2]; // Three years
 
                     for(let i=0; i<3; i++) {
@@ -104,7 +104,7 @@ async function getTimeData(req, res) {
                     }
                 }
                 /////////// Monthly SUM OF MONEY (This year's 12 months) //////////
-                if(req.body.timeOption == "month") {
+                if(req.query.timeOption == "month") {
                     const this_year = cur_date.getUTCFullYear();
 
                     for(let i=0; i<12; i++) {         
@@ -119,7 +119,7 @@ async function getTimeData(req, res) {
                     }
                 }
                 /////////// Weekly SUM OF MONEY (Last 7 days) //////////
-                if(req.body.timeOption == "week") {
+                if(req.query.timeOption == "week") {
                     var curr = new Date(); // get current date
                     // curr.setFullYear(2023);  // For test/demo
                     // curr.setMonth(1, 1);
@@ -164,9 +164,9 @@ async function getTimeData(req, res) {
                 }
 
                 /////////// Custom Time entries //////////
-                if(req.body.timeOption == "custom") {
-                    const startDate = new Date(req.body.startDate);
-                    const endDate = new Date(req.body.endDate);
+                if(req.query.timeOption == "custom") {
+                    const startDate = new Date(req.query.startDate);
+                    const endDate = new Date(req.query.endDate);
                     startDate.setUTCHours(0,0,0,0);
                     endDate.setUTCHours(0,0,0,0);
 
@@ -198,11 +198,11 @@ async function getTimeData(req, res) {
     return successResult;
 }
 
-router.delete('/todos/:id', (req, res, next) => {
+s_router.delete('/todos/:id', (req, res, next) => {
 //TODO
 })
 
-router.post('/user/manage', async(req, res, next) => {
+s_router.post('/s_user/manage', async(req, res, next) => {
     let result = await getSubordinates(req, res);
     res.send(result);
 });
@@ -210,12 +210,12 @@ router.post('/user/manage', async(req, res, next) => {
 //used for /user/manage and /aggregateData routes
 async function getSubordinates(req, res) {
     try {
-        const company = req.body.companyName
-        let person = req.body
+        const company = req.query.companyName
+        let person = req.query
         let queryList = []
         const checkedList = []
         const employees = []
-        if(req.body.isManager){
+        if(req.query.isManager){
             queryList.push(person)
         }
         while(queryList.length > 0){
@@ -248,12 +248,12 @@ async function getSubordinates(req, res) {
 
 }
 
-router.post('/user/addTime', async(req, res, next) => {    
-    await Time.findOne({employeeId: req.body.employeeId, companyId:req.body.companyId}).exec().then(employee => {
+s_router.post('/s_user/addTime', async(req, res, next) => {    
+    await Time.findOne({employeeId: req.query.employeeId, companyId:req.query.companyId}).exec().then(employee => {
         if(!employee){      
             return res.status(404).json({message: 'Employee not found'});
         } 
-        for(const timedata of req.body.times){   
+        for(const timedata of req.query.times){   
             filtered = employee.timeEntries.filter(e => e.date === timedata.date);
             if(filtered.length>0){
                 index = employee.timeEntries.indexOf(filtered[0])
@@ -279,7 +279,7 @@ router.post('/user/addTime', async(req, res, next) => {
 
 //route to get aggregateDate, works exactly the same as /user/time except returns aggregated time values for
 //all employees under the one specified in req.body
-router.post('/aggregateData', async(req, res, next) => {
+s_router.post('/s_aggregateData', async(req, res, next) => {
     //get array of employees under one specified in req.body
     let employees = await getSubordinates(req, res);
     employees = employees.value;
@@ -298,9 +298,9 @@ router.post('/aggregateData', async(req, res, next) => {
         let pseudoReq = {body: {
             employeeId: employee.employeeId,
             companyId: employee.companyId,
-            timeOption: req.body.timeOption,
-            startDate: req.body.startDate,
-            endDate: req.body.endDate
+            timeOption: req.query.timeOption,
+            startDate: req.query.startDate,
+            endDate: req.query.endDate
         }};
         let data = await getTimeData(pseudoReq, res);
         data = data.value;
@@ -309,7 +309,7 @@ router.post('/aggregateData', async(req, res, next) => {
             aggregateData = data.map(x=>x);
         }
         //if one of the summarized time options
-        else if (req.body.timeOption !== "" && req.body.startDate === undefined && req.body.endDate === undefined) {
+        else if (req.query.timeOption !== "" && req.query.startDate === undefined && req.query.endDate === undefined) {
             data.forEach((val, i)=>{aggregateData[i]+= Number(val)});
         }
         //if no options specified or range specified
@@ -333,4 +333,4 @@ router.post('/aggregateData', async(req, res, next) => {
 })
 
 //export router (used in index.js)
-module.exports = router;
+module.exports = s_router;
