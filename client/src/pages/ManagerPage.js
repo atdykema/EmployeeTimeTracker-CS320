@@ -85,7 +85,6 @@ const Managerpage = ({ employeeData, employeeDataUpdater, cookieReset, cookies }
         <div className='page-container'>
         {employeeData.isManager && <NavigationTab />}
         <LogoutButton employeeDataUpdater={employeeDataUpdater} cookieReset= {cookieReset}/>
-        <PaymentHistoryWindow isListPresent={isListPresent} setListPresence={setListPresence} employeeData={employeeData}/>
         {loadFunction()}
         <AggregateHistoryWindow isListPresent={isListPresent} setListPresence={setListPresence} employeeData={employeeData}/>
         </div>
