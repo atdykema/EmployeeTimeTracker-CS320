@@ -25,6 +25,7 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset, cookies 
   const loadTimeEntry = async () => {
     const result = await requests.getTimeData(
       employeeData.employeeId,
+      null,
       employeeData.companyId,
       cookies.token,
       'week'
