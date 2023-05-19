@@ -2,10 +2,10 @@ import axios from 'axios'
 
 const baseURL = 'http://localhost:5000'
 
-const getEmployee = async (employeeId, companyId, token) => {
+const getEmployee = async (employeeId, subordinateId, companyId, token) => {
   try {
     return axios.post(`${baseURL}/employeeGet`, {
-      employeeId, companyId, token
+      employeeId, subordinateId, companyId, token
     })
   } catch (e) {
     console.log(`Error detected: ${e}`)

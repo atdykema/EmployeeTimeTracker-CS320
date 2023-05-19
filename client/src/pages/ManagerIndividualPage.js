@@ -11,9 +11,9 @@ const ManagerIndividualPage = ({ employeeData, employeeDataUpdater, cookieReset,
   const { id: subordinateId } = useParams()
   const navigator = useNavigate()
 
-  const fetchEmployee = async (employeeId, companyId) => {
+  const fetchEmployee = async (subortinateId, companyId) => {
     try {
-      const resp = await requests.getEmployee(employeeId, companyId, cookies.token)
+      const resp = await requests.getEmployee(employeeData.employeeId, subortinateId, companyId, cookies.token)
       setSubordinateData(resp.data.value)
       return resp
     } catch (e) {
