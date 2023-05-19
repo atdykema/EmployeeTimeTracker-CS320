@@ -26,6 +26,7 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset, cookies 
     const result = await requests.getTimeData(
       employeeData.employeeId,
       employeeData.companyId,
+      cookies.token,
       'week'
     )
     setTime(result.data.value)
@@ -37,6 +38,7 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset, cookies 
 
   const sendData = async () => {
     console.log('send')
+    console.log(cookies.token)
     // get current date
     const currentDate = new Date()
 
@@ -45,7 +47,7 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset, cookies 
     )
     let resp
     try {
-      resp = await requests.sendTimeData(employeeData.employeeId, employeeData.companyId, timeEntries)
+      resp = await requests.sendTimeData(employeeData.employeeId, employeeData.companyId, timeEntries, cookies.token)
     } catch (err) {
       console.log(err)
       if (err.message === 'Network Error') {
@@ -105,7 +107,7 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset, cookies 
     ? <div></div>
     : (
       <div className='page-container'>
-        <LogoutButton employeeDataUpdater={employeeDataUpdater} cookieReset = {cookieReset}/>
+        <LogoutButton employeeData={employeeData} cookieReset = {cookieReset}/>
         {employeeData.isManager && <NavigationTab />}
         <div className='content-container'>
           <div className='daybuttons-container' style={isListPresent ? { opacity: '0%', zIndex: -1, maxHeight: '0vh' } : { opacity: '100%', zIndex: 1, maxHeight: '100vh' }}>
@@ -120,7 +122,7 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset, cookies 
               <button className='time-entry-submit' type='submit'>Submit</button>
             </form>
           </div>
-          <PaymentHistoryWindow isListPresent={isListPresent} setListPresence={setListPresence} employeeData={employeeData} graphUpdates={graphUpdates}/>
+          <PaymentHistoryWindow isListPresent={isListPresent} setListPresence={setListPresence} employeeData={employeeData} graphUpdates={graphUpdates} cookies = {cookies}/>
         </div>
       </div>
       )

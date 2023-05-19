@@ -13,7 +13,7 @@ const ManagerIndividualPage = ({ employeeData, employeeDataUpdater, cookieReset,
 
   const fetchEmployee = async (employeeId, companyId) => {
     try {
-      const resp = await requests.getEmployee(employeeId, companyId)
+      const resp = await requests.getEmployee(employeeId, companyId, cookies.token)
       setSubordinateData(resp.data.value)
       return resp
     } catch (e) {
@@ -33,7 +33,7 @@ const ManagerIndividualPage = ({ employeeData, employeeDataUpdater, cookieReset,
   return ((cookies.data === undefined) || subordinateData === undefined)
     ? <div/>
     : (<div className='page-container'>
-        <LogoutButton employeeDataUpdater={employeeDataUpdater} cookieReset={cookieReset}/>
+        <LogoutButton employeeData={employeeData} cookieReset={cookieReset}/>
         {employeeData.isManager && <NavigationTab />}
         <div className='back-button' onClick={() => navigator('/manager/view')}>Back</div>
         <div className='content-container'>
@@ -42,7 +42,7 @@ const ManagerIndividualPage = ({ employeeData, employeeDataUpdater, cookieReset,
               {subordinateData.firstName + ' ' + subordinateData.lastName}
             </div>
           </div>
-          <PaymentHistoryWindow isListPresent={isListPresent} setListPresence={setListPresence} employeeData={subordinateData}/>
+          <PaymentHistoryWindow isListPresent={isListPresent} setListPresence={setListPresence} employeeData={subordinateData} cookies = {cookies}/>
         </div>
       </div>)
 }

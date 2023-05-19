@@ -8,7 +8,7 @@ import requests from '../services/requests'
 import DaySearch from './DaySearch'
 import './AggregateHistoryWindow.css'
 
-const AggregateHistoryWindow = ({ isListPresent, setListPresence, employeeData, graphUpdates }) => {
+const AggregateHistoryWindow = ({ isListPresent, setListPresence, employeeData, graphUpdates, cookies }) => {
   const [graphDisplayOption, setGraphDisplayOption] = useState('week')
   const [graphLoaded, updateGraphLoad] = useState(0)
   const [listLoaded, updateListLoad] = useState(0)
@@ -30,9 +30,11 @@ const AggregateHistoryWindow = ({ isListPresent, setListPresence, employeeData, 
     updateGraphLoad(0)
     const result = await requests.getAggregateData(
       employeeData.employeeId,
+      employeeData.companyId,
       employeeData.companyName,
       employeeData.isManager,
-      graphDisplayOption
+      graphDisplayOption,
+      cookies.token
     )
     console.log('ROCKS')
     console.log(result)
@@ -44,8 +46,10 @@ const AggregateHistoryWindow = ({ isListPresent, setListPresence, employeeData, 
     updateListLoad(0)
     const result = await requests.getAllAggregate(
       employeeData.employeeId,
+      employeeData.companyId,
       employeeData.companyName,
-      employeeData.isManager
+      employeeData.isManager,
+      cookies.token
     )
     updateListData(result.data.value)
     // console.log(listData)

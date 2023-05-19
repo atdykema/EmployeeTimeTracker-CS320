@@ -11,7 +11,7 @@ import './PaymentHistoryWindow.css'
 import Calendar from 'react-calendar'
 import 'react-calendar/dist/Calendar.css'
 
-const PaymentHistoryWindow = ({ isListPresent, setListPresence, employeeData, graphUpdates }) => {
+const PaymentHistoryWindow = ({ isListPresent, setListPresence, employeeData, graphUpdates, cookies }) => {
   const [date, setDate] = useState('')
   const [showCalendar, setShowCalendar] = useState(false)
 
@@ -50,6 +50,7 @@ const PaymentHistoryWindow = ({ isListPresent, setListPresence, employeeData, gr
     const result = await requests.getTimeData(
       employeeData.employeeId,
       employeeData.companyId,
+      cookies.token,
       graphDisplayOption
     )
     setGraphData(result.data.value)
@@ -60,7 +61,8 @@ const PaymentHistoryWindow = ({ isListPresent, setListPresence, employeeData, gr
     updateListLoad(0)
     const result = await requests.getAllTime(
       employeeData.employeeId,
-      employeeData.companyId
+      employeeData.companyId,
+      cookies.token
     )
     console.log(result)
     updateListData(result.data.value)

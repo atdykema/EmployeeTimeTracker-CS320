@@ -2,10 +2,10 @@ import axios from 'axios'
 
 const baseURL = 'http://localhost:5000'
 
-const getEmployee = async (employeeId, companyId) => {
+const getEmployee = async (employeeId, companyId, token) => {
   try {
     return axios.post(`${baseURL}/employeeGet`, {
-      employeeId, companyId
+      employeeId, companyId, token
     })
   } catch (e) {
     console.log(`Error detected: ${e}`)
@@ -25,10 +25,10 @@ const validateLogin = async (username, password) => {
   }
 }
 
-const getManagerViewData = (employeeId, companyName, isManager) => {
+const getManagerViewData = (employeeId, companyId, companyName, isManager, token) => {
   try {
     return axios.post(`${baseURL}/user/manage`, {
-      employeeId, companyName, isManager
+      employeeId, companyId, companyName, isManager, token
     })
   } catch (e) {
     console.log('Error: Unable to get managerViewData')
@@ -37,10 +37,10 @@ const getManagerViewData = (employeeId, companyName, isManager) => {
   }
 }
 
-const sendTimeData = (employeeId, companyId, times) => {
+const sendTimeData = (employeeId, companyId, times, token) => {
   try {
     return axios.post(`${baseURL}/user/addTime`, {
-      employeeId, companyId, times // employeeID company id, times (array of objs {"date" YYYY-MM-DD, "hoursWorked"})
+      employeeId, companyId, times, token // employeeID company id, times (array of objs {"date" YYYY-MM-DD, "hoursWorked"})
     })
   } catch (e) {
     console.log('Error: Unable to get sendTimeData')
@@ -49,10 +49,10 @@ const sendTimeData = (employeeId, companyId, times) => {
   }
 }
 
-const getTimeData = (employeeId, companyId, timeOption) => {
+const getTimeData = (employeeId, companyId, token, timeOption) => {
   try {
     return axios.post(`${baseURL}/user/time`, {
-      employeeId, companyId, timeOption
+      employeeId, companyId, timeOption, token
     })
   } catch (e) {
     // console.log('Error: Unable to get getTimeData')
@@ -62,10 +62,10 @@ const getTimeData = (employeeId, companyId, timeOption) => {
   }
 }
 
-const getAllTime = (employeeId, companyId) => {
+const getAllTime = (employeeId, companyId, token) => {
   try {
     return axios.post(`${baseURL}/user/time`, {
-      employeeId, companyId, timeOption: ''
+      employeeId, companyId, timeOption: '', token
     })
   } catch (e) {
     console.log('Error: Unable to get getAllTime')
@@ -74,10 +74,10 @@ const getAllTime = (employeeId, companyId) => {
   }
 }
 
-const getAggregateData = (employeeId, companyName, isManager, timeOption) => {
+const getAggregateData = (employeeId, companyId, companyName, isManager, timeOption, token) => {
   try {
     return axios.post(`${baseURL}/aggregateData`, {
-      employeeId, companyName, isManager, timeOption
+      employeeId, companyId, companyName, isManager, timeOption, token
     })
   } catch (e) {
     // console.log('Error: Unable to get getTimeData')
@@ -87,10 +87,10 @@ const getAggregateData = (employeeId, companyName, isManager, timeOption) => {
   }
 }
 
-const getAllAggregate = (employeeId, companyName, isManager) => {
+const getAllAggregate = (employeeId, companyId, companyName, isManager, token) => {
   try {
     return axios.post(`${baseURL}/aggregateData`, {
-      employeeId, companyName, isManager, timeOption: ''
+      employeeId, companyId, companyName, isManager, timeOption: '', token
     })
   } catch (e) {
     console.log('Error: Unable to get getAllTime')
@@ -99,6 +99,17 @@ const getAllAggregate = (employeeId, companyName, isManager) => {
   }
 }
 
-const methods = { validateLogin, getEmployee, getManagerViewData, sendTimeData, getTimeData, getAllTime, getAggregateData, getAllAggregate } // Recent React needs this to be a separate obj
+const deleteToken = (employeeId, companyId, token) => {
+  try {
+    return axios.post(`${baseURL}/logout`, {
+      employeeId, companyId, token
+    })
+  } catch (e) {
+    console.log(`Error detected: ${e}`)
+    throw e
+  }
+}
+
+const methods = { validateLogin, getEmployee, getManagerViewData, sendTimeData, getTimeData, getAllTime, getAggregateData, deleteToken, getAllAggregate } // Recent React needs this to be a separate obj
 
 export default methods
