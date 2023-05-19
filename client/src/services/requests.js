@@ -99,8 +99,9 @@ const getAllAggregate = (employeeId, companyId, companyName, isManager, token) =
   }
 }
 
-const deleteToken = (employeeId, companyId, token) => {
+const deleteToken = async (employeeId, companyId, token) => {
   try {
+    // console.log('deleteToken')
     return axios.post(`${baseURL}/logout`, {
       employeeId, companyId, token
     })

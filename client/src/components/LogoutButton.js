@@ -4,26 +4,30 @@ import requests from '../services/requests'
 
 const LogoutButton = ({ cookies, cookieReset }) => {
   const navigator = useNavigate()
-  const logout = (event) => {
-    let resp
+
+  const logout = async (event) => {
+    // console.log(cookies.data.employeeId, cookies.data.companyId, cookies.token)
     try {
-      resp = requests.deleteToken(cookies.data.employeeId, cookies.data.companyId, cookies.token)
+      console.log('Sending deleteToken request...')
+      const resp = await requests.deleteToken(cookies.data.employeeId, cookies.data.companyId, cookies.token)
+      console.log('deleteToken response:', resp)
     } catch (err) {
-      console.log(err)
+      console.error('deleteToken error:', err)
       if (err.message === 'Network Error') {
-        // reroute to an error page saying that the server is down
         navigator('/serverdown')
       }
     }
-    console.log(resp)
+    // console.log(cookies.data)
+    // console.log(cookies.data.employeeId, cookies.data.companyId, cookies.token)
     cookieReset('data', { path: '/' })
     cookieReset('token', { path: '/' })
     navigator('/')
     console.log('logout')
+    // console.log(cookies.data.employeeId, cookies.data.companyId, cookies.token)
   }
 
   return <div className='Button'>
-   <div className='logout-button' onClick={logout}>Logout</div>
+   <div className='logout-button' onClick={logout}>{}Logout</div>
   </div>
 }
 
