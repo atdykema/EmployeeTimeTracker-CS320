@@ -107,7 +107,7 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset, cookies 
     ? <div></div>
     : (
       <div className='page-container'>
-        <LogoutButton employeeData={employeeData} cookieReset = {cookieReset}/>
+        <LogoutButton cookies={cookies} cookieReset = {cookieReset}/>
         {employeeData.isManager && <NavigationTab />}
         <div className='content-container'>
           <div className='daybuttons-container' style={isListPresent ? { opacity: '0%', zIndex: -1, maxHeight: '0vh' } : { opacity: '100%', zIndex: 1, maxHeight: '100vh' }}>

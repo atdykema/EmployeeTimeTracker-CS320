@@ -33,7 +33,7 @@ const ManagerIndividualPage = ({ employeeData, employeeDataUpdater, cookieReset,
   return ((cookies.data === undefined) || subordinateData === undefined)
     ? <div/>
     : (<div className='page-container'>
-        <LogoutButton employeeData={employeeData} cookieReset={cookieReset}/>
+        <LogoutButton cookies={cookies} cookieReset={cookieReset}/>
         {employeeData.isManager && <NavigationTab />}
         <div className='back-button' onClick={() => navigator('/manager/view')}>Back</div>
         <div className='content-container'>

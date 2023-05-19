@@ -2,12 +2,12 @@ import './LogoutButton.css'
 import { useNavigate } from 'react-router-dom'
 import requests from '../services/requests'
 
-const LogoutButton = ({ employeeData, cookieReset }) => {
+const LogoutButton = ({ cookies, cookieReset }) => {
   const navigator = useNavigate()
   const logout = (event) => {
     let resp
     try {
-      resp = requests.deleteToken(employeeData.employeeId, employeeData.companyId, employeeData.token)
+      resp = requests.deleteToken(cookies.data.employeeId, cookies.data.companyId, cookies.token)
     } catch (err) {
       console.log(err)
       if (err.message === 'Network Error') {
