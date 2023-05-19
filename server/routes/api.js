@@ -46,6 +46,10 @@ async function deleteToken(employeeId, companyId, token) {
     await tokenContainer.save();
 }
 
+async function isSubordinate(employeeId, subordinateId, companyId) {
+    return true;
+}
+
 router.post('/login', async (req, res, next) => {
     await User.findOne({email: req.body.username, password: req.body.password}).exec()
     .then(async (query) => {
@@ -69,7 +73,15 @@ router.post('/employeeGet', async (req, res, next) => {
         res.status(401).send({response: "FAILURE"});
         return;
     }
-    const searchId = (req.body.subordinateId !== undefined)? req.body.subordinateId : req.body.employeeId;
+    let searchId = req.body.employeeId;
+    if (req.body.subordinateId) {
+        if (await isSubordinate(req.body.subordinateId, req.body.employeeId, req.body.companyId)) {
+            searchId = req.body.subordinateId;
+        } else {
+            res.status(401).send({response: "FAILURE"});
+            return;
+        }
+    }
     await User.findOne({employeeId: searchId, companyId: req.body.companyId}).exec()
     .then(query=> {
         if (query) {
@@ -100,9 +112,18 @@ router.post('/user/time', async (req, res, next) => {
 //used for /user/time and /aggregateData routes
 async function getTimeData(req, res) {
     let successResult = null;
+    let searchId = req.body.employeeId;
+    if (req.body.subordinateId) {
+        if (await isSubordinate(req.body.subordinateId, req.body.employeeId, req.body.companyId)) {
+            searchId = req.body.subordinateId;
+        } else {
+            res.status(401).send({response: "FAILURE"});
+            return null;
+        }
+    }
     // Default ALL timeEntries returned
     if(req.body.timeOption == "") {
-        await Time.findOne({companyId: req.body.companyId, employeeId: req.body.employeeId}).exec()
+        await Time.findOne({companyId: req.body.companyId, employeeId: searchId}).exec()
     .then(query=> {
         if (query) {
             // console.log(`\nUser ${req.body.employeeId} found. Data:\n${query}`);
@@ -119,7 +140,7 @@ async function getTimeData(req, res) {
     }
 
     else {
-        await Time.findOne({companyId: req.body.companyId, employeeId: req.body.employeeId}).exec()
+        await Time.findOne({companyId: req.body.companyId, employeeId: searchId}).exec()
         .then(query=> {
             if (query) {                
                 return_arr = [] // Return SUMs array
