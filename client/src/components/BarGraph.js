@@ -16,14 +16,14 @@ const BarGraph = ({ timeOption, dataArr }) => {
     '2021', '2022', '2023'
   ]
   if (timeOption === 'week') {
-    data = zip(days, dataArr).map(([day, hours]) => ({ name: day, value: hours, pay: 10 }))
+    data = zip(days, dataArr).map(([day, hours]) => ({ name: day, value: hours }))
     xAxisName = 'Day'
   } else if (timeOption === 'month') {
-    data = zip(months, dataArr).map(([month, hours]) => ({ name: month, value: hours, pay: 10 }))
+    data = zip(months, dataArr).map(([month, hours]) => ({ name: month, value: hours }))
     xAxisName = 'Month'
   } else if (timeOption === 'year') {
     dataArr = dataArr.reverse()
-    data = zip(years, dataArr).map(([year, hours]) => ({ name: year, value: hours, pay: 10 }))
+    data = zip(years, dataArr).map(([year, hours]) => ({ name: year, value: hours }))
     xAxisName = 'Year'
   }
 
@@ -37,7 +37,7 @@ const BarGraph = ({ timeOption, dataArr }) => {
       return (
         <div className='custom-tooltip'>
           <p className='label'>
-            {`Pay: $${tooltipData.pay}`}
+            {`Pay: $${tooltipData.value * 15}`}
             </p>
         </div>
       )
