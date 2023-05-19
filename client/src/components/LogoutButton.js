@@ -15,6 +15,7 @@ const LogoutButton = ({ employeeData, cookieReset }) => {
         navigator('/serverdown')
       }
     }
+    console.log(resp)
     cookieReset('data', { path: '/' })
     cookieReset('token', { path: '/' })
     navigator('/')
