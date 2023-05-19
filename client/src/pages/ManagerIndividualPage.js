@@ -42,7 +42,7 @@ const ManagerIndividualPage = ({ employeeData, employeeDataUpdater, cookieReset,
               {subordinateData.firstName + ' ' + subordinateData.lastName}
             </div>
           </div>
-          <PaymentHistoryWindow isListPresent={isListPresent} setListPresence={setListPresence} employeeData={subordinateData} cookies = {cookies}/>
+          <PaymentHistoryWindow isListPresent={isListPresent} setListPresence={setListPresence} employeeData={employeeData} cookies = {cookies} subordinateId = {subordinateData.id}/>
         </div>
       </div>)
 }

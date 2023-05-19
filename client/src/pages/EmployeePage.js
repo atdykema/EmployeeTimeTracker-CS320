@@ -122,7 +122,7 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset, cookies 
               <button className='time-entry-submit' type='submit'>Submit</button>
             </form>
           </div>
-          <PaymentHistoryWindow isListPresent={isListPresent} setListPresence={setListPresence} employeeData={employeeData} graphUpdates={graphUpdates} cookies = {cookies}/>
+          <PaymentHistoryWindow isListPresent={isListPresent} setListPresence={setListPresence} employeeData={employeeData} graphUpdates={graphUpdates} cookies = {cookies} forItself = {'true'} subordinateId = {null}/>
         </div>
       </div>
       )

@@ -49,10 +49,10 @@ const sendTimeData = (employeeId, companyId, times, token) => {
   }
 }
 
-const getTimeData = (employeeId, companyId, token, timeOption) => {
+const getTimeData = (employeeId, subordinateId, companyId, token, timeOption) => {
   try {
     return axios.post(`${baseURL}/user/time`, {
-      employeeId, companyId, timeOption, token
+      employeeId, subordinateId, companyId, timeOption, token
     })
   } catch (e) {
     // console.log('Error: Unable to get getTimeData')
@@ -62,10 +62,10 @@ const getTimeData = (employeeId, companyId, token, timeOption) => {
   }
 }
 
-const getAllTime = (employeeId, companyId, token) => {
+const getAllTime = (employeeId, subordinateId, companyId, token) => {
   try {
     return axios.post(`${baseURL}/user/time`, {
-      employeeId, companyId, timeOption: '', token
+      employeeId, subordinateId, companyId, timeOption: '', token
     })
   } catch (e) {
     console.log('Error: Unable to get getAllTime')
