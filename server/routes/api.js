@@ -4,30 +4,71 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const Time = require('../models/timeModel');
 const User = require('../models/userModel');
+const TokenContainer = require('../models/tokenModel');
 
 const router = express.Router();
 router.use(cors());
 router.use(express.json());
 
+function generateUniqueHexCode() {
+    const timestamp = Date.now().toString(16); // Get current timestamp as hexadecimal
+    const randomNum = Math.floor(Math.random() * 10000).toString(16); // Generate random number as hexadecimal
+    const uniqueCode = timestamp + randomNum; // Concatenate the timestamp and random number
+    return uniqueCode;
+}
+
+async function createToken(employeeId, companyId) {
+    const newToken = generateUniqueHexCode();
+    const tokenContainer = await TokenContainer.findOne({employeeId: employeeId, companyId: companyId});
+    if (tokenContainer) {
+        tokenContainer.tokens.push(newToken);
+        tokenContainer.markModified();
+        await tokenContainer.save();
+    } else {
+        const newTokenContainer = new TokenContainer({employeeId: employeeId, companyId: companyId, tokens: [newToken]})
+        await newTokenContainer.save();
+    }
+    return newToken;
+}
+
+async function validateToken(employeeId, companyId, token) {
+    const tokenContainer = await TokenContainer.findOne({employeeId: employeeId, companyId: companyId});
+    if (tokenContainer) {
+        return tokenContainer.tokens.includes(token);
+    }
+    return false;
+}
+
+async function deleteToken(employeeId, companyId, token) {
+    const tokenContainer = await TokenContainer.findOne({employeeId: employeeId, companyId: companyId});
+    tokenContainer.tokens = tokenContainer.tokens.filter(foundToken => foundToken !== token);
+    tokenContainer.markModified();
+    await tokenContainer.save();
+}
 
 router.post('/login', async (req, res, next) => {
     await User.findOne({email: req.body.username, password: req.body.password}).exec()
-    .then(query=> {
+    .then(async (query) => {
         if (query) {
             // console.log(`\nUser ${req.body.username} found. Data:\n${query}`);
-            res.status(200).send({response: "OK", value: query});
+            let newToken = await createToken(query.employeeId, query.companyId);
+            res.status(200).send({response: "OK", value: query, token: newToken});
         } else {
             // console.log(`\nEither username ${req.body.username} or password ${req.body.password} incorrect`);
             res.status(404).send({response: "FAILURE"});
         }
     })
     .catch(error=> {
-        // console.log(`Failed. ${error}`);
+        console.log(`Failed. ${error}`);
         res.status(500).send({response: "FAILURE"});
     });
 });
 
 router.post('/employeeGet', async (req, res, next) => {
+    if (!(await validateToken(req.body.employeeId, req.body.companyId, req.body.token))) {
+        res.status(401).send({response: "FAILURE"});
+        return;
+    }
     await User.findOne({employeeId: req.body.employeeId, companyId: req.body.companyId}).exec()
     .then(query=> {
         if (query) {
@@ -45,6 +86,10 @@ router.post('/employeeGet', async (req, res, next) => {
 
 // GET TIME: get user time given the options
 router.post('/user/time', async (req, res, next) => {
+    if (!(await validateToken(req.body.employeeId, req.body.companyId, req.body.token))) {
+        res.status(401).send({response: "FAILURE"});
+        return;
+    }
     let data = await getTimeData(req, res);
     if (data) {
         res.send(data);
@@ -198,11 +243,11 @@ async function getTimeData(req, res) {
     return successResult;
 }
 
-router.delete('/todos/:id', (req, res, next) => {
-//TODO
-})
-
 router.post('/user/manage', async(req, res, next) => {
+    if (!(await validateToken(req.body.employeeId, req.body.companyId, req.body.token))) {
+        res.status(401).send({response: "FAILURE"});
+        return;
+    }
     let result = await getSubordinates(req, res);
     res.send(result);
 });
@@ -248,7 +293,11 @@ async function getSubordinates(req, res) {
 
 }
 
-router.post('/user/addTime', async(req, res, next) => {    
+router.post('/user/addTime', async(req, res, next) => {  
+    if (!(await validateToken(req.body.employeeId, req.body.companyId, req.body.token))) {
+        res.status(401).send({response: "FAILURE"});
+        return;
+    }
     await Time.findOne({employeeId: req.body.employeeId, companyId:req.body.companyId}).exec().then(employee => {
         if(!employee){      
             return res.status(404).json({message: 'Employee not found'});
@@ -280,6 +329,10 @@ router.post('/user/addTime', async(req, res, next) => {
 //route to get aggregateDate, works exactly the same as /user/time except returns aggregated time values for
 //all employees under the one specified in req.body
 router.post('/aggregateData', async(req, res, next) => {
+    if (!(await validateToken(req.body.employeeId, req.body.companyId, req.body.token))) {
+        res.status(401).send({response: "FAILURE"});
+        return;
+    }
     //get array of employees under one specified in req.body
     let employees = await getSubordinates(req, res);
     employees = employees.value;
@@ -288,10 +341,6 @@ router.post('/aggregateData', async(req, res, next) => {
         return;
     }
     let aggregateData = null;
-    //for each employee, get their respective time data and add it to aggregateData
-    // for (const employeeOuter of employees) {
-    //     addEmployee(employeeOuter);
-    // }
 
     const addEmployeeData = async (employee) => {
         //req object to pass to getTimeData
@@ -331,6 +380,11 @@ router.post('/aggregateData', async(req, res, next) => {
     aggregateData.sort((e1,e2) => new Date(e1.date) - new Date(e2.date));
     res.send({response: "OK", value: aggregateData});
 })
+
+router.post('/logout', async(req, res, next) => {
+    await deleteToken(req.body.employeeId, req.body.companyId, req.body.token);
+    res.status(200).send({response: "OK"});
+});
 
 //export router (used in index.js)
 module.exports = router;
