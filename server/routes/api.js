@@ -69,7 +69,8 @@ router.post('/employeeGet', async (req, res, next) => {
         res.status(401).send({response: "FAILURE"});
         return;
     }
-    await User.findOne({employeeId: req.body.employeeId, companyId: req.body.companyId}).exec()
+    const searchId = (req.body.subordinateId !== undefined)? req.body.subordinateId : req.body.employeeId;
+    await User.findOne({employeeId: searchId, companyId: req.body.companyId}).exec()
     .then(query=> {
         if (query) {
             res.status(200).send({response: "OK", value: query});
