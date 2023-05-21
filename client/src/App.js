@@ -8,7 +8,7 @@ import ErrorPage from './pages/ErrorPage'
 import { useCookies } from 'react-cookie'
 
 const App = () => {
-  const [cookies, setCookie, removeCookie] = useCookies(['data'])
+  const [cookies, setCookie, removeCookie] = useCookies(['data', 'token'])
 
   return (
     <Routes>

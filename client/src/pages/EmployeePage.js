@@ -25,7 +25,9 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset, cookies 
   const loadTimeEntry = async () => {
     const result = await requests.getTimeData(
       employeeData.employeeId,
+      null,
       employeeData.companyId,
+      cookies.token,
       'week'
     )
     setTime(result.data.value)
@@ -36,6 +38,8 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset, cookies 
   }, []) // populates time entry, only once
 
   const sendData = async () => {
+    console.log('send')
+    console.log(cookies.token)
     // get current date
     let currentDate = new Date()
 
@@ -55,7 +59,7 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset, cookies 
 
     let resp
     try {
-      resp = await requests.sendTimeData(employeeData.employeeId, employeeData.companyId, timeEntries)
+      resp = await requests.sendTimeData(employeeData.employeeId, employeeData.companyId, timeEntries, cookies.token)
     } catch (err) {
       console.log(err)
       if (err.message === 'Network Error') {
@@ -115,7 +119,7 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset, cookies 
     ? <div></div>
     : (
       <div className='page-container'>
-        <LogoutButton employeeDataUpdater={employeeDataUpdater} cookieReset = {cookieReset}/>
+        <LogoutButton cookies={cookies} cookieReset = {cookieReset}/>
         {employeeData.isManager && <NavigationTab />}
         <div className='content-container'>
           <div className='daybuttons-container' style={isListPresent ? { opacity: '0%', zIndex: -1, maxHeight: '0vh' } : { opacity: '100%', zIndex: 1, maxHeight: '100vh' }}>
@@ -130,7 +134,7 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset, cookies 
               <button className='time-entry-submit' type='submit'>Submit</button>
             </form>
           </div>
-          <PaymentHistoryWindow isListPresent={isListPresent} setListPresence={setListPresence} employeeData={employeeData} graphUpdates={graphUpdates}/>
+          <PaymentHistoryWindow isListPresent={isListPresent} setListPresence={setListPresence} employeeData={employeeData} graphUpdates={graphUpdates} cookies={cookies} forItself={'true'} subordinateId = {null} type='employee'/>
         </div>
       </div>
       )
