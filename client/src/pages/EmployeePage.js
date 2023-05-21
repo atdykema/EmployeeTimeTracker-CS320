@@ -36,13 +36,23 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset, cookies 
   }, []) // populates time entry, only once
 
   const sendData = async () => {
-    console.log('send')
     // get current date
-    const currentDate = new Date()
+    let currentDate = new Date()
 
+    // map dates to time entry to send to backend, storing date and hour
     const timeEntries = time.map(
       (e, i) => ({ date: new Date(currentDate.setDate(currentDate.getDate() - currentDate.getDay() + i)).toISOString().slice(0, 10), hoursWorked: e })
     )
+
+    // checks if a user has put a time after the current date
+    currentDate = new Date()
+    for (let i = currentDate.getDay() + 1; i < 7; i++) {
+      if (parseInt(time[i]) !== 0 && !isNaN(parseInt(time[i]))) { // empty or expliticlty 0
+        alert('You have entered a time after today. Please erase, or set to zero.')
+        return
+      }
+    }
+
     let resp
     try {
       resp = await requests.sendTimeData(employeeData.employeeId, employeeData.companyId, timeEntries)
