@@ -7,7 +7,7 @@ import loadingLogo from './loading.svg'
 import './ManagerPage.css'
 import NavigationTab from '../components/NavigationTab'
 import { useNavigate } from 'react-router-dom'
-import AggregateHistoryWindow from '../components/AggregateHistoryWindow'
+import PaymentHistoryWindow from '../components/PaymentHistoryWindow'
 
 const Managerpage = ({ employeeData, employeeDataUpdater, cookieReset, cookies }) => {
   const [isListPresent, setListPresence] = useState(false)
@@ -85,7 +85,7 @@ const Managerpage = ({ employeeData, employeeDataUpdater, cookieReset, cookies }
         <div className='page-container'>
         {employeeData.isManager && <NavigationTab />}
         <LogoutButton employeeDataUpdater={employeeDataUpdater} cookieReset= {cookieReset}/>
-        <AggregateHistoryWindow isListPresent={isListPresent} setListPresence={setListPresence} employeeData={employeeData}/>
+        <PaymentHistoryWindow isListPresent={isListPresent} setListPresence={setListPresence} employeeData={employeeData} type='aggregate'/>
         {loadFunction()}
         </div>
       )
