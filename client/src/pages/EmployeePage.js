@@ -25,7 +25,9 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset, cookies 
   const loadTimeEntry = async () => {
     const result = await requests.getTimeData(
       employeeData.employeeId,
+      null,
       employeeData.companyId,
+      cookies.token,
       'week'
     )
     setTime(result.data.value)
@@ -37,15 +39,27 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset, cookies 
 
   const sendData = async () => {
     console.log('send')
+    console.log(cookies.token)
     // get current date
-    const currentDate = new Date()
+    let currentDate = new Date()
 
+    // map dates to time entry to send to backend, storing date and hour
     const timeEntries = time.map(
       (e, i) => ({ date: new Date(currentDate.setDate(currentDate.getDate() - currentDate.getDay() + i)).toISOString().slice(0, 10), hoursWorked: e })
     )
+
+    // checks if a user has put a time after the current date
+    currentDate = new Date()
+    for (let i = currentDate.getDay() + 1; i < 7; i++) {
+      if (parseInt(time[i]) !== 0 && !isNaN(parseInt(time[i]))) { // empty or expliticlty 0
+        alert('You have entered a time after today. Please erase, or set to zero.')
+        return
+      }
+    }
+
     let resp
     try {
-      resp = await requests.sendTimeData(employeeData.employeeId, employeeData.companyId, timeEntries)
+      resp = await requests.sendTimeData(employeeData.employeeId, employeeData.companyId, timeEntries, cookies.token)
     } catch (err) {
       console.log(err)
       if (err.message === 'Network Error') {
@@ -105,7 +119,7 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset, cookies 
     ? <div></div>
     : (
       <div className='page-container'>
-        <LogoutButton employeeDataUpdater={employeeDataUpdater} cookieReset = {cookieReset}/>
+        <LogoutButton cookies={cookies} cookieReset = {cookieReset}/>
         {employeeData.isManager && <NavigationTab />}
         <div className='content-container'>
           <div className='daybuttons-container' style={isListPresent ? { opacity: '0%', zIndex: -1, maxHeight: '0vh' } : { opacity: '100%', zIndex: 1, maxHeight: '100vh' }}>
@@ -120,7 +134,7 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset, cookies 
               <button className='time-entry-submit' type='submit'>Submit</button>
             </form>
           </div>
-          <PaymentHistoryWindow isListPresent={isListPresent} setListPresence={setListPresence} employeeData={employeeData} graphUpdates={graphUpdates}/>
+          <PaymentHistoryWindow isListPresent={isListPresent} setListPresence={setListPresence} employeeData={employeeData} graphUpdates={graphUpdates} cookies={cookies} forItself={'true'} subordinateId = {null} type='employee'/>
         </div>
       </div>
       )

@@ -26,8 +26,12 @@ const Login = ({ cookies, cookieSetter }) => {
       }
       console.log('Promise fulfilled:', result)
       if (result.status === 200) {
-        console.log(result.data.value)
+        // console.log(result.data)
+        // console.log(result.data.value)
         cookieSetter('data', result.data.value, { path: '/', expires: new Date(Date.now() + 50000000) })
+        cookieSetter('token', result.data.token, { path: '/', expires: new Date(Date.now() + 50000000) })
+        // console.log(cookies.data)
+        // console.log(cookies.token)
         navigator('/time')
       }
     } catch (e) {
