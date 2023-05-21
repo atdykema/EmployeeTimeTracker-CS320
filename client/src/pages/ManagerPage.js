@@ -36,8 +36,10 @@ const Managerpage = ({ employeeData, employeeDataUpdater, cookieReset, cookies }
         // eslint-disable-next-line no-unused-vars
         result = await requests.getManagerViewData(
           employeeData.employeeId,
+          employeeData.companyId,
           employeeData.companyName,
-          employeeData.isManager
+          employeeData.isManager,
+          cookies.token
         )
       } catch (err) {
         console.log(err)
@@ -85,7 +87,7 @@ const Managerpage = ({ employeeData, employeeDataUpdater, cookieReset, cookies }
         <div className='page-container'>
         {employeeData.isManager && <NavigationTab />}
         <LogoutButton employeeDataUpdater={employeeDataUpdater} cookieReset= {cookieReset}/>
-        <PaymentHistoryWindow isListPresent={isListPresent} setListPresence={setListPresence} employeeData={employeeData} type='aggregate'/>
+        <PaymentHistoryWindow isListPresent={isListPresent} setListPresence={setListPresence} employeeData={employeeData} cookies={cookies} type='aggregate'/>
         {loadFunction()}
         </div>
       )
