@@ -41,7 +41,8 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset, cookies 
     console.log('send')
     console.log(cookies.token)
     // get current date
-    let currentDate = new Date()
+    const currentDate = new Date()
+    console.log(currentDate)
 
     // map dates to time entry to send to backend, storing date and hour
     const timeEntries = time.map(
@@ -49,13 +50,15 @@ const EmployeePage = ({ employeeData, employeeDataUpdater, cookieReset, cookies 
     )
 
     // checks if a user has put a time after the current date
-    currentDate = new Date()
-    for (let i = currentDate.getDay() + 1; i < 7; i++) {
+    const today = new Date()
+    for (let i = today.getDay() + 1; i < 7; i++) {
       if (parseInt(time[i]) !== 0 && !isNaN(parseInt(time[i]))) { // empty or expliticlty 0
         alert('You have entered a time after today. Please erase, or set to zero.')
         return
       }
     }
+
+    console.log(timeEntries)
 
     let resp
     try {
