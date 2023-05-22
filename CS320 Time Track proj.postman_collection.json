@@ -1,0 +1,531 @@
+{
+	"info": {
+		"_postman_id": "572d4d8e-bc51-4552-b88d-23372964b21b",
+		"name": "CS320 Time Track proj",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26661983",
+		"_collection_link": "https://grey-zodiac-69546.postman.co/workspace/My-Workspace~1aae540c-1a4b-456b-8445-622cb5086f5a/collection/26593360-572d4d8e-bc51-4552-b88d-23372964b21b?action=share&creator=26661983&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "/time/update - NAM",
+			"item": [
+				{
+					"name": "user/time, year, SUCCESS",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"companyId\": 3,\r\n    \"subordinateId\": 99,\r\n    \"employeeId\": 1,\r\n    \"timeOption\": \"year\",\r\n    \"startDate\" : \"\",\r\n    \"endDate\" : \"\",\r\n    \"token\": \"18840bfe0542616\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{port}}/user/time",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"user",
+								"time"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user/time, month, SUCCESS",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"companyId\": 3,\r\n    \"employeeId\": 1,\r\n    \"timeOption\": \"month\",\r\n    \"startDate\": \"\",\r\n    \"endDate\": \"\",\r\n    \"token\": \"18840bfe0542616\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{port}}/user/time",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"user",
+								"time"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user/time, week, SUCCESS",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"companyId\": 3,\r\n    \"employeeId\": 1,\r\n    \"timeOption\": \"week\",\r\n    \"startDate\" : \"\",\r\n    \"endDate\" : \"\",\r\n    \"token\": \"18840bfe0542616\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{port}}/user/time",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"user",
+								"time"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user/time, week, FAIL",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"companyId\": 3123,\r\n    \"employeeId\": 1123,\r\n    \"timeOption\": \"week\",\r\n    \"startDate\" : \"\",\r\n    \"endDate\" : \"\",\r\n    \"token\": \"18840bfe0542616\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{port}}/user/time",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"user",
+								"time"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user/time, custom, SUCCESS",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"companyId\": 4,\r\n    \"employeeId\": 20,\r\n    \"timeOption\": \"\",\r\n    \"startDate\" : \"2022-01-01\",\r\n    \"endDate\" : \"2024-01-01\",\r\n    \"token\": \"18840bfe0542616\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{port}}/user/time",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"user",
+								"time"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user/time, wrong any ID, FAIL",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"companyId\": 91298,\r\n    \"employeeId\": 11923,\r\n    \"timeOption\": \"custom\",\r\n    \"startDate\" : \"2023-01-01\",\r\n    \"endDate\" : \"2023-02-01\",\r\n    \"token\": \"18840bfe0542616\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{port}}/user/time",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"user",
+								"time"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "/login",
+			"item": [
+				{
+					"name": "User get SUCCESS",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"Betty_Burke@gizmogram.com\",\r\n    \"password\": \"burkebe\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{port}}/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User get FAIL",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"Betty_Burke@gizmogram.com\",\r\n    \"password\": \"RandomPassword\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{port}}/user/get",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"user",
+								"get"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "/user/manage",
+			"item": [
+				{
+					"name": "Manager",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"employeeId\": 1,\r\n        \"companyId\": 3,\r\n        \"companyName\": \"GizmoGram\",\r\n        \"isManager\": true,\r\n        \"token\": \"18840bfe0542616\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{port}}/user/manage",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"user",
+								"manage"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "/user/addTime",
+			"item": [
+				{
+					"name": "user addTime",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"employeeId\": 20,\r\n    \"companyId\": 3,\r\n    \"times\":[{\r\n            \"date\":\"2023-05-02\",\r\n            \"hoursWorked\": 9\r\n        },\r\n        {\r\n            \"date\":\"2023-05-03\",\r\n            \"hoursWorked\": 2            \r\n        }],\r\n    \"token\": \"18840bfe0542616\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{port}}/user/addTime",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"user",
+								"addTime"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "/employeeGet",
+			"item": [
+				{
+					"name": "/employeeGet",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"employeeId\": 1,\n    \"subordinateId\": null,\n    \"companyId\": 3,\n    \"token\": \"18840bfe0542616\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{port}}/employeeGet",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"employeeGet"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "/logout",
+			"item": [
+				{
+					"name": "logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"employeeId\": 1,\n    \"companyId\": 3,\n    \"token\": \"188355c4572171\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{port}}/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "/aggregateData",
+			"item": [
+				{
+					"name": "aggregateData custom, SUCCESS",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"companyId\": 3,\n    \"employeeId\": 1,\n    \"companyName\": \"LunchRock LLC\",\n    \"isManager\": true,\n    \"timeOption\": \"custom\",\n    \"startDate\" : \"2022-01-01\",\n    \"endDate\" : \"2024-01-01\",\n    \"token\": \"18840bfe0542616\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{port}}/aggregateData",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"aggregateData"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "aggregateData week, SUCCESS",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"companyId\": 3,\n    \"employeeId\": 1,\n    \"companyName\": \"GizmoGram\",\n    \"isManager\": true,\n    \"timeOption\": \"week\",\n    \"startDate\" : \"\",\n    \"endDate\" : \"\",\n    \"token\": \"18840bfe0542616\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{port}}/aggregateData",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"aggregateData"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "aggregateData month, SUCCESS",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"companyId\": 3,\n    \"employeeId\": 1,\n    \"companyName\": \"GizmoGram\",\n    \"isManager\": true,\n    \"timeOption\": \"month\",\n    \"startDate\" : \"\",\n    \"endDate\" : \"\",\n    \"token\": \"18840bfe0542616\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{port}}/aggregateData",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"aggregateData"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "aggregateData year, SUCCESS Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"companyId\": 3,\n    \"employeeId\": 1,\n    \"companyName\": \"GizmoGram\",\n    \"isManager\": true,\n    \"timeOption\": \"year\",\n    \"startDate\" : \"\",\n    \"endDate\" : \"\",\n    \"token\": \"18840bfe0542616\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{port}}/aggregateData",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"aggregateData"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "aggregateData FAILURE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"companyId\": -1,\n    \"employeeId\": 9,\n    \"companyName\": \"GizmoGrm\",\n    \"isManager\": true,\n    \"timeOption\": \"year\",\n    \"startDate\" : \"\",\n    \"endDate\" : \"\",\n    \"token\": \"18840bfe0542616\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:{{port}}/aggregateData",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "{{port}}",
+							"path": [
+								"aggregateData"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
