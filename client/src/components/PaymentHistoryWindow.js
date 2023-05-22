@@ -69,12 +69,22 @@ const PaymentHistoryWindow = ({ isListPresent, setListPresence, employeeData, gr
 
   const fetchListData = async () => {
     updateListLoad(0)
-    const result = await requests.getAllTime(
-      employeeData.employeeId,
-      subordinateId,
-      employeeData.companyId,
-      cookies.token
-    )
+
+    const result = type === 'employee'
+      ? await requests.getAllTime(
+        employeeData.employeeId,
+        subordinateId,
+        employeeData.companyId,
+        cookies.token
+      )
+      : await requests.getAllAggregate(
+        employeeData.employeeId,
+        employeeData.companyId,
+        employeeData.companyName,
+        employeeData.isManager,
+        cookies.token
+      )
+
     console.log(result)
     updateListData(result.data.value)
     // console.log(listData)
